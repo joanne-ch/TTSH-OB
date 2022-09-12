@@ -349,30 +349,37 @@ style navigation_button_text:
 ## https://www.renpy.org/doc/html/screen_special.html#main-menu
 
 screen main_menu():
+    add "images/main_menu/main_menu.png"
+    add "images/main_menu/border.png"
+    
+    use profile
+    use selection
+    
 
-    ## This ensures that any other menu screen is replaced.
-    tag menu
 
-    add gui.main_menu_background
+    # ## This ensures that any other menu screen is replaced.
+    # tag menu
 
-    ## This empty frame darkens the main menu.
-    frame:
-        style "main_menu_frame"
+    # add gui.main_menu_background
 
-    ## The use statement includes another screen inside this one. The actual
-    ## contents of the main menu are in the navigation screen.
-    use navigation
+    # ## This empty frame darkens the main menu.
+    # frame:
+    #     style "main_menu_frame"
 
-    if gui.show_name:
+    # ## The use statement includes another screen inside this one. The actual
+    # ## contents of the main menu are in the navigation screen.
+    # use navigation
 
-        vbox:
-            style "main_menu_vbox"
+    # if gui.show_name:
 
-            text "[config.name!t]":
-                style "main_menu_title"
+    #     vbox:
+    #         style "main_menu_vbox"
 
-            text "[config.version]":
-                style "main_menu_version"
+    #         text "[config.name!t]":
+    #             style "main_menu_title"
+
+    #         text "[config.version]":
+    #             style "main_menu_version"
 
 
 style main_menu_frame is empty
