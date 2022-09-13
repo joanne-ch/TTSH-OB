@@ -1,21 +1,19 @@
-screen popUp():
+screen chooseCharacters():
     tag menu
     
     use game_menu1(_("About"), scroll="viewport"):
         style_prefix "about"
 
     use overlay
-    add "images/main_menu/profile_background.png" xpos 110
-    text "Profile" style "mainText" xpos 300 ypos 200 size 110
 
     imagebutton:
-        xpos 1200
-        ypos 750
+        xpos 1400
+        ypos 850
         idle "images/main_menu/hide_button.png"
         hover "images/main_menu/hide_button_hover.png" 
         action Return()
 
-    text "Close"  size 80 xpos 1330 ypos 70
+    text "Back" size 80 xpos 1550 ypos 890
     
 screen overlay():
     add "images/main_menu/overlay.png" zoom 2

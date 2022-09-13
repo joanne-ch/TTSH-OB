@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/additional_screens/Profile_inMainMenu.rpy", line 15: 'text' is not a keyword argument or valid child for the imagebutton statement.
-    text "Hide"
-        ^
+File "game/additional_screens/Profile_inMainMenu.rpy", line 9: expected a keyword argument, colon, or end of line.
+    text "{u}Profile{u}" style  xpos 300 ypos 200 size 110
+                                     ^
 
 Ren'Py Version: Ren'Py 8.0.3.22090809
-Tue Sep 13 20:05:48 2022
+Tue Sep 13 20:35:54 2022

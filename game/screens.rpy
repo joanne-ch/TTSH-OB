@@ -369,7 +369,7 @@ screen main_menu():
         xpos 865
         idle "images/main_menu/profile_icon.png"
         hover "images/main_menu/profile_icon_hover.png" 
-        action Show("popUp")
+        #action Show("profilePopUp")
 
     #Main Chapter Button
     imagebutton:
@@ -389,10 +389,16 @@ screen main_menu():
         xpos 260
         idle "images/main_menu/orange_box.png" 
         hover "images/main_menu/orange_box_hover.png"
-        #action Show("selectionPage")
+        action Show("chooseCharacters")
 
     text "Side Chapter" style "mainText" ypos 800 xpos 365
     text "(Play with your friends)" style "subMain" ypos 885 xpos 365 size 60
+
+    #Big Nurse Icon
+    imagebutton:
+        xpos 1500
+        ypos 200
+        idle "images/main_menu/big_nurse_icon.png"
 
 
     # ## This ensures that any other menu screen is replaced.
