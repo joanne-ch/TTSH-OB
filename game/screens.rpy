@@ -349,12 +349,50 @@ style navigation_button_text:
 ## https://www.renpy.org/doc/html/screen_special.html#main-menu
 
 screen main_menu():
-    add "images/main_menu/main_menu.png"
-    add "images/main_menu/border.png"
+    tag menu
+
+    add gui.main_menu_background
     
-    use profile
-    use selection
-    
+    #Profile
+    zorder 0
+    add "images/main_menu/profile_frame.png" ypos 20
+    add "images/main_menu/nurse_icon.png" ypos 90 xpos 85
+
+    #User name, need to limit characters - need to sync with user input
+    text "Kamala Harris" style "user_name"
+
+    #Progress Check - Need to sync, with below Main Chapter
+    text "Progress: Chapter 1 - 1" style "progress_check"
+
+    imagebutton:
+        ypos 245
+        xpos 865
+        idle "images/main_menu/profile_icon.png"
+        hover "images/main_menu/profile_icon_hover.png" 
+        action Show("popUp")
+
+    #Main Chapter Button
+    imagebutton:
+        ypos 440
+        xpos 100
+        idle "images/main_menu/orange_box.png" 
+        hover "images/main_menu/orange_box_hover.png"
+        action Start()
+        
+    text "Main Chapter" style "mainText" ypos 510 xpos 200
+    #Progress Check - Need to sync, with profile
+    text "Chapter 1 - 1" style "subMain" ypos 590 xpos 200
+
+    #Side Chapter Button
+    imagebutton:
+        ypos 725
+        xpos 260
+        idle "images/main_menu/orange_box.png" 
+        hover "images/main_menu/orange_box_hover.png"
+        #action Show("selectionPage")
+
+    text "Side Chapter" style "mainText" ypos 800 xpos 365
+    text "(Play with your friends)" style "subMain" ypos 885 xpos 365 size 60
 
 
     # ## This ensures that any other menu screen is replaced.
@@ -474,14 +512,14 @@ screen game_menu(title, scroll=None, yinitial=0.0):
 
                     transclude
 
-    use navigation
+    #use navigation
 
     textbutton _("Return"):
         style "return_button"
 
         action Return()
 
-    label title
+    #label title
 
     if main_menu:
         key "game_menu" action ShowMenu("main_menu")

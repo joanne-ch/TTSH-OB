@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/profile.rpy", line 13: keyword argument 'ypos' appears more than once in a imagebutton statement.
-    hover "images/main_menu/profile_icon_hover.png" ypos 245 xpos 865
-                                                        ^
+File "game/additional_screens/Profile_inMainMenu.rpy", line 15: 'text' is not a keyword argument or valid child for the imagebutton statement.
+    text "Hide"
+        ^
 
 Ren'Py Version: Ren'Py 8.0.3.22090809
-Mon Sep 12 22:28:29 2022
+Tue Sep 13 20:05:48 2022
