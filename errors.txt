@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/additional_screens/Profile_inMainMenu.rpy", line 9: expected a keyword argument, colon, or end of line.
-    text "{u}Profile{u}" style  xpos 300 ypos 200 size 110
-                                     ^
+File "game/script.rpy", line 56: end of line expected.
+    d " I like your spirit, getting right to the point! Then let’s get started.":
+                                                                                ^
 
-Ren'Py Version: Ren'Py 8.0.3.22090809
-Tue Sep 13 20:35:54 2022
+Ren'Py Version: Ren'Py 7.5.3.22090809
+Fri Sep 16 04:14:06 2022
