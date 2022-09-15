@@ -7,7 +7,7 @@ screen profilePopUp():
     use overlay
 
     imagebutton:
-        xpos 1200
+        xpos 12
         ypos 750
         idle "images/main_menu/hide_button.png"
         hover "images/main_menu/hide_button_hover.png" 
