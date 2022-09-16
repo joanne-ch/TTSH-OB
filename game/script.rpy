@@ -1,7 +1,10 @@
-﻿define d = Character('doctor A', color="#c8ffc8")
+﻿
+######################import scene 1 character, "doctor A" and "me"
+define d = Character('doctor A', color="#c8ffc8")
 define m = Character('me', color="#c8c8ff")
 
-label start: #scene_1_1 (chapter1_scene1)
+##################start scene_1_1 (chapter1_scene1)
+label start: 
 
     scene bg main_background #import background
     with fade
@@ -25,8 +28,10 @@ label start: #scene_1_1 (chapter1_scene1)
         "Before we start the tour, I do have some questions…":
             jump scene_1_1_3 #go to chapter1_scene1_branch3
 
-#story continues in other scenes now
-    return
+        "(Specific Content TBD, placeholder for now)":
+            jump scene_1_1_4 # go to chapter1_scene1_branch4
+
+    return 
 
 
 label scene_1_1_1: #scene 1, branch 1
@@ -42,14 +47,12 @@ label scene_1_1_1: #scene 1, branch 1
             jump scene_1_2 #straightly to scene_1_2
 
         "Great, let’s get started then!":
-            jump scene_1_1_3 #to the third branch
+            jump scene_1_1_3 # go to the third branch
 
     return 
 
 label scene_1_1_2:
 
-    scene bg main_background
-    with dissolve
     show doctor_icon at right
     with dissolve
 
@@ -60,14 +63,22 @@ label scene_1_1_2:
 
 label scene_1_1_3:
 
-    scene bg main_background
-    with dissolve
     show doctor_icon at right
     with dissolve
 
     d "You’re an eager one, aren’t you!"
     d " There’s no rush, we have plenty of time for Q&A as we tour, but I don’t mind giving any clarifications now."
-    "(Specific Content TBD, placeholder for now)"
+
+    jump scene_1_2 #finish scene_1_1, jump to scene_1_2 (chapter1, scene2)
+    return
+
+label scene_1_1_4:
+
+    show doctor_icon at right
+    with dissolve
+
+    d "(TBD)"
+    m "jump tob scene 2"
 
     jump scene_1_2 #finish scene_1_1, jump to scene_1_2 (chapter1, scene2)
     return

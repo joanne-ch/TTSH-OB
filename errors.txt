@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 56: end of line expected.
-    d " I like your spirit, getting right to the point! Then let’s get started.":
-                                                                                ^
+File "game/script.rpy", line 32: expected statement.
+    jumpe scene_1_1_4 
+                      ^
 
 Ren'Py Version: Ren'Py 7.5.3.22090809
-Fri Sep 16 04:14:06 2022
+Fri Sep 16 12:37:34 2022
