@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 32: expected statement.
-    jumpe scene_1_1_4 
-                      ^
+File "game/styles/styles.rpy", line 4: ATL statement contains two expressions in a row; is one of them a misspelled property? If not, separate them with pass.
+    add "images/main_menu/grey_text1.png" ypos 735 xpos 1020
+                                          ^
 
-Ren'Py Version: Ren'Py 7.5.3.22090809
-Fri Sep 16 12:37:34 2022
+Ren'Py Version: Ren'Py 8.0.3.22090809
+Mon Sep 19 18:53:33 2022

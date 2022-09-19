@@ -389,16 +389,41 @@ screen main_menu():
         xpos 260
         idle "images/main_menu/orange_box.png" 
         hover "images/main_menu/orange_box_hover.png"
-        action Show("chooseCharacters")
+        action Show("chooseCharacters") 
 
     text "Side Chapter" style "mainText" ypos 800 xpos 365
     text "(Play with your friends)" style "subMain" ypos 885 xpos 365 size 60
 
     #Big Nurse Icon
+    #image bigNurse = "images/main_menu/big_nurse_icon.png"
     imagebutton:
         xpos 1500
         ypos 200
         idle "images/main_menu/big_nurse_icon.png"
+
+    #Dialogue Box below Nurse Icon
+    
+    if onClick:
+        imagebutton at ClickAnimation:
+            idle "images/main_menu/grey_dialogue_box.png" 
+            ypos 550 
+            xpos 950
+            action ToggleVariable("onClick")
+        add "images/main_menu/grey_text2.png" at TextAnimation ypos 735 xpos 1100
+    else:
+        imagebutton at ClickAnimation:
+            idle "images/main_menu/grey_dialogue_box.png" 
+            ypos 550
+            xpos 950
+            action ToggleVariable("onClick")
+        add "images/main_menu/grey_text1.png" at TextAnimation ypos 735 xpos 1020 
+
+default onClick = False
+
+    
+    # imagebutton:
+    #     idle "images/main_menu/grey_dialogue_box.png"
+    
 
 
     # ## This ensures that any other menu screen is replaced.
@@ -412,7 +437,7 @@ screen main_menu():
 
     # ## The use statement includes another screen inside this one. The actual
     # ## contents of the main menu are in the navigation screen.
-    # use navigation
+    # use navigatio
 
     # if gui.show_name:
 
@@ -424,7 +449,6 @@ screen main_menu():
 
     #         text "[config.version]":
     #             style "main_menu_version"
-
 
 style main_menu_frame is empty
 style main_menu_vbox is vbox
