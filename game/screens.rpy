@@ -347,7 +347,7 @@ style navigation_button_text:
 ## Used to display the main menu when Ren'Py starts.
 ##
 ## https://www.renpy.org/doc/html/screen_special.html#main-menu
-
+default onClick = False
 screen main_menu():
     tag menu
 
@@ -402,7 +402,6 @@ screen main_menu():
         idle "images/main_menu/big_nurse_icon.png"
 
     #Dialogue Box below Nurse Icon
-    
     if onClick:
         imagebutton at ClickAnimation:
             idle "images/main_menu/grey_dialogue_box.png" 
@@ -418,37 +417,19 @@ screen main_menu():
             action ToggleVariable("onClick")
         add "images/main_menu/grey_text1.png" at TextAnimation ypos 735 xpos 1020 
 
-default onClick = False
+    #Add friend Icon
+    add "images/main_menu/add friend icon.png" xpos 1780 ypos 950
+    add "images/main_menu/friend list icon.png" xpos 1780 ypos 820
+    imagebutton:
+        idle "images/main_menu/setting icon.png" xpos 1780 ypos 700
+        action Show("preferences_custom")
+
+    add "images/main_menu/pink banner.png" xpos 1400
+    add "images/main_menu/pink banner.png" xpos 1000
+
 
     
-    # imagebutton:
-    #     idle "images/main_menu/grey_dialogue_box.png"
-    
 
-
-    # ## This ensures that any other menu screen is replaced.
-    # tag menu
-
-    # add gui.main_menu_background
-
-    # ## This empty frame darkens the main menu.
-    # frame:
-    #     style "main_menu_frame"
-
-    # ## The use statement includes another screen inside this one. The actual
-    # ## contents of the main menu are in the navigation screen.
-    # use navigatio
-
-    # if gui.show_name:
-
-    #     vbox:
-    #         style "main_menu_vbox"
-
-    #         text "[config.name!t]":
-    #             style "main_menu_title"
-
-    #         text "[config.version]":
-    #             style "main_menu_version"
 
 style main_menu_frame is empty
 style main_menu_vbox is vbox
@@ -787,7 +768,7 @@ screen preferences():
 
     tag menu
 
-    use game_menu(_("Preferences"), scroll="viewport"):
+    use game_menu1(_("Preferences"), scroll="viewport"):
 
         vbox:
 

@@ -29,14 +29,4 @@ screen game_menu1(title, scroll=None, yinitial=0.0):
         transclude
 
 
-style mainText:
-    font "font/LondrinaBlack_Regular.otf"
-    size 90
-    color "#000000"
-
-style subMain:
-    font "font/LondrinaThin-Regular.otf"
-    size 70
-    color "#000000"
-
 

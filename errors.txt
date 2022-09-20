@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/styles/styles.rpy", line 4: ATL statement contains two expressions in a row; is one of them a misspelled property? If not, separate them with pass.
-    add "images/main_menu/grey_text1.png" ypos 735 xpos 1020
-                                          ^
+File "game/styles/styles.rpy", line 20: style property idle is not known.
+    idle "#fe3eed"
+        ^
 
 Ren'Py Version: Ren'Py 8.0.3.22090809
-Mon Sep 19 18:53:33 2022
+Tue Sep 20 14:41:47 2022
