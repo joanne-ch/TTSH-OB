@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/styles/styles.rpy", line 20: style property idle is not known.
-    idle "#fe3eed"
+File "game/additional_screens/settings.rpy", line 16: 'zoom' is not a keyword argument or valid child for the imagebutton statement.
+    zoom 0.5
         ^
 
 Ren'Py Version: Ren'Py 8.0.3.22090809
-Tue Sep 20 14:41:47 2022
+Tue Sep 20 16:19:59 2022

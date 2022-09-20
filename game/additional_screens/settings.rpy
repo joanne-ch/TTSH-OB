@@ -1,4 +1,4 @@
-default window = True
+define persistent.window = True
 define persistent.transition = False
 define persistent.afterTransition = False
 default barValue_change = False 
@@ -11,6 +11,7 @@ screen preferences_custom():
 
 
     use game_menu1(_("Preferences"), scroll="viewport"):
+
         if renpy.variant("pc") or renpy.variant("web"):
             text _("{u}Display{u}") style "mainText"  xpos 100 ypos 100
             imagebutton:
@@ -55,7 +56,7 @@ screen preferences_custom():
                     style "mute_all_button"
 
             #Display Setting
-            if window: 
+            if persistent.window: 
                 imagebutton:
                     idle "images/settings/checkbox_check.png"
                     action Preference('display', 'window')
@@ -64,7 +65,7 @@ screen preferences_custom():
                 imagebutton:
                     idle "images/settings/checkbox_uncheck.png"
                     hover "images/settings/checkbox_check.png"
-                    action ToggleVariable("window"),  Preference('display', 'fullscreen')
+                    action ToggleVariable("persistent.window"),  Preference('display', 'fullscreen')
                     xpos 90  ypos -1000
 
                 text "Window" xpos 250 ypos -1270 color "#000000ff" size 70
@@ -73,7 +74,7 @@ screen preferences_custom():
                 imagebutton:
                     idle "images/settings/checkbox_uncheck.png"
                     hover "images/settings/checkbox_check.png"
-                    action ToggleVariable("window"),  Preference('display', 'window')
+                    action ToggleVariable("persistent.window"),  Preference('display', 'window')
                     xpos 90  ypos -1000
 
                 imagebutton:
@@ -113,7 +114,7 @@ screen preferences_custom():
                     action Preference("after choices", "toggle"),ToggleVariable("persistent.afterTransition")
                     xpos 90  ypos -1220
             text "After Choices" xpos 220 ypos -1332 color "#000000ff" size 68
-
+    
 screen text_test:
     frame:
         background Null()

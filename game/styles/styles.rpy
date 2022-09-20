@@ -16,12 +16,13 @@ style subMain:
     size 70
     color "#000000"
 
-style TestTextSpeed:
-    # idle "#fe3eed"
-    # hover "#d2d2d2"
+style TestTextSpeed is text:
     font "font/LondrinaBlack_Regular.otf"
     size 50
     color "#000000"
+
+
+    
 
     
 
