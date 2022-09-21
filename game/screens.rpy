@@ -348,6 +348,13 @@ style navigation_button_text:
 ##
 ## https://www.renpy.org/doc/html/screen_special.html#main-menu
 default onClick = False
+# init python:
+#     def check_lock():
+#         global onClick
+#         if onClick: 
+#             renpy.play("audio/opening_1.ogg") 
+
+
 screen main_menu():
     tag menu
 
@@ -407,14 +414,14 @@ screen main_menu():
             idle "images/main_menu/grey_dialogue_box.png" 
             ypos 550 
             xpos 950
-            action ToggleVariable("onClick")
+            action [ToggleVariable("onClick"), Play("sound", "audio/opening_1.ogg")]
         add "images/main_menu/grey_text2.png" at TextAnimation ypos 735 xpos 1100
     else:
         imagebutton at ClickAnimation:
             idle "images/main_menu/grey_dialogue_box.png" 
             ypos 550
             xpos 950
-            action ToggleVariable("onClick")
+            action [ToggleVariable("onClick"), Play("sound", "audio/opening_2.ogg")]
         add "images/main_menu/grey_text1.png" at TextAnimation ypos 735 xpos 1020 
 
     #Add friend Icon

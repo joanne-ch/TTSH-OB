@@ -1,59 +1,43 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "renpy/common/00start.rpy", line 215, in script call
-    call _load_reload_game from _call__load_reload_game_1
-  File "renpy/common/00keymap.rpy", line 517, in script
-    python hide:
-  File "renpy/common/00start.rpy", line 215, in script call
-    call _load_reload_game from _call__load_reload_game_1
-  File "renpy/common/00keymap.rpy", line 517, in script
-    python hide:
-  File "renpy/common/00keymap.rpy", line 517, in <module>
-    python hide:
-  File "renpy/common/00keymap.rpy", line 528, in _execute_python_hide
-    renpy.load(renpy.session["_reload_slot"])
-Exception: Couldn't find a place to stop rolling back. Perhaps the script changed in an incompatible way?
+OSError: Couldn't find file 'audio/opening_2.ogg'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "C:\Users\joann\Downloads\renpy-8.0.3-sdk\renpy\bootstrap.py", line 277, in bootstrap
-    renpy.main.main()
-  File "C:\Users\joann\Downloads\renpy-8.0.3-sdk\renpy\main.py", line 660, in main
-    run(restart)
-  File "C:\Users\joann\Downloads\renpy-8.0.3-sdk\renpy\main.py", line 146, in run
-    renpy.execution.run_context(True)
-  File "C:\Users\joann\Downloads\renpy-8.0.3-sdk\renpy\execution.py", line 938, in run_context
-    context.run()
-  File "renpy/common/00start.rpy", line 215, in script call
-    call _load_reload_game from _call__load_reload_game_1
-  File "renpy/common/00keymap.rpy", line 517, in script
-    python hide:
-  File "/home/tom/ab/renpy-build/tmp/install.linux-x86_64/lib/python3.9/site-packages/future/utils/__init__.py", line 441, in raise_
-  File "renpy/common/00start.rpy", line 215, in script call
-    call _load_reload_game from _call__load_reload_game_1
-  File "renpy/common/00keymap.rpy", line 517, in script
+  File "renpy/common/_layout/screen_main_menu.rpym", line 28, in script
     python hide:
   File "C:\Users\joann\Downloads\renpy-8.0.3-sdk\renpy\ast.py", line 1131, in execute
     renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
   File "C:\Users\joann\Downloads\renpy-8.0.3-sdk\renpy\python.py", line 1061, in py_exec_bytecode
     exec(bytecode, globals, locals)
-  File "renpy/common/00keymap.rpy", line 517, in <module>
+  File "renpy/common/_layout/screen_main_menu.rpym", line 28, in <module>
     python hide:
-  File "renpy/common/00keymap.rpy", line 528, in _execute_python_hide
-    renpy.load(renpy.session["_reload_slot"])
-  File "C:\Users\joann\Downloads\renpy-8.0.3-sdk\renpy\loadsave.py", line 769, in load
-    log.unfreeze(roots, label="_after_load")
-  File "C:\Users\joann\Downloads\renpy-8.0.3-sdk\renpy\rollback.py", line 1078, in unfreeze
-    self.rollback(0, force=True, label=label, greedy=greedy, on_load=True)
-  File "C:\Users\joann\Downloads\renpy-8.0.3-sdk\renpy\rollback.py", line 889, in rollback
-    self.load_failed()
-  File "C:\Users\joann\Downloads\renpy-8.0.3-sdk\renpy\rollback.py", line 807, in load_failed
-    raise Exception("Couldn't find a place to stop rolling back. Perhaps the script changed in an incompatible way?")
-Exception: Couldn't find a place to stop rolling back. Perhaps the script changed in an incompatible way?
+  File "renpy/common/_layout/screen_main_menu.rpym", line 35, in _execute_python_hide
+    ui.interact()
+  File "C:\Users\joann\Downloads\renpy-8.0.3-sdk\renpy\ui.py", line 299, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "C:\Users\joann\Downloads\renpy-8.0.3-sdk\renpy\display\core.py", line 3377, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "C:\Users\joann\Downloads\renpy-8.0.3-sdk\renpy\display\core.py", line 4103, in interact_core
+    renpy.audio.audio.periodic()
+  File "C:\Users\joann\Downloads\renpy-8.0.3-sdk\renpy\audio\audio.py", line 1166, in periodic
+    raise_(exc[0], exc[1], exc[2])
+  File "/home/tom/ab/renpy-build/tmp/install.linux-x86_64/lib/python3.9/site-packages/future/utils/__init__.py", line 441, in raise_
+  File "C:\Users\joann\Downloads\renpy-8.0.3-sdk\renpy\audio\audio.py", line 1144, in periodic_thread_main
+    periodic_pass()
+  File "C:\Users\joann\Downloads\renpy-8.0.3-sdk\renpy\audio\audio.py", line 1086, in periodic_pass
+    c.periodic()
+  File "C:\Users\joann\Downloads\renpy-8.0.3-sdk\renpy\audio\audio.py", line 517, in periodic
+    topf = load(filename)
+  File "C:\Users\joann\Downloads\renpy-8.0.3-sdk\renpy\audio\audio.py", line 70, in load
+    rv = renpy.loader.load(fn)
+  File "C:\Users\joann\Downloads\renpy-8.0.3-sdk\renpy\loader.py", line 820, in load
+    raise IOError("Couldn't find file '%s'." % name)
+OSError: Couldn't find file 'audio/opening_2.ogg'.
 
 Windows-10-10.0.22000 AMD64
 Ren'Py 8.0.3.22090809
 BetaGame 1.0
-Tue Sep 20 16:10:56 2022
+Wed Sep 21 12:19:17 2022
