@@ -4,7 +4,20 @@ define d = Character('doctor A', color="#c8ffc8")
 define m = Character('me', color="#c8c8ff")
 
 ##################start scene_1_1 (chapter1_scene1)
+
+screen summary():
+    frame:
+        xalign 0.5 ypos 50
+        vbox:
+            text "You have just become a new-hire of TTSH, it is your first day at the hospital as an official worker (Nurse)."
+            text "You were informed that you will be given a tour today around the hospital and possibly get to know some of your colleagues."
+            text "Excited and a bit nervous, you enter the main lobby of Tan Tock Seng Hospital."
+            textbutton "Continue":
+                action Return(True)
+
 label start: 
+
+    call screen summary
 
     scene bg main_background #import background
     with fade
@@ -28,9 +41,6 @@ label start:
         "Before we start the tour, I do have some questions…":
             jump scene_1_1_3 #go to chapter1_scene1_branch3
 
-        "(Specific Content TBD, placeholder for now)":
-            jump scene_1_1_4 # go to chapter1_scene1_branch4
-
     return 
 
 
@@ -43,13 +53,20 @@ label scene_1_1_1: #scene 1, branch 1
     d "I’ve heard great things about you, but just a heads-up, this job can be quite demanding, I hope you’ll keep up your spirit! Now then, do you want to start the tour? "
 
     menu:
-        "Good to meet you too, A, looking forward to working with you!":
-            jump scene_1_2 #straightly to scene_1_2
+        "Yes, let’s get started.":
+            jump end_ofscene1 
 
-        "Great, let’s get started then!":
+        "I do have some questions…":
             jump scene_1_1_3 # go to the third branch
 
     return 
+
+label end_ofscene1:
+    scene black
+    with Pause(1)
+
+    jump scene_2_1
+    return
 
 label scene_1_1_2:
 
@@ -57,7 +74,7 @@ label scene_1_1_2:
     with dissolve
 
     d " I like your spirit, getting right to the point! Then let’s get started."
-    jump scene_1_2 # go to scene2
+    jump end_ofscene1 # go to scene2
     
     return 
 
@@ -72,29 +89,50 @@ label scene_1_1_3:
     jump scene_1_2 #finish scene_1_1, jump to scene_1_2 (chapter1, scene2)
     return
 
-label scene_1_1_4:
+label scene_1_2: #chapter1_scene2
+    d"On the first floor, we have…"
 
-    show doctor_icon at right
-    with dissolve
+    d "On the second floor, we have…"
 
-    d "(TBD)"
-    m "jump tob scene 2"
+    d "On the third  floor, we have…"
 
-    jump scene_1_2 #finish scene_1_1, jump to scene_1_2 (chapter1, scene2)
+    d "This is our main office and where you can work & rest during off-hour"
+
+    d "Here is the nurse ward…"
+
+    d "This is where you will be working most of the day, tending to patients assigned to you. Do you have any questions so far? "
+
+    menu:
+        "No, I have no question at the moment.":
+            jump scene2_2_1 #chapter1_scene2_branch1
+        "Actually, I do have some questions…":
+            jump scene2_2_2 #chapter1_scene2_branch2
+    
     return
 
-label scene_1_2:
-
-############# the following is to indicate "has entered scene_1_2"
-    scene bg main_background
-    with dissolve
-    show doctor_icon at truecenter
-    with dissolve
-
-    "scene_1_2"
-############# start real code bellow
-
+label scene2_2_1:
+    d "Great, well, I think we are almost done with today’s tour, now we just…"
+    jump end_ofscene2
     return
 
+label end_ofscene2:
+    scene black
+    with Pause(1)
 
+    jump scene_2_1_1
+    return
 
+label scene2_2_2:
+    # menu:
+    #     "Can you run me through the first floor again…"
+    #         jump scene2_2_2
+    #     "Can you run me through the second floor again…"
+    #         jump scene2_2_2
+    #     "Can you run me through the third floor again…"
+    #         jump scene2_2_2
+    #     "Can you run me through the main office area again…"
+    #         jump scene2_2_2
+    #     "Can you run me through the nursing ward again…"
+    #         jump scene2_2_2
+
+    return

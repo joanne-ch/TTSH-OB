@@ -348,12 +348,6 @@ style navigation_button_text:
 ##
 ## https://www.renpy.org/doc/html/screen_special.html#main-menu
 default onClick = False
-# init python:
-#     def check_lock():
-#         global onClick
-#         if onClick: 
-#             renpy.play("audio/opening_1.ogg") 
-
 
 screen main_menu():
     tag menu
@@ -362,17 +356,18 @@ screen main_menu():
     
     #Profile
     zorder 0
-    add "images/main_menu/profile_frame.png" ypos 20
-    add "images/main_menu/nurse_icon.png" ypos 90 xpos 85
+    add "images/main_menu/profile_frame.png" xpos 30 ypos 50
+    add "images/main_menu/nurse_icon.png" ypos 90 xpos 65
 
     #User name, need to limit characters - need to sync with user input
-    text "Kamala Harris" style "user_name"
+    text "[persistent.user_name]" style "user_name" xpos 420 ypos 200
+    #text "placeholder" style "user_name" xpos 420 ypos 200
 
     #Progress Check - Need to sync, with below Main Chapter
-    text "Progress: Chapter 1 - 1" style "progress_check"
+    text "Progress: Chapter 1 - 1" style "progress_check" ypos 320
 
     imagebutton:
-        ypos 245
+        ypos 225
         xpos 865
         idle "images/main_menu/profile_icon.png"
         hover "images/main_menu/profile_icon_hover.png" 
@@ -384,7 +379,8 @@ screen main_menu():
         xpos 100
         idle "images/main_menu/orange_box.png" 
         hover "images/main_menu/orange_box_hover.png"
-        action Start()
+        action Show("characterSelect")
+        #action Start()
         
     text "Main Chapter" style "mainText" ypos 510 xpos 200
     #Progress Check - Need to sync, with profile
@@ -396,7 +392,7 @@ screen main_menu():
         xpos 260
         idle "images/main_menu/orange_box.png" 
         hover "images/main_menu/orange_box_hover.png"
-        action Show("chooseCharacters") 
+        #action Show("chooseCharacters") 
 
     text "Side Chapter" style "mainText" ypos 800 xpos 365
     text "(Play with your friends)" style "subMain" ypos 885 xpos 365 size 60
@@ -447,6 +443,41 @@ screen main_menu():
     add "images/main_menu/Saves.png" xpos 1130 ypos 140
     add "images/main_menu/Codex.png" xpos 1520 ypos 140
 
+screen input(prompt):
+    style_prefix "input"
+
+    window:
+
+        vbox:
+            xanchor gui.dialogue_text_xalign
+            xpos gui.dialogue_xpos
+            xsize gui.dialogue_width
+            ypos gui.dialogue_ypos
+
+            text prompt style "input_prompt"
+            input id "input"
+
+screen give_input(prompt):
+    add "images/input name/Confirmation Box.png" xpos 300 ypos 150 
+    text prompt style "input_prompt" xpos 590 ypos 360 color "#000000" outlines [(5, "#ffffff", 0, 0)] size 70
+
+    add "images/input name/input box.png" xpos 560 ypos 450
+    input id "input" xpos 640 ypos 605 style "input_prompt" size 50
+
+image splash = "images/doctor_icon.png"
+default persistent.user_name = ""
+label splashscreen:
+    scene black
+    with Pause(1)
+
+    python:
+        persistent.user_name = renpy.input("Please input your name \n (Max 15 characters):", length=15, screen = u'give_input')
+        persistent.user_name = persistent.user_name.strip()
+
+        if not persistent.user_name:
+            persistent.user_name = "Kamala Harris"
+
+    with Pause(1)
     
 
 
