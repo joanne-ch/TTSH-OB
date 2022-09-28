@@ -2,9 +2,10 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 193: Line is followed by a block, despite not being a menu choice. Did you forget a colon at the end of the line?
-    "Mam. I need you to calm down, this isn’t going to help you get in any sooner. You are only making a scene."
-                                                                                                                ^
+File "game/script.rpy", line 16: invalid syntax
+    renpy.movie_cutscene "Opening.avi"
+                          ^
+    
 
 Ren'Py Version: Ren'Py 8.0.3.22090809
-Wed Sep 28 16:00:01 2022
+Wed Sep 28 23:02:50 2022

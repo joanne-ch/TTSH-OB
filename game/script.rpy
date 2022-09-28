@@ -5,7 +5,7 @@ define m = Character('me', color="#c8c8ff")
 define p = Character('patient', color="#c8c8ff")
 
 ##################start scene_1_1 (chapter1_scene1)
-
+image movie = Movie(size=(1280, 720), xalign=0.5, yalign=0.5)
 label start: 
 
     scene black
@@ -13,7 +13,7 @@ label start:
     centered "You have just become a new-hire of TTSH, it is your first day at the hospital as an official worker (Nurse)."
     centered "You were informed that you will be given a tour today around the hospital and possibly get to know some of your colleagues."
     centered "Excited and a bit nervous, you enter the main lobby of Tan Tock Seng Hospital."
-    $ renpy.movie_cutscene("video/Opening.ogg")
+    $ renpy.movie_cutscene ("video/Opening.webm")
     with Pause(3)
 
     scene bg main_background #import background
@@ -28,6 +28,9 @@ label start:
     d "Today, I will just be showing you around the hospital, our offices and do feel free to ask any questions."
 
     #make choice 
+
+    #TUTORIALL(FOR CHOICE PICKING) 
+
     menu:
         "Good to meet you too, A, looking forward to working with you!":
             jump scene_1_1_1  #go to chapter1_scene1_branch1
@@ -200,5 +203,5 @@ label scene_1_3_1_2:
             jump scene_1_3_1_3
 
 label scene_1_3_1_3:
-    call screen show_trust
+    call screen show_trust  
     return
