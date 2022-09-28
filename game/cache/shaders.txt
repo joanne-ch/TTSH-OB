@@ -1,8 +1,8 @@
 renpy.geometry renpy.matrixcolor renpy.texture
-renpy.alpha renpy.geometry renpy.matrixcolor renpy.texture
-renpy.geometry renpy.solid
 renpy.alpha renpy.geometry renpy.texture
 renpy.solid
+renpy.alpha renpy.geometry renpy.matrixcolor renpy.texture
+renpy.geometry renpy.solid
 renpy.ftl
 renpy.alpha renpy.texture
 <<<<<<< Updated upstream
