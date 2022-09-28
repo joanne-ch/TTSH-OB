@@ -1,30 +1,27 @@
 ﻿
 ######################import scene 1 character, "doctor A" and "me"
-define d = Character('doctor A', color="#c8ffc8")
+define d = Character('doctor A', color="#c8ffc8", what_outlines=[(5, "#000000", 0, 0)])
 define m = Character('me', color="#c8c8ff")
+define p = Character('patient', color="#c8c8ff")
 
 ##################start scene_1_1 (chapter1_scene1)
 
-screen summary():
-    frame:
-        xalign 0.5 ypos 50
-        vbox:
-            text "You have just become a new-hire of TTSH, it is your first day at the hospital as an official worker (Nurse)."
-            text "You were informed that you will be given a tour today around the hospital and possibly get to know some of your colleagues."
-            text "Excited and a bit nervous, you enter the main lobby of Tan Tock Seng Hospital."
-            textbutton "Continue":
-                action Return(True)
-
 label start: 
 
-    call screen summary
+    scene black
+    with Pause(1)
+    centered "You have just become a new-hire of TTSH, it is your first day at the hospital as an official worker (Nurse)."
+    centered "You were informed that you will be given a tour today around the hospital and possibly get to know some of your colleagues."
+    centered "Excited and a bit nervous, you enter the main lobby of Tan Tock Seng Hospital."
+    $ renpy.movie_cutscene("video/Opening.ogg")
+    with Pause(3)
 
     scene bg main_background #import background
     with fade
     show doctor_icon at right #import character doctor A
     with dissolve
 
-    d "Good morning, so good to finally meet you in person Kamala. We are very excited to have you on board of TTSH. My name is Doctor A. "
+    d "Good morning, so good to finally meet you in person [persistent.user_name]. We are very excited to have you on board of TTSH. My name is Doctor A. "
 
     d " I believe HR has briefed you that you’d be working with me for the first few months of your appointment."
 
@@ -43,6 +40,13 @@ label start:
 
     return 
 
+# Scene ONE
+label end_ofscene1:
+    scene black
+    with Pause(1)
+
+    jump scene_1_2 
+    return
 
 label scene_1_1_1: #scene 1, branch 1
 
@@ -58,15 +62,7 @@ label scene_1_1_1: #scene 1, branch 1
 
         "I do have some questions…":
             jump scene_1_1_3 # go to the third branch
-
     return 
-
-label end_ofscene1:
-    scene black
-    with Pause(1)
-
-    jump scene_2_1
-    return
 
 label scene_1_1_2:
 
@@ -86,7 +82,28 @@ label scene_1_1_3:
     d "You’re an eager one, aren’t you!"
     d " There’s no rush, we have plenty of time for Q&A as we tour, but I don’t mind giving any clarifications now."
 
-    jump scene_1_2 #finish scene_1_1, jump to scene_1_2 (chapter1, scene2)
+    menu:
+        "What will be my duty as a (Job role: Nurse)?":
+            return
+        "Can you tell me more about TTSH?":
+            return
+        "Who else will I be working with?":
+            return
+        "Which area will I be working at the most?":
+            return
+        "I think I have no further questions":
+            d"Great, as I was saying, today we’re just here to see around the office space and the hospital ground, no 	need to rush yourself to anything yet. "
+            jump end_ofscene1
+    
+    return
+
+
+#Scene TWO
+label end_ofscene2:
+    scene black
+    with Pause(1)
+
+    jump scene_1_3
     return
 
 label scene_1_2: #chapter1_scene2
@@ -104,35 +121,64 @@ label scene_1_2: #chapter1_scene2
 
     menu:
         "No, I have no question at the moment.":
-            jump scene2_2_1 #chapter1_scene2_branch1
+            jump scene_1_2_1 #chapter1_scene2_branch1
         "Actually, I do have some questions…":
-            jump scene2_2_2 #chapter1_scene2_branch2
+            jump scene_1_2_2 #chapter1_scene2_branch2
     
     return
 
-label scene2_2_1:
-    d "Great, well, I think we are almost done with today’s tour, now we just…"
+label scene_1_2_1:
+    d "Great, well, I think we are almost done with today’s tour, now we just--…"
     jump end_ofscene2
     return
 
-label end_ofscene2:
-    scene black
-    with Pause(1)
-
-    jump scene_2_1_1
-    return
-
-label scene2_2_2:
-    # menu:
-    #     "Can you run me through the first floor again…"
-    #         jump scene2_2_2
-    #     "Can you run me through the second floor again…"
-    #         jump scene2_2_2
-    #     "Can you run me through the third floor again…"
-    #         jump scene2_2_2
-    #     "Can you run me through the main office area again…"
-    #         jump scene2_2_2
-    #     "Can you run me through the nursing ward again…"
-    #         jump scene2_2_2
+label scene_1_2_2:
+    menu:
+        "Can you run me through the first floor again…":
+            jump scene_1_2_2
+        "Can you run me through the second floor again…":
+            jump scene_1_2_2
+        "Can you run me through the third floor again…":
+            jump scene_1_2_2
+        "Can you run me through the main office area again…":
+            jump scene_1_2_2
+        "Can you run me through the nursing ward again…":
+            jump scene_1_2_2
+        "I think I have no further questions":
+            jump end_ofscene2
 
     return
+
+#Scene THREE
+label scene_1_3:
+    d "Alright, I hope that clarifies everything"
+
+    centered "(Doctor A receives a phone call, after taking the call, he needed to leave for an emergency situation, he promises he will be back in sometime later)"
+    centered "You are now in the nursing ward hallway. As you patiently wait for A’s return, you notice a patient sitting impatiently with her arm crossed."
+    centered "She seems quite upset and is clearly waiting for some sort of appointment."
+    centered "While you have been hired as a nurse, it is not your first official day of work, do you want to approach this upset patient?"
+
+    call screen tutorial 
+
+    menu:
+        "Even though my shift hasn’t officially started, I should help this patient. They seem very upset.":
+            jump scene_1_3_1
+
+        "I should focus on the tour, besides, I am sure it is nothing urgent.":
+            jump scene_1_3_2
+    return
+
+label scene_1_3_1:
+    centered "You see a elderly female patient impatiently seated in the hallway. She seems to be waiting for something, tapping her thumbs and cursing under her lips."
+
+    menu:
+        "*Take a closer look at the patient before speaking*":
+            centered "You got a closer look at the patient. She is an elderly lady likely in her 60s. She seems to be mumbling to herself while seated in the patient ward hall. You see that she also carries a walking stick, and there were signs of recent operation on her right leg."
+            jump scene_1_3_1
+        "Mam, can I help you?":
+            p"You can help me by getting my appointment started! I’ve been waiting here for 2 HOURS, can you imagine? And I just had my surgery! This is unacceptable!"
+            jump scene_1_3_1_2
+
+label scene_1_3_1_2:
+    
+

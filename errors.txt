@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/screens.rpy", line 468: expected '=' not found.
-    default user_name
-                     ^
+File "game/script.rpy", line 136: Line is followed by a block, despite not being a menu choice. Did you forget a colon at the end of the line?
+    "Can you run me through the first floor again…"
+                                                   ^
 
 Ren'Py Version: Ren'Py 8.0.3.22090809
-Wed Sep 28 01:37:44 2022
+Wed Sep 28 15:35:32 2022
