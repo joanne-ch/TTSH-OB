@@ -7,7 +7,7 @@ define p = Character('Patient', color="#c8c8ff", what_outlines=[(5, "#000000", 0
 ##################start scene_1_1 (chapter1_scene1)
 
 label start: 
-
+    jump scene_1_3_1_2
     scene black
     with Pause(1)
     voice "audio/scene_1/scene1_1.ogg"
@@ -249,6 +249,8 @@ label scene_1_3_1:
             p"You can help me by getting my appointment started! I’ve been waiting here for 2 HOURS, can you imagine? And I just had my surgery! This is unacceptable!"
             
             jump scene_1_3_1_2
+    
+    return
 
 label scene_1_3_1_2:
     image happy grandma:
@@ -256,8 +258,27 @@ label scene_1_3_1_2:
         xpos 1450
         "happy grandma.png"
         zoom 2.8
+<<<<<<< Updated upstream
     call screen narration("You decide to try to calm her down first")
     show screen show_trust
+=======
+    
+    call screen narration("The patient continues to rant as if you are not there. What should you do in this situation?")
+    
+    call screen tutorial_2
+    
+    centered ""
+    
+    jump scene_1_3_1_3
+
+    return
+
+label scene_1_3_1_3:
+    call screen narration("You decide to try to calm her down first")
+    show screen show_npc_status
+    show screen guidebook_icon
+
+>>>>>>> Stashed changes
     menu:
         "I’m so sorry for your situation mam, it is a busy day for the hospital so I hope you may understand.":
             $trust_level += 1
@@ -265,23 +286,94 @@ label scene_1_3_1_2:
             hide grandma icon static
             show happy grandma
             p "I’m sure you’re sorry, but I have already waited for so long. But I guess you are right, there are a lot of people today for some reason. But your hospital really ought to improve your wait time."
+<<<<<<< Updated upstream
             jump scene_1_3_1_3
         "I’m so sorry that you feel this way, but it is a busy day for the hospital so I hope you understand.":
             p "How I feel’ is irrelevant, the fact is that I have been waiting here for 2 hours and there has been no update. It doesn’t matter if there’s a lot of people, we all deserve better treatment and wait time!”"
             jump scene_1_3_1_3
+=======
+            jump scene_1_3_1_4
+        "I’m so sorry that you feel this way, but it is a busy day for the hospital so I hope you understand.":
+            p "How I feel is irrelevant, the fact is that I have been waiting here for 2 hours and there has been no update. It doesn’t matter if there’s a lot of people, we all deserve better treatment and wait time!"
+            jump scene_1_3_1_4
+>>>>>>> Stashed changes
         "Mam. I need you to calm down, this isn’t going to help you get in any sooner. You are only making a scene.":
-            $trust_level -=1
+            $trust_level -= 1
             p "How dare you tell me what to do? I am making a scene? How about you go and ask why they are making us wait for so long?"
+<<<<<<< Updated upstream
                 
             jump scene_1_3_1_3
+=======
+            jump scene_1_3_1_4
+>>>>>>> Stashed changes
         "Mam, I will go talk to the doctor in charge right away, but I think you should also calm down first.":
             $trust_level = trust_level + 2
             hide angry icon
             hide grandma icon static
-            show happy grandma
-            p"That’s what I like to hear, you better go check what’s going on with the clinic today."
-            jump scene_1_3_1_3
+            show happy grandma          
+            p "That’s what I like to hear, you better go check what’s going on with the clinic today."
+            jump scene_1_3_1_4
+    
+    return
 
+<<<<<<< Updated upstream
 label scene_1_3_1_3:
     call screen show_trust  
+=======
+    
+label scene_1_3_1_4:
+    call screen narration("You decide to learn more about the patient now that she has calmed down a bit")
+    menu:
+        "What is your name madam?":
+            p"It’s Merry Ho."
+            jump scene_1_3_1_5
+
+        "What are you visiting SOC for?":
+            p"I have to check on my knee after the surgery."
+            jump scene_1_3_1_5
+        
+        "How long have you been waiting?":
+            p"TWO HOURS! Can you believe it, I know the hospital is busy and all but this is simply outrageous…"
+            call screen narration("You quickly dropped the subject to prevent another rant")
+            jump scene_1_3_1_5
+        
+        "Have you been admitted to TTSH before?":
+            p"I was admitted for a couple months due to my knee surgery."
+            jump scene_1_3_1_5
+        
+        "Is it unusual to wait this long?":
+            p"Obviously! I don’t think I’ve had to wait this long for anything in my life, ever! They must have made a mistake or something!"
+            jump scene_1_3_1_5
+
+    return 
+
+default try = False
+
+label scene_1_3_1_5:
+    call screen narration("You contemplate what is the best course of action next, hopefully this can resolve the situation")
+
+    menu:
+        "You decide to further reassure Mdm Ho that the long wait time is normal and there’s really nothing you can do for now.":
+            if (trust_level >= 1):
+                call screen conflict_success
+            else:
+                if try:
+                    return
+                    #call screen conflict_fail
+                else:
+                    jump scene_1_3_1_5
+            jump final_scene1A
+        
+        "ni hao":
+            return
+
+
+>>>>>>> Stashed changes
     return
+
+label final_scene1A:
+    call screen narration("You observed how the nurse calmly and patiently explained the congested waiting time for SOC to the patient. You feel that you learnt something new about resolving conflict with patients.")
+    call screen narration("It seems that you will have to do a better job at using the six tools to analyse the patient and the nature of the conflict. Refer to your guidebook next time to better deal with conflicts.")
+
+    call screen narration("")
+

@@ -1,13 +1,22 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
+<<<<<<< Updated upstream
   File "game/script.rpy", line 175, in script
     jump scene_1_3_2
 ScriptError: could not find label 'scene_1_3_2'.
+=======
+  File "game/script.rpy", line 314, in script call
+    call narration("You quickly dropped the subject to prevent another rant")
+  File "game/script.rpy", line 314, in script call
+    call narration("You quickly dropped the subject to prevent another rant")
+ScriptError: could not find label 'narration'.
+>>>>>>> Stashed changes
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
+<<<<<<< Updated upstream
   File "game/script.rpy", line 175, in script
     jump scene_1_3_2
   File "C:\Users\joann\Downloads\renpy-8.0.3-sdk\renpy\ast.py", line 1974, in execute
@@ -15,8 +24,23 @@ Full traceback:
   File "C:\Users\joann\Downloads\renpy-8.0.3-sdk\renpy\script.py", line 927, in lookup
     raise ScriptError("could not find label '%s'." % str(original))
 ScriptError: could not find label 'scene_1_3_2'.
+=======
+  File "game/script.rpy", line 314, in script call
+    call narration("You quickly dropped the subject to prevent another rant")
+  File "C:\Users\joann\Downloads\renpy-8.0.3-sdk\renpy\ast.py", line 1705, in execute
+    rv = renpy.game.context().call(label, return_site=self.next.name)
+  File "game/script.rpy", line 314, in script call
+    call narration("You quickly dropped the subject to prevent another rant")
+  File "C:\Users\joann\Downloads\renpy-8.0.3-sdk\renpy\script.py", line 927, in lookup
+    raise ScriptError("could not find label '%s'." % str(original))
+ScriptError: could not find label 'narration'.
+>>>>>>> Stashed changes
 
 Windows-10-10.0.22000 AMD64
 Ren'Py 8.0.3.22090809
 BetaGame 1.0
+<<<<<<< Updated upstream
 Thu Sep 29 16:28:26 2022
+=======
+Thu Sep 29 22:50:47 2022
+>>>>>>> Stashed changes

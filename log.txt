@@ -1,10 +1,15 @@
+<<<<<<< Updated upstream
 Thu Sep 29 15:27:08 2022
+=======
+Thu Sep 29 22:52:01 2022
+>>>>>>> Stashed changes
 Windows-10-10.0.22000
 Ren'Py 8.0.3.22090809
  
 
 Bootstrap to the start of init.init took 0.05s
 Early init took 0.00s
+<<<<<<< Updated upstream
 Loader init took 0.04s
 Loading error handling took 0.03s
 Loading script took 0.21s
@@ -35,6 +40,24 @@ Save bytecode. took 0.04s
 Running _start took 0.00s
 Performance test:
 Interface start took 0.12s
+=======
+Loader init took 0.03s
+Loading error handling took 0.02s
+Loading script took 0.23s
+Loading save slot metadata. took 0.02s
+Loading persistent took 0.00s
+Faled to initialize steam: FileNotFoundError("Could not find module 'C:\\Users\\joann\\Downloads\\renpy-8.0.3-sdk\\lib\\py3-windows-x86_64\\steam_api64.dll' (or one of its dependencies). Try using the full path with constructor syntax.")
+
+The label scene_1_3_1_5 is defined twice, at File "game/scenes_script/scene_3.rpy", line 66:
+label scene_1_3_1_5:
+and File "game/script.rpy", line 327:
+label scene_1_3_1_5:
+
+DPI scale factor: 1.500000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Interface start took 0.41s
+>>>>>>> Stashed changes
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1920, 1080)
@@ -44,42 +67,60 @@ Vendor: "b'NVIDIA Corporation'"
 Renderer: b'NVIDIA GeForce MX250/PCIe/SSE2'
 Version: b'4.6.0 NVIDIA 512.72'
 Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1155, 650) drawable=(1155, 650)
+Screen sizes: virtual=(1920, 1080) physical=(1152, 648) drawable=(1152, 648)
 Maximum texture size: 4096x4096
 Resetting cache.
+<<<<<<< Updated upstream
 Bootstrap to the start of init.init took 1146.27s
 Early init took 0.00s
 Loader init took 0.04s
 Loading error handling took 0.03s
 Loading script took 0.20s
+=======
+Bootstrap to the start of init.init took 34.92s
+Early init took 0.00s
+Loader init took 0.04s
+Loading error handling took 0.02s
+Loading script took 0.13s
+>>>>>>> Stashed changes
 Loading save slot metadata. took 0.02s
 Loading persistent took 0.00s
 Faled to initialize steam: FileNotFoundError("Could not find module 'C:\\Users\\joann\\Downloads\\renpy-8.0.3-sdk\\lib\\py3-windows-x86_64\\steam_api64.dll' (or one of its dependencies). Try using the full path with constructor syntax.")
-Running init code took 0.03s
+Running init code took 0.02s
 Loading analysis data took 0.01s
 Analyze and compile ATL took 0.00s
 Index archives took 0.00s
 Backing up script files to 'C:\\Users\\joann\\AppData\\Roaming/RenPy/backups\\TTSH-OB':
-Dump and make backups. took 0.05s
+Dump and make backups. took 0.04s
 Cleaning cache took 0.00s
 Making clean stores took 0.00s
 Initial gc. took 0.04s
 DPI scale factor: 1.500000
 nvdrs: Loaded, about to disable thread optimizations.
 nvdrs: Disabled thread optimizations.
+<<<<<<< Updated upstream
 Creating interface object took 0.30s
+=======
+Creating interface object took 0.26s
+>>>>>>> Stashed changes
 Cleaning stores took 0.00s
-Init translation took 0.04s
+Init translation took 0.03s
 Build styles took 0.00s
 Load screen analysis took 0.00s
 Analyze screens took 0.01s
 Save screen analysis took 0.02s
+<<<<<<< Updated upstream
 Prepare screens took 0.07s
 Save pyanalysis. took 0.02s
 Save bytecode. took 0.02s
+=======
+Prepare screens took 0.05s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.01s
+>>>>>>> Stashed changes
 Running _start took 0.00s
 Performance test:
-Interface start took 0.06s
+Interface start took 0.05s
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1920, 1080)
@@ -89,8 +130,9 @@ Vendor: "b'NVIDIA Corporation'"
 Renderer: b'NVIDIA GeForce MX250/PCIe/SSE2'
 Version: b'4.6.0 NVIDIA 512.72'
 Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1155, 650) drawable=(1155, 650)
+Screen sizes: virtual=(1920, 1080) physical=(1152, 648) drawable=(1152, 648)
 Maximum texture size: 4096x4096
+<<<<<<< Updated upstream
 Resetting cache.
 Bootstrap to the start of init.init took 1373.94s
 Early init took 0.00s
@@ -113,34 +155,25 @@ DPI scale factor: 1.500000
 nvdrs: Loaded, about to disable thread optimizations.
 nvdrs: Disabled thread optimizations.
 Creating interface object took 0.31s
+=======
+>>>>>>> Stashed changes
 Cleaning stores took 0.00s
-Init translation took 0.04s
+Init translation took 0.00s
 Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.02s
-Prepare screens took 0.06s
-Save pyanalysis. took 0.02s
-Save bytecode. took 0.02s
+Load screen analysis took 0.04s
+Analyze screens took 0.00s
+Prepare screens took 0.00s
 Running _start took 0.00s
-Performance test:
-Interface start took 0.06s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'NVIDIA Corporation'"
-Renderer: b'NVIDIA GeForce MX250/PCIe/SSE2'
-Version: b'4.6.0 NVIDIA 512.72'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1155, 650) drawable=(1155, 650)
-Maximum texture size: 4096x4096
 Resetting cache.
+<<<<<<< Updated upstream
 Bootstrap to the start of init.init took 1403.29s
+=======
+Bootstrap to the start of init.init took 550.38s
+>>>>>>> Stashed changes
 Early init took 0.00s
 Loader init took 0.04s
 Loading error handling took 0.02s
+<<<<<<< Updated upstream
 Loading script took 0.16s
 Loading save slot metadata. took 0.02s
 Loading persistent took 0.00s
@@ -215,6 +248,19 @@ Save bytecode. took 0.02s
 Running _start took 0.00s
 Performance test:
 Interface start took 0.06s
+=======
+Loading script took 0.14s
+Loading save slot metadata. took 0.02s
+Loading persistent took 0.00s
+
+File "game/script.rpy", line 333: expected menuitem
+    if (trust_level >= 1):
+    ^
+DPI scale factor: 1.500000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Interface start took 0.35s
+>>>>>>> Stashed changes
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1920, 1080)
@@ -224,9 +270,10 @@ Vendor: "b'NVIDIA Corporation'"
 Renderer: b'NVIDIA GeForce MX250/PCIe/SSE2'
 Version: b'4.6.0 NVIDIA 512.72'
 Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1155, 650) drawable=(1155, 650)
+Screen sizes: virtual=(1920, 1080) physical=(1152, 648) drawable=(1152, 648)
 Maximum texture size: 4096x4096
 Resetting cache.
+<<<<<<< Updated upstream
 Bootstrap to the start of init.init took 1451.65s
 Early init took 0.00s
 Loader init took 0.05s
@@ -305,6 +352,23 @@ Save bytecode. took 0.02s
 Running _start took 0.00s
 Performance test:
 Interface start took 0.06s
+=======
+Bootstrap to the start of init.init took 551.12s
+Early init took 0.00s
+Loader init took 0.04s
+Loading error handling took 0.01s
+Loading script took 0.13s
+Loading save slot metadata. took 0.02s
+Loading persistent took 0.00s
+
+File "game/script.rpy", line 333: expected menuitem
+    if (trust_level >= 1):
+    ^
+DPI scale factor: 1.500000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Interface start took 0.30s
+>>>>>>> Stashed changes
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1920, 1080)
@@ -314,13 +378,18 @@ Vendor: "b'NVIDIA Corporation'"
 Renderer: b'NVIDIA GeForce MX250/PCIe/SSE2'
 Version: b'4.6.0 NVIDIA 512.72'
 Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1155, 650) drawable=(1155, 650)
+Screen sizes: virtual=(1920, 1080) physical=(1152, 648) drawable=(1152, 648)
 Maximum texture size: 4096x4096
 Resetting cache.
+<<<<<<< Updated upstream
 Bootstrap to the start of init.init took 1475.19s
+=======
+Bootstrap to the start of init.init took 584.58s
+>>>>>>> Stashed changes
 Early init took 0.00s
 Loader init took 0.05s
 Loading error handling took 0.02s
+<<<<<<< Updated upstream
 Loading script took 0.18s
 Loading save slot metadata. took 0.03s
 Loading persistent took 0.00s
@@ -350,6 +419,27 @@ Save bytecode. took 0.02s
 Running _start took 0.00s
 Performance test:
 Interface start took 0.06s
+=======
+Loading script took 0.13s
+Loading save slot metadata. took 0.01s
+Loading persistent took 0.00s
+
+File "game/script.rpy", line 336: if statement expects a non-empty block.
+    if try:
+           ^
+
+File "game/script.rpy", line 338: expected statement.
+    else:
+        ^
+
+File "game/script.rpy", line 343: Line is followed by a block, despite not being a menu choice. Did you forget a colon at the end of the line?
+    "ni hao"
+            ^
+DPI scale factor: 1.500000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Interface start took 0.30s
+>>>>>>> Stashed changes
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1920, 1080)
@@ -359,16 +449,21 @@ Vendor: "b'NVIDIA Corporation'"
 Renderer: b'NVIDIA GeForce MX250/PCIe/SSE2'
 Version: b'4.6.0 NVIDIA 512.72'
 Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1155, 650) drawable=(1155, 650)
+Screen sizes: virtual=(1920, 1080) physical=(1152, 648) drawable=(1152, 648)
 Maximum texture size: 4096x4096
 Resetting cache.
+<<<<<<< Updated upstream
 Bootstrap to the start of init.init took 1481.61s
+=======
+Bootstrap to the start of init.init took 585.28s
+>>>>>>> Stashed changes
 Early init took 0.00s
 Loader init took 0.05s
 Loading error handling took 0.02s
-Loading script took 0.15s
+Loading script took 0.12s
 Loading save slot metadata. took 0.02s
 Loading persistent took 0.00s
+<<<<<<< Updated upstream
 Faled to initialize steam: FileNotFoundError("Could not find module 'C:\\Users\\joann\\Downloads\\renpy-8.0.3-sdk\\lib\\py3-windows-x86_64\\steam_api64.dll' (or one of its dependencies). Try using the full path with constructor syntax.")
 Running init code took 0.03s
 Loading analysis data took 0.01s
@@ -395,6 +490,24 @@ Save bytecode. took 0.02s
 Running _start took 0.00s
 Performance test:
 Interface start took 0.06s
+=======
+
+File "game/script.rpy", line 336: if statement expects a non-empty block.
+    if try:
+           ^
+
+File "game/script.rpy", line 338: expected statement.
+    else:
+        ^
+
+File "game/script.rpy", line 343: Line is followed by a block, despite not being a menu choice. Did you forget a colon at the end of the line?
+    "ni hao"
+            ^
+DPI scale factor: 1.500000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Interface start took 0.30s
+>>>>>>> Stashed changes
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1920, 1080)
@@ -404,29 +517,41 @@ Vendor: "b'NVIDIA Corporation'"
 Renderer: b'NVIDIA GeForce MX250/PCIe/SSE2'
 Version: b'4.6.0 NVIDIA 512.72'
 Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1155, 650) drawable=(1155, 650)
+Screen sizes: virtual=(1920, 1080) physical=(1152, 648) drawable=(1152, 648)
 Maximum texture size: 4096x4096
 Resetting cache.
+<<<<<<< Updated upstream
 Bootstrap to the start of init.init took 1488.01s
 Early init took 0.00s
 Loader init took 0.04s
 Loading error handling took 0.02s
 Loading script took 0.17s
 Loading save slot metadata. took 0.03s
+=======
+Bootstrap to the start of init.init took 585.94s
+Early init took 0.00s
+Loader init took 0.04s
+Loading error handling took 0.02s
+Loading script took 0.13s
+Loading save slot metadata. took 0.01s
+>>>>>>> Stashed changes
 Loading persistent took 0.00s
-Faled to initialize steam: FileNotFoundError("Could not find module 'C:\\Users\\joann\\Downloads\\renpy-8.0.3-sdk\\lib\\py3-windows-x86_64\\steam_api64.dll' (or one of its dependencies). Try using the full path with constructor syntax.")
-Running init code took 0.03s
-Loading analysis data took 0.02s
-Analyze and compile ATL took 0.00s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\joann\\AppData\\Roaming/RenPy/backups\\TTSH-OB':
-Dump and make backups. took 0.05s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc. took 0.03s
+
+File "game/script.rpy", line 336: if statement expects a non-empty block.
+    if try:
+           ^
+
+File "game/script.rpy", line 338: expected statement.
+    else:
+        ^
+
+File "game/script.rpy", line 343: Line is followed by a block, despite not being a menu choice. Did you forget a colon at the end of the line?
+    "ni hao"
+            ^
 DPI scale factor: 1.500000
 nvdrs: Loaded, about to disable thread optimizations.
 nvdrs: Disabled thread optimizations.
+<<<<<<< Updated upstream
 Creating interface object took 0.28s
 Cleaning stores took 0.00s
 Init translation took 0.04s
@@ -440,6 +565,9 @@ Save bytecode. took 0.02s
 Running _start took 0.00s
 Performance test:
 Interface start took 0.05s
+=======
+Interface start took 0.31s
+>>>>>>> Stashed changes
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1920, 1080)
@@ -449,9 +577,10 @@ Vendor: "b'NVIDIA Corporation'"
 Renderer: b'NVIDIA GeForce MX250/PCIe/SSE2'
 Version: b'4.6.0 NVIDIA 512.72'
 Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1155, 650) drawable=(1155, 650)
+Screen sizes: virtual=(1920, 1080) physical=(1152, 648) drawable=(1152, 648)
 Maximum texture size: 4096x4096
 Resetting cache.
+<<<<<<< Updated upstream
 Bootstrap to the start of init.init took 1495.90s
 Early init took 0.00s
 Loader init took 0.05s
@@ -1069,21 +1198,28 @@ Early init took 0.00s
 Loader init took 0.04s
 Loading error handling took 0.02s
 Loading script took 0.15s
+=======
+Bootstrap to the start of init.init took 595.26s
+Early init took 0.00s
+Loader init took 0.04s
+Loading error handling took 0.02s
+Loading script took 0.16s
+>>>>>>> Stashed changes
 Loading save slot metadata. took 0.02s
 Loading persistent took 0.00s
-Faled to initialize steam: FileNotFoundError("Could not find module 'C:\\Users\\joann\\Downloads\\renpy-8.0.3-sdk\\lib\\py3-windows-x86_64\\steam_api64.dll' (or one of its dependencies). Try using the full path with constructor syntax.")
-Running init code took 0.03s
-Loading analysis data took 0.02s
-Analyze and compile ATL took 0.00s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\joann\\AppData\\Roaming/RenPy/backups\\TTSH-OB':
-Dump and make backups. took 0.05s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc. took 0.04s
+
+File "game/script.rpy", line 344: Line is followed by a block, despite not being a menu choice. Did you forget a colon at the end of the line?
+    "ni hao"
+            ^
+
+File "game/script.rpy", line 340: invalid syntax
+    try = True
+         ^
+    
 DPI scale factor: 1.500000
 nvdrs: Loaded, about to disable thread optimizations.
 nvdrs: Disabled thread optimizations.
+<<<<<<< Updated upstream
 Creating interface object took 0.30s
 Cleaning stores took 0.00s
 Init translation took 0.04s
@@ -1097,6 +1233,9 @@ Save bytecode. took 0.02s
 Running _start took 0.00s
 Performance test:
 Interface start took 0.06s
+=======
+Interface start took 0.31s
+>>>>>>> Stashed changes
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1920, 1080)
@@ -1106,9 +1245,10 @@ Vendor: "b'NVIDIA Corporation'"
 Renderer: b'NVIDIA GeForce MX250/PCIe/SSE2'
 Version: b'4.6.0 NVIDIA 512.72'
 Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1155, 650) drawable=(1155, 650)
+Screen sizes: virtual=(1920, 1080) physical=(1152, 648) drawable=(1152, 648)
 Maximum texture size: 4096x4096
 Resetting cache.
+<<<<<<< Updated upstream
 Bootstrap to the start of init.init took 1620.73s
 Early init took 0.00s
 Loader init took 0.05s
@@ -1142,6 +1282,33 @@ Save bytecode. took 0.02s
 Running _start took 0.00s
 Performance test:
 Interface start took 0.06s
+=======
+Bootstrap to the start of init.init took 601.53s
+Early init took 0.00s
+Loader init took 0.04s
+Loading error handling took 0.02s
+Loading script took 0.13s
+Loading save slot metadata. took 0.02s
+Loading persistent took 0.00s
+
+File "game/script.rpy", line 344: Line is followed by a block, despite not being a menu choice. Did you forget a colon at the end of the line?
+    "ni hao"
+            ^
+
+File "game/script.rpy", line 337: invalid syntax
+    try = True
+         ^
+    
+
+File "game/script.rpy", line 340: invalid syntax
+    try = True
+         ^
+    
+DPI scale factor: 1.500000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Interface start took 0.30s
+>>>>>>> Stashed changes
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1920, 1080)
@@ -1151,9 +1318,10 @@ Vendor: "b'NVIDIA Corporation'"
 Renderer: b'NVIDIA GeForce MX250/PCIe/SSE2'
 Version: b'4.6.0 NVIDIA 512.72'
 Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1155, 650) drawable=(1155, 650)
+Screen sizes: virtual=(1920, 1080) physical=(1152, 648) drawable=(1152, 648)
 Maximum texture size: 4096x4096
 Resetting cache.
+<<<<<<< Updated upstream
 Bootstrap to the start of init.init took 1891.32s
 Early init took 0.00s
 Loader init took 0.05s
@@ -1187,6 +1355,33 @@ Save bytecode. took 0.02s
 Running _start took 0.00s
 Performance test:
 Interface start took 0.06s
+=======
+Bootstrap to the start of init.init took 602.77s
+Early init took 0.00s
+Loader init took 0.03s
+Loading error handling took 0.02s
+Loading script took 0.12s
+Loading save slot metadata. took 0.02s
+Loading persistent took 0.00s
+
+File "game/script.rpy", line 344: Line is followed by a block, despite not being a menu choice. Did you forget a colon at the end of the line?
+    "ni hao"
+            ^
+
+File "game/script.rpy", line 337: invalid syntax
+    try = True
+         ^
+    
+
+File "game/script.rpy", line 340: invalid syntax
+    try = True
+         ^
+    
+DPI scale factor: 1.500000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Interface start took 0.31s
+>>>>>>> Stashed changes
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1920, 1080)
@@ -1196,13 +1391,18 @@ Vendor: "b'NVIDIA Corporation'"
 Renderer: b'NVIDIA GeForce MX250/PCIe/SSE2'
 Version: b'4.6.0 NVIDIA 512.72'
 Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1155, 650) drawable=(1155, 650)
+Screen sizes: virtual=(1920, 1080) physical=(1152, 648) drawable=(1152, 648)
 Maximum texture size: 4096x4096
 Resetting cache.
+<<<<<<< Updated upstream
 Bootstrap to the start of init.init took 1900.71s
+=======
+Bootstrap to the start of init.init took 603.46s
+>>>>>>> Stashed changes
 Early init took 0.00s
-Loader init took 0.04s
+Loader init took 0.03s
 Loading error handling took 0.02s
+<<<<<<< Updated upstream
 Loading script took 0.15s
 Loading save slot metadata. took 0.02s
 Loading persistent took 0.00s
@@ -1232,6 +1432,29 @@ Save bytecode. took 0.02s
 Running _start took 0.00s
 Performance test:
 Interface start took 0.05s
+=======
+Loading script took 0.12s
+Loading save slot metadata. took 0.02s
+Loading persistent took 0.00s
+
+File "game/script.rpy", line 344: Line is followed by a block, despite not being a menu choice. Did you forget a colon at the end of the line?
+    "ni hao"
+            ^
+
+File "game/script.rpy", line 337: invalid syntax
+    try = True
+         ^
+    
+
+File "game/script.rpy", line 340: invalid syntax
+    try = True
+         ^
+    
+DPI scale factor: 1.500000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Interface start took 0.29s
+>>>>>>> Stashed changes
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1920, 1080)
@@ -1241,9 +1464,10 @@ Vendor: "b'NVIDIA Corporation'"
 Renderer: b'NVIDIA GeForce MX250/PCIe/SSE2'
 Version: b'4.6.0 NVIDIA 512.72'
 Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1155, 650) drawable=(1155, 650)
+Screen sizes: virtual=(1920, 1080) physical=(1152, 648) drawable=(1152, 648)
 Maximum texture size: 4096x4096
 Resetting cache.
+<<<<<<< Updated upstream
 Bootstrap to the start of init.init took 1919.21s
 Early init took 0.00s
 Loader init took 0.04s
@@ -1277,6 +1501,33 @@ Save bytecode. took 0.02s
 Running _start took 0.00s
 Performance test:
 Interface start took 0.05s
+=======
+Bootstrap to the start of init.init took 604.14s
+Early init took 0.00s
+Loader init took 0.04s
+Loading error handling took 0.01s
+Loading script took 0.13s
+Loading save slot metadata. took 0.02s
+Loading persistent took 0.00s
+
+File "game/script.rpy", line 344: Line is followed by a block, despite not being a menu choice. Did you forget a colon at the end of the line?
+    "ni hao"
+            ^
+
+File "game/script.rpy", line 337: invalid syntax
+    try = True
+         ^
+    
+
+File "game/script.rpy", line 340: invalid syntax
+    try = True
+         ^
+    
+DPI scale factor: 1.500000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Interface start took 0.31s
+>>>>>>> Stashed changes
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1920, 1080)
@@ -1286,9 +1537,10 @@ Vendor: "b'NVIDIA Corporation'"
 Renderer: b'NVIDIA GeForce MX250/PCIe/SSE2'
 Version: b'4.6.0 NVIDIA 512.72'
 Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1155, 650) drawable=(1155, 650)
+Screen sizes: virtual=(1920, 1080) physical=(1152, 648) drawable=(1152, 648)
 Maximum texture size: 4096x4096
 Resetting cache.
+<<<<<<< Updated upstream
 Bootstrap to the start of init.init took 1925.58s
 Early init took 0.00s
 Loader init took 0.04s
@@ -1322,6 +1574,33 @@ Save bytecode. took 0.02s
 Running _start took 0.00s
 Performance test:
 Interface start took 0.06s
+=======
+Bootstrap to the start of init.init took 604.84s
+Early init took 0.00s
+Loader init took 0.04s
+Loading error handling took 0.02s
+Loading script took 0.17s
+Loading save slot metadata. took 0.02s
+Loading persistent took 0.00s
+
+File "game/script.rpy", line 344: Line is followed by a block, despite not being a menu choice. Did you forget a colon at the end of the line?
+    "ni hao"
+            ^
+
+File "game/script.rpy", line 337: invalid syntax
+    try = True
+         ^
+    
+
+File "game/script.rpy", line 340: invalid syntax
+    try = True
+         ^
+    
+DPI scale factor: 1.500000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Interface start took 0.32s
+>>>>>>> Stashed changes
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1920, 1080)
@@ -1331,16 +1610,21 @@ Vendor: "b'NVIDIA Corporation'"
 Renderer: b'NVIDIA GeForce MX250/PCIe/SSE2'
 Version: b'4.6.0 NVIDIA 512.72'
 Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1155, 650) drawable=(1155, 650)
+Screen sizes: virtual=(1920, 1080) physical=(1152, 648) drawable=(1152, 648)
 Maximum texture size: 4096x4096
 Resetting cache.
+<<<<<<< Updated upstream
 Bootstrap to the start of init.init took 1930.39s
+=======
+Bootstrap to the start of init.init took 605.59s
+>>>>>>> Stashed changes
 Early init took 0.00s
 Loader init took 0.04s
 Loading error handling took 0.02s
 Loading script took 0.14s
 Loading save slot metadata. took 0.02s
 Loading persistent took 0.00s
+<<<<<<< Updated upstream
 Faled to initialize steam: FileNotFoundError("Could not find module 'C:\\Users\\joann\\Downloads\\renpy-8.0.3-sdk\\lib\\py3-windows-x86_64\\steam_api64.dll' (or one of its dependencies). Try using the full path with constructor syntax.")
 Running init code took 0.03s
 Loading analysis data took 0.02s
@@ -1367,6 +1651,26 @@ Save bytecode. took 0.02s
 Running _start took 0.00s
 Performance test:
 Interface start took 0.06s
+=======
+
+File "game/script.rpy", line 344: Line is followed by a block, despite not being a menu choice. Did you forget a colon at the end of the line?
+    "ni hao"
+            ^
+
+File "game/script.rpy", line 337: invalid syntax
+    try = True
+         ^
+    
+
+File "game/script.rpy", line 340: invalid syntax
+    try = True
+         ^
+    
+DPI scale factor: 1.500000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Interface start took 0.30s
+>>>>>>> Stashed changes
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1920, 1080)
@@ -1376,16 +1680,23 @@ Vendor: "b'NVIDIA Corporation'"
 Renderer: b'NVIDIA GeForce MX250/PCIe/SSE2'
 Version: b'4.6.0 NVIDIA 512.72'
 Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1155, 650) drawable=(1155, 650)
+Screen sizes: virtual=(1920, 1080) physical=(1152, 648) drawable=(1152, 648)
 Maximum texture size: 4096x4096
 Resetting cache.
+<<<<<<< Updated upstream
 Bootstrap to the start of init.init took 1942.78s
 Early init took 0.00s
 Loader init took 0.05s
+=======
+Bootstrap to the start of init.init took 607.30s
+Early init took 0.00s
+Loader init took 0.04s
+>>>>>>> Stashed changes
 Loading error handling took 0.02s
 Loading script took 0.14s
 Loading save slot metadata. took 0.02s
 Loading persistent took 0.00s
+<<<<<<< Updated upstream
 Faled to initialize steam: FileNotFoundError("Could not find module 'C:\\Users\\joann\\Downloads\\renpy-8.0.3-sdk\\lib\\py3-windows-x86_64\\steam_api64.dll' (or one of its dependencies). Try using the full path with constructor syntax.")
 Running init code took 0.03s
 Loading analysis data took 0.01s
@@ -1412,6 +1723,22 @@ Save bytecode. took 0.02s
 Running _start took 0.00s
 Performance test:
 Interface start took 0.05s
+=======
+
+File "game/script.rpy", line 337: invalid syntax
+    try = True
+         ^
+    
+
+File "game/script.rpy", line 340: invalid syntax
+    try = True
+         ^
+    
+DPI scale factor: 1.500000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Interface start took 0.32s
+>>>>>>> Stashed changes
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1920, 1080)
@@ -1421,13 +1748,18 @@ Vendor: "b'NVIDIA Corporation'"
 Renderer: b'NVIDIA GeForce MX250/PCIe/SSE2'
 Version: b'4.6.0 NVIDIA 512.72'
 Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1155, 650) drawable=(1155, 650)
+Screen sizes: virtual=(1920, 1080) physical=(1152, 648) drawable=(1152, 648)
 Maximum texture size: 4096x4096
 Resetting cache.
+<<<<<<< Updated upstream
 Bootstrap to the start of init.init took 2377.68s
+=======
+Bootstrap to the start of init.init took 616.58s
+>>>>>>> Stashed changes
 Early init took 0.00s
-Loader init took 0.05s
+Loader init took 0.04s
 Loading error handling took 0.02s
+<<<<<<< Updated upstream
 Loading script took 0.13s
 Loading save slot metadata. took 0.03s
 Loading persistent took 0.00s
@@ -1484,6 +1816,25 @@ Save bytecode. took 0.02s
 Running _start took 0.00s
 Performance test:
 Interface start took 0.06s
+=======
+Loading script took 0.14s
+Loading save slot metadata. took 0.02s
+Loading persistent took 0.00s
+
+File "game/script.rpy", line 337: invalid syntax
+    try = True
+         ^
+    
+
+File "game/script.rpy", line 340: invalid syntax
+    try = True
+         ^
+    
+DPI scale factor: 1.500000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Interface start took 0.31s
+>>>>>>> Stashed changes
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1920, 1080)
@@ -1493,15 +1844,24 @@ Vendor: "b'NVIDIA Corporation'"
 Renderer: b'NVIDIA GeForce MX250/PCIe/SSE2'
 Version: b'4.6.0 NVIDIA 512.72'
 Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1155, 650) drawable=(1155, 650)
+Screen sizes: virtual=(1920, 1080) physical=(1152, 648) drawable=(1152, 648)
 Maximum texture size: 4096x4096
 Resetting cache.
+<<<<<<< Updated upstream
 Bootstrap to the start of init.init took 2609.60s
 Early init took 0.00s
 Loader init took 0.04s
 Loading error handling took 0.02s
 Loading script took 0.15s
 Loading save slot metadata. took 0.02s
+=======
+Bootstrap to the start of init.init took 669.70s
+Early init took 0.00s
+Loader init took 0.04s
+Loading error handling took 0.01s
+Loading script took 0.14s
+Loading save slot metadata. took 0.01s
+>>>>>>> Stashed changes
 Loading persistent took 0.00s
 Faled to initialize steam: FileNotFoundError("Could not find module 'C:\\Users\\joann\\Downloads\\renpy-8.0.3-sdk\\lib\\py3-windows-x86_64\\steam_api64.dll' (or one of its dependencies). Try using the full path with constructor syntax.")
 Running init code took 0.03s
@@ -1509,6 +1869,7 @@ Loading analysis data took 0.01s
 Analyze and compile ATL took 0.00s
 Index archives took 0.00s
 Backing up script files to 'C:\\Users\\joann\\AppData\\Roaming/RenPy/backups\\TTSH-OB':
+<<<<<<< Updated upstream
 Dump and make backups. took 0.05s
 Cleaning cache took 0.00s
 Making clean stores took 0.00s
@@ -1517,18 +1878,28 @@ DPI scale factor: 1.500000
 nvdrs: Loaded, about to disable thread optimizations.
 nvdrs: Disabled thread optimizations.
 Creating interface object took 0.29s
+=======
+Dump and make backups. took 0.04s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.02s
+DPI scale factor: 1.500000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.25s
+>>>>>>> Stashed changes
 Cleaning stores took 0.00s
-Init translation took 0.04s
+Init translation took 0.03s
 Build styles took 0.00s
 Load screen analysis took 0.00s
 Analyze screens took 0.01s
 Save screen analysis took 0.02s
-Prepare screens took 0.06s
-Save pyanalysis. took 0.02s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.00s
 Save bytecode. took 0.02s
 Running _start took 0.00s
 Performance test:
-Interface start took 0.06s
+Interface start took 0.05s
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1920, 1080)
@@ -1538,32 +1909,45 @@ Vendor: "b'NVIDIA Corporation'"
 Renderer: b'NVIDIA GeForce MX250/PCIe/SSE2'
 Version: b'4.6.0 NVIDIA 512.72'
 Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1155, 650) drawable=(1155, 650)
+Screen sizes: virtual=(1920, 1080) physical=(1152, 648) drawable=(1152, 648)
 Maximum texture size: 4096x4096
 Resetting cache.
+<<<<<<< Updated upstream
 Bootstrap to the start of init.init took 2628.75s
+=======
+Bootstrap to the start of init.init took 703.32s
+>>>>>>> Stashed changes
 Early init took 0.00s
 Loader init took 0.04s
 Loading error handling took 0.02s
-Loading script took 0.15s
+Loading script took 0.14s
 Loading save slot metadata. took 0.02s
 Loading persistent took 0.00s
 Faled to initialize steam: FileNotFoundError("Could not find module 'C:\\Users\\joann\\Downloads\\renpy-8.0.3-sdk\\lib\\py3-windows-x86_64\\steam_api64.dll' (or one of its dependencies). Try using the full path with constructor syntax.")
+<<<<<<< Updated upstream
 Running init code took 0.03s
 Loading analysis data took 0.02s
 Analyze and compile ATL took 0.00s
 Index archives took 0.00s
 Backing up script files to 'C:\\Users\\joann\\AppData\\Roaming/RenPy/backups\\TTSH-OB':
 Dump and make backups. took 0.06s
+=======
+Running init code took 0.02s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\joann\\AppData\\Roaming/RenPy/backups\\TTSH-OB':
+Dump and make backups. took 0.04s
+>>>>>>> Stashed changes
 Cleaning cache took 0.00s
 Making clean stores took 0.00s
-Initial gc. took 0.04s
+Initial gc. took 0.03s
 DPI scale factor: 1.500000
 nvdrs: Loaded, about to disable thread optimizations.
 nvdrs: Disabled thread optimizations.
-Creating interface object took 0.30s
+Creating interface object took 0.26s
 Cleaning stores took 0.00s
-Init translation took 0.04s
+Init translation took 0.03s
 Build styles took 0.00s
 Load screen analysis took 0.00s
 Analyze screens took 0.01s
@@ -1573,7 +1957,7 @@ Save pyanalysis. took 0.00s
 Save bytecode. took 0.02s
 Running _start took 0.00s
 Performance test:
-Interface start took 0.06s
+Interface start took 0.05s
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1920, 1080)
@@ -1583,9 +1967,10 @@ Vendor: "b'NVIDIA Corporation'"
 Renderer: b'NVIDIA GeForce MX250/PCIe/SSE2'
 Version: b'4.6.0 NVIDIA 512.72'
 Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1155, 650) drawable=(1155, 650)
+Screen sizes: virtual=(1920, 1080) physical=(1152, 648) drawable=(1152, 648)
 Maximum texture size: 4096x4096
 Resetting cache.
+<<<<<<< Updated upstream
 Bootstrap to the start of init.init took 2649.12s
 Early init took 0.00s
 Loader init took 0.04s
@@ -1622,30 +2007,44 @@ Loading save slot metadata. took 0.02s
 Loading persistent took 0.00s
 Faled to initialize steam: FileNotFoundError("Could not find module 'C:\\Users\\joann\\Downloads\\renpy-8.0.3-sdk\\lib\\py3-windows-x86_64\\steam_api64.dll' (or one of its dependencies). Try using the full path with constructor syntax.")
 Running init code took 0.04s
+=======
+Bootstrap to the start of init.init took 706.63s
+Early init took 0.00s
+Loader init took 0.04s
+Loading error handling took 0.01s
+Loading script took 0.11s
+Loading save slot metadata. took 0.02s
+Loading persistent took 0.00s
+Faled to initialize steam: FileNotFoundError("Could not find module 'C:\\Users\\joann\\Downloads\\renpy-8.0.3-sdk\\lib\\py3-windows-x86_64\\steam_api64.dll' (or one of its dependencies). Try using the full path with constructor syntax.")
+Running init code took 0.03s
+>>>>>>> Stashed changes
 Loading analysis data took 0.01s
 Analyze and compile ATL took 0.00s
 Index archives took 0.00s
-Backing up script files to 'C:\\Users\\joann\\AppData\\Roaming/RenPy/backups\\TTSH-OB':
-Dump and make backups. took 0.05s
+Dump and make backups. took 0.04s
 Cleaning cache took 0.00s
 Making clean stores took 0.00s
 Initial gc. took 0.03s
 DPI scale factor: 1.500000
 nvdrs: Loaded, about to disable thread optimizations.
 nvdrs: Disabled thread optimizations.
+<<<<<<< Updated upstream
 Creating interface object took 0.27s
+=======
+Creating interface object took 0.24s
+>>>>>>> Stashed changes
 Cleaning stores took 0.00s
 Init translation took 0.03s
 Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.02s
+Load screen analysis took 0.03s
+Analyze screens took 0.00s
+Save screen analysis took 0.00s
 Prepare screens took 0.06s
-Save pyanalysis. took 0.02s
-Save bytecode. took 0.02s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.00s
 Running _start took 0.00s
 Performance test:
-Interface start took 0.06s
+Interface start took 0.05s
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1920, 1080)
@@ -1655,9 +2054,10 @@ Vendor: "b'NVIDIA Corporation'"
 Renderer: b'NVIDIA GeForce MX250/PCIe/SSE2'
 Version: b'4.6.0 NVIDIA 512.72'
 Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1155, 650) drawable=(1155, 650)
+Screen sizes: virtual=(1920, 1080) physical=(1152, 648) drawable=(1152, 648)
 Maximum texture size: 4096x4096
 Resetting cache.
+<<<<<<< Updated upstream
 Bootstrap to the start of init.init took 2930.22s
 Early init took 0.00s
 Loader init took 0.04s
@@ -1786,6 +2186,37 @@ While running game code:
     default look = False
 Exception: store.look is being given a default a second time.
 Interface start took 0.06s
+=======
+Bootstrap to the start of init.init took 1274.53s
+Early init took 0.00s
+Loader init took 0.04s
+Loading error handling took 0.02s
+Loading script took 0.14s
+Loading save slot metadata. took 0.02s
+Loading persistent took 0.00s
+
+File "game/additional_script_screen/tutorial.rpy", line 16: textbutton expects a non-empty block.
+    textbutton "Ok":
+                    ^
+
+File "game/additional_script_screen/tutorial.rpy", line 17: expected statement.
+    <<<<<<< HEAD
+                ^
+
+File "game/additional_script_screen/tutorial.rpy", line 216: expected statement.
+    =======
+          ^
+
+File "game/additional_script_screen/tutorial.rpy", line 218: expected statement.
+    >>>>>>> 78e40782385dc108c518ed3f3a06cf511df0b3fe
+                                                    ^
+
+File "game/script.rpy", line 291: Indentation mismatch.
+DPI scale factor: 1.500000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Interface start took 0.40s
+>>>>>>> Stashed changes
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1920, 1080)
@@ -1795,10 +2226,14 @@ Vendor: "b'NVIDIA Corporation'"
 Renderer: b'NVIDIA GeForce MX250/PCIe/SSE2'
 Version: b'4.6.0 NVIDIA 512.72'
 Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1155, 650) drawable=(1155, 650)
+Screen sizes: virtual=(1920, 1080) physical=(1152, 648) drawable=(1152, 648)
 Maximum texture size: 4096x4096
 Resetting cache.
+<<<<<<< Updated upstream
 Bootstrap to the start of init.init took 3049.56s
+=======
+Bootstrap to the start of init.init took 1285.36s
+>>>>>>> Stashed changes
 Early init took 0.00s
 Loader init took 0.04s
 Loading error handling took 0.02s
@@ -1806,6 +2241,7 @@ Loading script took 0.13s
 Loading save slot metadata. took 0.02s
 Loading persistent took 0.00s
 Faled to initialize steam: FileNotFoundError("Could not find module 'C:\\Users\\joann\\Downloads\\renpy-8.0.3-sdk\\lib\\py3-windows-x86_64\\steam_api64.dll' (or one of its dependencies). Try using the full path with constructor syntax.")
+<<<<<<< Updated upstream
 Running init code took 0.02s
 Loading analysis data took 0.01s
 Analyze and compile ATL took 0.00s
@@ -2122,12 +2558,33 @@ Build styles took 0.00s
 Load screen analysis took 0.00s
 Analyze screens took 0.01s
 Save screen analysis took 0.02s
+=======
+Running init code took 0.03s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Index archives took 0.00s
+Dump and make backups. took 0.04s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.02s
+DPI scale factor: 1.500000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.30s
+Cleaning stores took 0.00s
+Init translation took 0.04s
+Build styles took 0.00s
+Load screen analysis took 0.03s
+Analyze screens took 0.00s
+Save screen analysis took 0.00s
+>>>>>>> Stashed changes
 Prepare screens took 0.05s
 Save pyanalysis. took 0.00s
-Save bytecode. took 0.00s
+Save bytecode. took 0.02s
 Running _start took 0.00s
 Performance test:
 Interface start took 0.05s
+<<<<<<< Updated upstream
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1920, 1080)
@@ -4193,6 +4650,8 @@ Save bytecode. took 0.02s
 Running _start took 0.00s
 Performance test:
 Interface start took 0.07s
+=======
+>>>>>>> Stashed changes
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1920, 1080)
@@ -4202,7 +4661,7 @@ Vendor: "b'NVIDIA Corporation'"
 Renderer: b'NVIDIA GeForce MX250/PCIe/SSE2'
 Version: b'4.6.0 NVIDIA 512.72'
 Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1155, 650) drawable=(1155, 650)
+Screen sizes: virtual=(1920, 1080) physical=(1152, 648) drawable=(1152, 648)
 Maximum texture size: 4096x4096
 Resetting cache.
 Bootstrap to the start of init.init took 4220.00s

@@ -494,6 +494,8 @@ label splashscreen:
     scene black
     with Pause(1)
 
+    $ renpy.movie_cutscene ("video/FINAL NTU EDGE Game Intro.webm")
+
     python:
         persistent.user_name = renpy.input("Please input your name \n (Max 15 characters):", length=15, screen = u'give_input')
         persistent.user_name = persistent.user_name.strip()
