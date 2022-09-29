@@ -1,8 +1,15 @@
 default trust_level = 0
+default npc_shape = "Square"
 
-screen show_trust():
+screen show_npc_status():
     frame:
+        xalign 0.5
+        xmaximum 1000
+        ymaximum 300
+        xpos 1710 ypos 30
+        xpadding 30
+        ypadding 30
         vbox:
             text "Trust Level: [trust_level]"
-            textbutton "Okay":
-                action Return(True)
+            text "Shape: [npc_shape]"
+            

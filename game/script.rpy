@@ -7,7 +7,6 @@ define p = Character('Patient', color="#c8c8ff", what_outlines=[(5, "#000000", 0
 ##################start scene_1_1 (chapter1_scene1)
 
 label start: 
-    jump scene_1_3_1_2
     scene black
     with Pause(1)
     voice "audio/scene_1/scene1_1.ogg"
@@ -343,9 +342,11 @@ label scene_1_3_1_5:
                     jump scene_1_3_1_5
             jump final_scene1A
         
-        "ni hao":
+        "You decide to talk to the nurse at the reception and inquire about the long wait time":
             return
 
+        "You decide to ask the help from another nurse to take over and assist the situation. You observe how the nurse resolves the conflict.":
+            return
 
     return
 

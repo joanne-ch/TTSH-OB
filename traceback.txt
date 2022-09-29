@@ -1,46 +1,34 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-<<<<<<< Updated upstream
-  File "game/script.rpy", line 175, in script
-    jump scene_1_3_2
-ScriptError: could not find label 'scene_1_3_2'.
-=======
-  File "game/script.rpy", line 314, in script call
-    call narration("You quickly dropped the subject to prevent another rant")
-  File "game/script.rpy", line 314, in script call
-    call narration("You quickly dropped the subject to prevent another rant")
-ScriptError: could not find label 'narration'.
->>>>>>> Stashed changes
+  File "game/script.rpy", line 336, in script
+    call screen conflict_success
+  File "renpy/common/000statements.rpy", line 609, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+Exception: Screen conflict_success is not known.
+
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-<<<<<<< Updated upstream
-  File "game/script.rpy", line 175, in script
-    jump scene_1_3_2
-  File "C:\Users\joann\Downloads\renpy-8.0.3-sdk\renpy\ast.py", line 1974, in execute
-    rv = renpy.game.script.lookup(target)
-  File "C:\Users\joann\Downloads\renpy-8.0.3-sdk\renpy\script.py", line 927, in lookup
-    raise ScriptError("could not find label '%s'." % str(original))
-ScriptError: could not find label 'scene_1_3_2'.
-=======
-  File "game/script.rpy", line 314, in script call
-    call narration("You quickly dropped the subject to prevent another rant")
-  File "C:\Users\joann\Downloads\renpy-8.0.3-sdk\renpy\ast.py", line 1705, in execute
-    rv = renpy.game.context().call(label, return_site=self.next.name)
-  File "game/script.rpy", line 314, in script call
-    call narration("You quickly dropped the subject to prevent another rant")
-  File "C:\Users\joann\Downloads\renpy-8.0.3-sdk\renpy\script.py", line 927, in lookup
-    raise ScriptError("could not find label '%s'." % str(original))
-ScriptError: could not find label 'narration'.
->>>>>>> Stashed changes
+  File "game/script.rpy", line 336, in script
+    call screen conflict_success
+  File "C:\Users\joann\Downloads\renpy-8.0.3-sdk\renpy\ast.py", line 2232, in execute
+    self.call("execute")
+  File "C:\Users\joann\Downloads\renpy-8.0.3-sdk\renpy\ast.py", line 2220, in call
+    return renpy.statements.call(method, parsed, *args, **kwargs)
+  File "C:\Users\joann\Downloads\renpy-8.0.3-sdk\renpy\statements.py", line 281, in call
+    return method(parsed, *args, **kwargs)
+  File "renpy/common/000statements.rpy", line 609, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+  File "C:\Users\joann\Downloads\renpy-8.0.3-sdk\renpy\exports.py", line 3167, in call_screen
+    show_screen(_screen_name, _transient=True, *args, **kwargs)
+  File "C:\Users\joann\Downloads\renpy-8.0.3-sdk\renpy\display\screen.py", line 1185, in show_screen
+    raise Exception("Screen %s is not known.\n" % (name[0],))
+Exception: Screen conflict_success is not known.
+
 
 Windows-10-10.0.22000 AMD64
 Ren'Py 8.0.3.22090809
 BetaGame 1.0
-<<<<<<< Updated upstream
-Thu Sep 29 16:28:26 2022
-=======
-Thu Sep 29 22:50:47 2022
->>>>>>> Stashed changes
+Fri Sep 30 00:01:19 2022

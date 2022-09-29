@@ -5,7 +5,7 @@ screen guidebook_sample():
         add "images/notebook/notebook.png" xalign 0.5 yalign 0.5
 
         imagebutton:
-            idle "images/notebook/cross icon.png" xpos 1530 ypos 90
+            idle "images/notebook/cross icon.png" xpos 1550 ypos 110
             action [Hide("guidebook_sample"), Hide("tutorial_guidebook_2"), Return(True)]
 
 screen guidebook():

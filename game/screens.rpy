@@ -217,11 +217,13 @@ screen choice(items):
             if (length <= 45):
                 textbutton i.caption action i.action text_style "choice_button_text_short"
             else: 
-                if (length >= 100):
+                if (length >= 116):
+                    textbutton i.caption action i.action text_style "choice_button_text_tootoolong"
+                elif(length >= 100):
                     textbutton i.caption action i.action text_style "choice_button_text_toolong"
                 else:
                     textbutton i.caption action i.action  text_style "choice_button_text_long"
-            #text "[length]"
+            
 
             
 
@@ -253,6 +255,12 @@ style choice_button_text_toolong is default:
     properties gui.button_text_properties("choice_button")
     outlines [(5, "#000000", 0, 0)]
     ypos 45
+    size 40
+
+style choice_button_text_tootoolong is default:
+    properties gui.button_text_properties("choice_button")
+    outlines [(5, "#000000", 0, 0)]
+    ypos 28
     size 40
 
 ## Quick Menu screen ###########################################################
@@ -483,7 +491,7 @@ screen input(prompt):
 
 screen give_input(prompt):
     add "images/input name/Confirmation Box.png" xpos 300 ypos 150 
-    text prompt style "input_prompt" xpos 590 ypos 360 color "#000000" outlines [(5, "#ffffff", 0, 0)] size 70
+    text prompt style "input_prompt" xpos 590 ypos 390 color "#000000" outlines [(5, "#ffffff", 0, 0)] size 70
 
     add "images/input name/input box.png" xpos 560 ypos 450
     input id "input" xpos 640 ypos 605 style "input_prompt" size 50
