@@ -1,20 +1,24 @@
 ﻿
 ######################import scene 1 character, "doctor A" and "me"
-define d = Character('doctor A', color="#c8ffc8", what_outlines=[(5, "#000000", 0, 0)])
+define d = Character('Doctor A', color="#c8ffc8", what_outlines=[(5, "#000000", 0, 0)])
 define m = Character('me', color="#c8c8ff")
-define p = Character('patient', color="#c8c8ff")
+define p = Character('Patient', color="#c8c8ff", what_outlines=[(5, "#000000", 0, 0)])
 
 ##################start scene_1_1 (chapter1_scene1)
-image movie = Movie(size=(1280, 720), xalign=0.5, yalign=0.5)
+
 label start: 
 
     scene black
     with Pause(1)
+    voice "audio/scene_1/scene1_1.ogg"
     centered "You have just become a new-hire of TTSH, it is your first day at the hospital as an official worker (Nurse)."
+    
+    voice "audio/scene_1/scene1_2.ogg"
     centered "You were informed that you will be given a tour today around the hospital and possibly get to know some of your colleagues."
+    
+    voice "audio/scene_1/scene1_3.ogg"
     centered "Excited and a bit nervous, you enter the main lobby of Tan Tock Seng Hospital."
     $ renpy.movie_cutscene ("video/Opening.webm")
-    with Pause(3)
 
     scene bg main_background #import background
     with fade
@@ -23,7 +27,7 @@ label start:
 
     d "Good morning, so good to finally meet you in person [persistent.user_name]. We are very excited to have you on board of TTSH. My name is Doctor A. "
 
-    d " I believe HR has briefed you that you’d be working with me for the first few months of your appointment."
+    d "I believe HR has briefed you that you’d be working with me for the first few months of your appointment."
 
     d "Today, I will just be showing you around the hospital, our offices and do feel free to ask any questions."
 
@@ -139,10 +143,6 @@ label scene_1_2_2:
     menu:
         "Can you run me through the first floor again…":
             jump scene_1_2_2
-        "Can you run me through the second floor again…":
-            jump scene_1_2_2
-        "Can you run me through the third floor again…":
-            jump scene_1_2_2
         "Can you run me through the main office area again…":
             jump scene_1_2_2
         "Can you run me through the nursing ward again…":
@@ -156,10 +156,14 @@ label scene_1_2_2:
 label scene_1_3:
     d "Alright, I hope that clarifies everything"
 
-    centered "(Doctor A receives a phone call, after taking the call, he needed to leave for an emergency situation, he promises he will be back in sometime later)"
-    centered "You are now in the nursing ward hallway. As you patiently wait for A’s return, you notice a patient sitting impatiently with her arm crossed."
-    centered "She seems quite upset and is clearly waiting for some sort of appointment."
-    centered "While you have been hired as a nurse, it is not your first official day of work, do you want to approach this upset patient?"
+    centered "Doctor A receives a phone call, after taking the call, she needed to leave for an emergency situation, she promises she will be back in sometime later"
+
+    call screen narration("You are now in the nursing ward hallway. As you patiently wait for A’s return, you notice a patient sitting impatiently with her arm crossed.")
+    show hallway_grandma
+    centered ""
+    call screen narration("She seems quite upset and is clearly waiting for some sort of appointment.")
+    $ renpy.movie_cutscene ("video/angry grandma.webm")
+    call screen narration("While you have been hired as a nurse, it is not your first official day of work, do you want to approach this upset patient?")
 
     call screen tutorial 
 
@@ -171,23 +175,93 @@ label scene_1_3:
             jump scene_1_3_2
     return
 
+default look = False
+default second_loop = False
 label scene_1_3_1:
-    centered "You see a elderly female patient impatiently seated in the hallway. She seems to be waiting for something, tapping her thumbs and cursing under her lips."
+
+    image grandma icon leg:
+        animation
+        xpos 1350
+        ypos 1100
+        zoom 1.2
+        "grandma icon leg.png" 
+        rotate 0.0
+        easeout 0.3 rotate 4.0
+        easein 0.3 rotate 0.0
+        repeat
+
+    image grandma icon:
+        animation
+        xpos 1350
+        ypos 1100
+        zoom 1.2
+        "grandma icon.png" 
+        rotate 0.0
+        easeout 0.3 rotate 4.0
+        easein 0.3 rotate 0.0
+        repeat
+
+    image angry icon:
+        animation
+        xpos 1150 
+        ypos 400
+        "angry icon.png"
+        zoom 0.6 
+        easeout 0.3 zoom 1.0
+        easein 0.3 zoom 0.6
+        repeat
+    
+    image grandma icon static:
+        ypos 2000
+        xpos 1450
+        "grandma icon static.png"
+        zoom 2.8
+        
+    if (second_loop == False):
+        call screen narration("You see a elderly female patient impatiently seated in the hallway. She seems to be waiting for something, tapping her thumbs and cursing under her lips.")
+    
+    show nursing hallway
+    if look: 
+        show grandma icon leg
+    else:
+        show grandma icon
+    
+    show angry icon
+    
+    voice "audio/angry-grandma.ogg"
+    centered ""
 
     menu:
         "*Take a closer look at the patient before speaking*":
-            centered "You got a closer look at the patient. She is an elderly lady likely in her 60s. She seems to be mumbling to herself while seated in the patient ward hall. You see that she also carries a walking stick, and there were signs of recent operation on her right leg."
+            call screen narration("You got a closer look at the patient. She is an elderly lady likely in her 60s. She seems to be mumbling to herself while seated in the patient ward hall. You see that she also carries a walking stick, and there were signs of recent operation on her right leg.")
+            $ look = True
+            $ second_loop = True
             jump scene_1_3_1
+
         "Mam, can I help you?":
+            hide grandma icon leg
+            hide grandma icon
+            
+            show grandma icon static
+
             p"You can help me by getting my appointment started! I’ve been waiting here for 2 HOURS, can you imagine? And I just had my surgery! This is unacceptable!"
+            
             jump scene_1_3_1_2
 
 label scene_1_3_1_2:
-    centered "You decide to try to calm her down first"
-    call screen show_trust
+    image happy grandma:
+        ypos 2000
+        xpos 1450
+        "happy grandma.png"
+        zoom 2.8
+    call screen narration("You decide to try to calm her down first")
+    show screen show_trust
     menu:
         "I’m so sorry for your situation mam, it is a busy day for the hospital so I hope you may understand.":
             $trust_level += 1
+            hide angry icon
+            hide grandma icon static
+            show happy grandma
             p "I’m sure you’re sorry, but I have already waited for so long. But I guess you are right, there are a lot of people today for some reason. But your hospital really ought to improve your wait time."
             jump scene_1_3_1_3
         "I’m so sorry that you feel this way, but it is a busy day for the hospital so I hope you understand.":
@@ -196,9 +270,13 @@ label scene_1_3_1_2:
         "Mam. I need you to calm down, this isn’t going to help you get in any sooner. You are only making a scene.":
             $trust_level -=1
             p "How dare you tell me what to do? I am making a scene? How about you go and ask why they are making us wait for so long?"
+                
             jump scene_1_3_1_3
         "Mam, I will go talk to the doctor in charge right away, but I think you should also calm down first.":
             $trust_level = trust_level + 2
+            hide angry icon
+            hide grandma icon static
+            show happy grandma
             p"That’s what I like to hear, you better go check what’s going on with the clinic today."
             jump scene_1_3_1_3
 

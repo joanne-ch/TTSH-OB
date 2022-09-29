@@ -2,10 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 16: invalid syntax
-    renpy.movie_cutscene "Opening.avi"
+File "game/script.rpy", line 236: end of line expected.
+    hide grandma iccon leg:
                           ^
-    
 
 Ren'Py Version: Ren'Py 8.0.3.22090809
-Wed Sep 28 23:02:50 2022
+Thu Sep 29 16:25:48 2022

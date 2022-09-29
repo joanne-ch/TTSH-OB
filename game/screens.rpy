@@ -123,7 +123,9 @@ init python:
 
 style window is default
 style say_label is default
-style say_dialogue is default
+style say_dialogue is default:
+    line_spacing 10
+
 style say_thought is say_dialogue
 
 style namebox is default
@@ -206,31 +208,52 @@ style input:
 ## https://www.renpy.org/doc/html/screen_special.html#choice
 
 screen choice(items):
+    use overlay
     style_prefix "choice"
-
-    vbox:
+    $ space = 0 / len(items)
+    vbox spacing space:
         for i in items:
-            textbutton i.caption action i.action
+            $ length = len(i[0])
+            if (length <= 45):
+                textbutton i.caption action i.action text_style "choice_button_text_short"
+            else: 
+                if (length >= 100):
+                    textbutton i.caption action i.action text_style "choice_button_text_toolong"
+                else:
+                    textbutton i.caption action i.action  text_style "choice_button_text_long"
+            #text "[length]"
 
+            
 
 style choice_vbox is vbox
 style choice_button is button
-style choice_button_text is button_text:
-    outlines [(5, "#000000", 0, 0)] 
+style choice_button_text is button_text
 
 style choice_vbox:
     xalign 0.5
     ypos 405
-    yanchor 0.5
+    yanchor 0.38
 
-    spacing gui.choice_spacing
+    #spacing gui.choice_spacing
 
 style choice_button is default:
     properties gui.button_properties("choice_button")
 
-style choice_button_text is default:
+style choice_button_text_short is default:
     properties gui.button_text_properties("choice_button")
+    outlines [(5, "#000000", 0, 0)]
+    ypos 65
 
+style choice_button_text_long is default:
+    properties gui.button_text_properties("choice_button")
+    outlines [(5, "#000000", 0, 0)]
+    ypos 40
+
+style choice_button_text_toolong is default:
+    properties gui.button_text_properties("choice_button")
+    outlines [(5, "#000000", 0, 0)]
+    ypos 45
+    size 40
 
 ## Quick Menu screen ###########################################################
 ##
