@@ -325,7 +325,7 @@ label scene_1_3_1_4:
 
     return 
 
-default try = False
+default tried = False
 
 label scene_1_3_1_5:
     call screen narration("You contemplate what is the best course of action next, hopefully this can resolve the situation")
@@ -333,26 +333,29 @@ label scene_1_3_1_5:
     menu:
         "You decide to further reassure Mdm Ho that the long wait time is normal and there’s really nothing you can do for now.":
             if (trust_level >= 1):
-                call screen conflict_success
+                call screen conflict_win
+                jump final_scene1A
             else:
-                if try:
-                    return
-                    #call screen conflict_fail
+                if tried:
+                    jump final_scene1A
                 else:
+                    call screen conflict_failure
                     jump scene_1_3_1_5
-            jump final_scene1A
+
         
         "You decide to talk to the nurse at the reception and inquire about the long wait time":
-            return
+            call screen conflict_win
+            jump final_scene1A
 
         "You decide to ask the help from another nurse to take over and assist the situation. You observe how the nurse resolves the conflict.":
-            return
-
+            call screen narration("You observed how the nurse calmly and patiently explained the congested waiting time for SOC to the patient.")
+            call screen narration(" You feel that you learnt something new about resolving conflict with patients. It seems that you will have to do a better job at using the six tools to analyse the patient and the nature of the conflict.")
+            call screen narration("Refer to your guidebook next time to better deal with conflicts.")
+            jump final_scene1A
     return
 
 label final_scene1A:
-    call screen narration("You observed how the nurse calmly and patiently explained the congested waiting time for SOC to the patient. You feel that you learnt something new about resolving conflict with patients.")
-    call screen narration("It seems that you will have to do a better job at using the six tools to analyse the patient and the nature of the conflict. Refer to your guidebook next time to better deal with conflicts.")
+    call screen narration("It seems that the situation has been resolved, regardless of the outcome, you return to the spot where you were meeting for Doctor A, Doctor A soon returns and reconvenes with the player")
 
-    call screen narration("")
+    return
 
