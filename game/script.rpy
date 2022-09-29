@@ -156,8 +156,10 @@ label scene_1_2_2:
 label scene_1_3:
     d "Alright, I hope that clarifies everything"
 
+    play sound "audio/phone.mp3"
     centered "Doctor A receives a phone call, after taking the call, she needed to leave for an emergency situation, she promises she will be back in sometime later"
-
+    stop sound fadeout 0.5
+    
     call screen narration("You are now in the nursing ward hallway. As you patiently wait for A’s return, you notice a patient sitting impatiently with her arm crossed.")
     show hallway_grandma
     centered ""
