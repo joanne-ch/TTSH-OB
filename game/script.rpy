@@ -167,7 +167,7 @@ label scene_1_3:
     $ renpy.movie_cutscene ("video/angry grandma.webm")
     call screen narration("While you have been hired as a nurse, it is not your first official day of work, do you want to approach this upset patient?")
 
-    call screen tutorial_1 
+    call screen tutorial 
 
     menu:
         "Even though my shift hasn’t officially started, I should help this patient. They seem very upset.":
@@ -256,13 +256,8 @@ label scene_1_3_1_2:
         xpos 1450
         "happy grandma.png"
         zoom 2.8
-    
-    call screen narration("The patient continues to rant as if you are not there. What should you do in this situation?")
-    
-    call screen tutorial_2
-    
     call screen narration("You decide to try to calm her down first")
-    show screen show_npc_status
+    show screen show_trust
     menu:
         "I’m so sorry for your situation mam, it is a busy day for the hospital so I hope you may understand.":
             $trust_level += 1
@@ -271,17 +266,14 @@ label scene_1_3_1_2:
             show happy grandma
             p "I’m sure you’re sorry, but I have already waited for so long. But I guess you are right, there are a lot of people today for some reason. But your hospital really ought to improve your wait time."
             jump scene_1_3_1_3
-
         "I’m so sorry that you feel this way, but it is a busy day for the hospital so I hope you understand.":
             p "How I feel’ is irrelevant, the fact is that I have been waiting here for 2 hours and there has been no update. It doesn’t matter if there’s a lot of people, we all deserve better treatment and wait time!”"
             jump scene_1_3_1_3
-
         "Mam. I need you to calm down, this isn’t going to help you get in any sooner. You are only making a scene.":
             $trust_level -=1
             p "How dare you tell me what to do? I am making a scene? How about you go and ask why they are making us wait for so long?"
                 
             jump scene_1_3_1_3
-
         "Mam, I will go talk to the doctor in charge right away, but I think you should also calm down first.":
             $trust_level = trust_level + 2
             hide angry icon
@@ -291,5 +283,5 @@ label scene_1_3_1_2:
             jump scene_1_3_1_3
 
 label scene_1_3_1_3:
-    
+    call screen show_trust  
     return

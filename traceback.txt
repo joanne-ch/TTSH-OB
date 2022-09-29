@@ -1,40 +1,22 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-After initialization, but before game start.
-  File "game/additional_script_screen/tutorial.rpy", line 165, in prepare_screen
-    screen tutorial_trustpoint:
-  File "game/additional_script_screen/tutorial.rpy", line 165, in prepare
-    screen tutorial_trustpoint:
-  File "game/additional_script_screen/tutorial.rpy", line 168, in prepare
-    frame:
-  File "game/additional_script_screen/tutorial.rpy", line 168, in prepare
-    frame:
-Exception: A screen named show_trust does not exist.
+While running game code:
+  File "game/script.rpy", line 175, in script
+    jump scene_1_3_2
+ScriptError: could not find label 'scene_1_3_2'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "C:\Users\joann\Downloads\renpy-8.0.3-sdk\renpy\bootstrap.py", line 277, in bootstrap
-    renpy.main.main()
-  File "C:\Users\joann\Downloads\renpy-8.0.3-sdk\renpy\main.py", line 660, in main
-    run(restart)
-  File "C:\Users\joann\Downloads\renpy-8.0.3-sdk\renpy\main.py", line 95, in run
-    renpy.display.screen.prepare_screens()
-  File "C:\Users\joann\Downloads\renpy-8.0.3-sdk\renpy\display\screen.py", line 976, in prepare_screens
-    s.ast.prepare_screen()
-  File "game/additional_script_screen/tutorial.rpy", line 165, in prepare_screen
-    screen tutorial_trustpoint:
-  File "game/additional_script_screen/tutorial.rpy", line 165, in prepare
-    screen tutorial_trustpoint:
-  File "game/additional_script_screen/tutorial.rpy", line 168, in prepare
-    frame:
-  File "game/additional_script_screen/tutorial.rpy", line 168, in prepare
-    frame:
-  File "C:\Users\joann\Downloads\renpy-8.0.3-sdk\renpy\sl2\slast.py", line 1916, in prepare
-    raise Exception("A screen named {} does not exist.".format(self.target))
-Exception: A screen named show_trust does not exist.
+  File "game/script.rpy", line 175, in script
+    jump scene_1_3_2
+  File "C:\Users\joann\Downloads\renpy-8.0.3-sdk\renpy\ast.py", line 1974, in execute
+    rv = renpy.game.script.lookup(target)
+  File "C:\Users\joann\Downloads\renpy-8.0.3-sdk\renpy\script.py", line 927, in lookup
+    raise ScriptError("could not find label '%s'." % str(original))
+ScriptError: could not find label 'scene_1_3_2'.
 
 Windows-10-10.0.22000 AMD64
 Ren'Py 8.0.3.22090809
 BetaGame 1.0
-Thu Sep 29 20:02:14 2022
+Thu Sep 29 16:28:26 2022
