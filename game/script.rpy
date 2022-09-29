@@ -344,7 +344,12 @@ label scene_1_3_1_5:
 
         
         "You decide to talk to the nurse at the reception and inquire about the long wait time":
+            call screen narration("It seems that there were really no errors in the number calling, it was simply yet another busy day at TTSH. You return with this information to the patient.")
             call screen conflict_win
+            call screen narration("She begrudgingly accepts this fact")
+            if (trust_level >= 1):
+                p"Thank you for at least trying to reach out"
+                call screen narration(" You feel somewhat reassured by this gesture")
             jump final_scene1A
 
         "You decide to ask the help from another nurse to take over and assist the situation. You observe how the nurse resolves the conflict.":
