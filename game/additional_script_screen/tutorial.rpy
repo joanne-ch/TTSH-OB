@@ -14,9 +14,6 @@ screen tutorial():
             text "While playing this game, you will often be {color=#f4b157}making choices {/color}that may {color=#f4b157}change the trajectory of your story {/color}and the challenges you will have to overcome.Don’t worry about missing out, after finishing each chapter, you will be able to {color=#f4b157}replay and choose the different choices {/color} .With that said, we encourage you to fully experience the game at least once before replaying any sequence"
             text ""
             textbutton "Ok":
-<<<<<<< Updated upstream
-                action Return(True)
-=======
                 action Return(True)
 
 init python:
@@ -215,4 +212,3 @@ screen tutorial_trustpoint:
 
 
 
->>>>>>> Stashed changes

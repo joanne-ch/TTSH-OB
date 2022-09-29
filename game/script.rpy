@@ -258,10 +258,6 @@ label scene_1_3_1_2:
         xpos 1450
         "happy grandma.png"
         zoom 2.8
-<<<<<<< Updated upstream
-    call screen narration("You decide to try to calm her down first")
-    show screen show_trust
-=======
     
     call screen narration("The patient continues to rant as if you are not there. What should you do in this situation?")
     
@@ -278,7 +274,6 @@ label scene_1_3_1_3:
     show screen show_npc_status
     show screen guidebook_icon
 
->>>>>>> Stashed changes
     menu:
         "I’m so sorry for your situation mam, it is a busy day for the hospital so I hope you may understand.":
             $trust_level += 1
@@ -286,26 +281,14 @@ label scene_1_3_1_3:
             hide grandma icon static
             show happy grandma
             p "I’m sure you’re sorry, but I have already waited for so long. But I guess you are right, there are a lot of people today for some reason. But your hospital really ought to improve your wait time."
-<<<<<<< Updated upstream
-            jump scene_1_3_1_3
-        "I’m so sorry that you feel this way, but it is a busy day for the hospital so I hope you understand.":
-            p "How I feel’ is irrelevant, the fact is that I have been waiting here for 2 hours and there has been no update. It doesn’t matter if there’s a lot of people, we all deserve better treatment and wait time!”"
-            jump scene_1_3_1_3
-=======
             jump scene_1_3_1_4
         "I’m so sorry that you feel this way, but it is a busy day for the hospital so I hope you understand.":
             p "How I feel is irrelevant, the fact is that I have been waiting here for 2 hours and there has been no update. It doesn’t matter if there’s a lot of people, we all deserve better treatment and wait time!"
             jump scene_1_3_1_4
->>>>>>> Stashed changes
         "Mam. I need you to calm down, this isn’t going to help you get in any sooner. You are only making a scene.":
             $trust_level -= 1
             p "How dare you tell me what to do? I am making a scene? How about you go and ask why they are making us wait for so long?"
-<<<<<<< Updated upstream
-                
-            jump scene_1_3_1_3
-=======
             jump scene_1_3_1_4
->>>>>>> Stashed changes
         "Mam, I will go talk to the doctor in charge right away, but I think you should also calm down first.":
             $trust_level = trust_level + 2
             hide angry icon
@@ -316,10 +299,6 @@ label scene_1_3_1_3:
     
     return
 
-<<<<<<< Updated upstream
-label scene_1_3_1_3:
-    call screen show_trust  
-=======
     
 label scene_1_3_1_4:
     call screen narration("You decide to learn more about the patient now that she has calmed down a bit")
@@ -368,7 +347,6 @@ label scene_1_3_1_5:
             return
 
 
->>>>>>> Stashed changes
     return
 
 label final_scene1A:
