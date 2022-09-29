@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 236: end of line expected.
-    hide grandma iccon leg:
-                          ^
+File "game/additional_script_screen/tutorial.rpy", line 167: end of line expected.
+    use show_trust xpos 100 ypos 100
+                   ^
 
 Ren'Py Version: Ren'Py 8.0.3.22090809
-Thu Sep 29 16:25:48 2022
+Thu Sep 29 19:55:47 2022
