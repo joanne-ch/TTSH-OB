@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 Fri Sep 30 01:11:27 2022
 Windows-10-10.0.22000
 Ren'Py 8.0.3.22090809
@@ -2087,22 +2088,60 @@ Load screen analysis took 0.06s
 Analyze screens took 0.00s
 Save screen analysis took 0.00s
 Prepare screens took 0.12s
+=======
+Fri Sep 30 05:32:46 2022
+Darwin-21.6.0-x86_64-i386-64bit
+Ren'Py 7.5.3.22090809
+ 
+
+Bootstrap to the start of init.init took 0.10s
+Early init took 0.00s
+Loader init took 0.01s
+Loading error handling took 0.06s
+Loading script took 0.23s
+Loading save slot metadata. took 0.01s
+Loading persistent took 0.00s
+Faled to initialize steam: OSError("dlopen(/Volumes/renpy-7.5.3-sdk/renpy-7.5.3-sdk/renpy.app/Contents/MacOS/libsteam_api.dylib, 0x0006): tried: '/Volumes/renpy-7.5.3-sdk/renpy-7.5.3-sdk/renpy.app/Contents/MacOS/libsteam_api.dylib' (no such file)",)
+Running init code took 0.06s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.00s
+Index archives took 0.00s
+Backing up script files to '/Users/fanyupei/Library/RenPy/backups/TTSH-OB':
+Dump and make backups. took 0.07s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.02s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.03s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.03s
+Prepare screens took 0.05s
+>>>>>>> Stashed changes
 Save pyanalysis. took 0.00s
 Save bytecode. took 0.00s
 Running _start took 0.00s
 Performance test:
+<<<<<<< Updated upstream
 Interface start took 0.11s
+=======
+Interface start took 0.30s
+>>>>>>> Stashed changes
 
 Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
+primary display bounds: (0, 0, 1440, 900)
 swap interval: 1 frames
 Windowed mode.
-Vendor: "b'NVIDIA Corporation'"
-Renderer: b'NVIDIA GeForce MX250/PCIe/SSE2'
-Version: b'4.6.0 NVIDIA 512.72'
+Vendor: 'Apple'
+Renderer: 'Apple M1'
+Version: '2.1 Metal - 76.3'
 Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1152, 648) drawable=(1152, 648)
+Screen sizes: virtual=(1920, 1080) physical=(768, 432) drawable=(1536, 864)
 Maximum texture size: 4096x4096
+<<<<<<< Updated upstream
 Cleaning stores took 0.00s
 Init translation took 0.00s
 Build styles took 0.01s
@@ -2110,3 +2149,5 @@ Load screen analysis took 0.06s
 Analyze screens took 0.00s
 Prepare screens took 0.00s
 Running _start took 0.00s
+=======
+>>>>>>> Stashed changes

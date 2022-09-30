@@ -1,13 +1,20 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
+<<<<<<< Updated upstream
   File "game/script.rpy", line 176, in script
     jump scene_1_3_2
 ScriptError: could not find label 'scene_1_3_2'.
+=======
+  File "game/script.rpy", line 170, in script
+    audio "audio/phone.mp3"
+Exception: Sayer audio is not a function or string.
+>>>>>>> Stashed changes
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
+<<<<<<< Updated upstream
   File "game/script.rpy", line 176, in script
     jump scene_1_3_2
   File "C:\Users\joann\Downloads\renpy-8.0.3-sdk\renpy\ast.py", line 1974, in execute
@@ -15,8 +22,19 @@ Full traceback:
   File "C:\Users\joann\Downloads\renpy-8.0.3-sdk\renpy\script.py", line 927, in lookup
     raise ScriptError("could not find label '%s'." % str(original))
 ScriptError: could not find label 'scene_1_3_2'.
+=======
+  File "game/script.rpy", line 170, in script
+    audio "audio/phone.mp3"
+  File "/Volumes/renpy-7.5.3-sdk/renpy-7.5.3-sdk/renpy/ast.py", line 898, in execute
+    raise Exception("Sayer %s is not a function or string." % self.who.encode("utf-8"))
+Exception: Sayer audio is not a function or string.
+>>>>>>> Stashed changes
 
-Windows-10-10.0.22000 AMD64
-Ren'Py 8.0.3.22090809
+Darwin-21.6.0-x86_64-i386-64bit x86_64
+Ren'Py 7.5.3.22090809
 BetaGame 1.0
+<<<<<<< Updated upstream
 Fri Sep 30 01:32:42 2022
+=======
+Fri Sep 30 05:29:13 2022
+>>>>>>> Stashed changes
