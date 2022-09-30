@@ -348,27 +348,35 @@ label scene_1_3_1_4:
 default try = False
 
 label scene_1_3_1_5:
-    voice "audio/scene_3/You contemplate what is the best course of action.mp3"
     call screen narration("You contemplate what is the best course of action next, hopefully this can resolve the situation")
 
     menu:
         "You decide to further reassure Mdm Ho that the long wait time is normal and there’s really nothing you can do for now.":
             if (trust_level >= 1):
-                call screen conflict_success
+                call screen conflict_win
+                jump final_scene1A
             else:
-                if try:
-                    return
-                    #call screen conflict_fail
+                if tried:
+                    jump final_scene1A
                 else:
+                    call screen conflict_failure
                     jump scene_1_3_1_5
-            jump final_scene1A
+
         
         "You decide to talk to the nurse at the reception and inquire about the long wait time":
-            return
+            call screen narration("It seems that there were really no errors in the number calling, it was simply yet another busy day at TTSH. You return with this information to the patient.")
+            call screen conflict_win
+            call screen narration("She begrudgingly accepts this fact")
+            if (trust_level >= 1):
+                p"Thank you for at least trying to reach out"
+                call screen narration(" You feel somewhat reassured by this gesture")
+            jump final_scene1A
 
         "You decide to ask the help from another nurse to take over and assist the situation. You observe how the nurse resolves the conflict.":
-            return
-
+            call screen narration("You observed how the nurse calmly and patiently explained the congested waiting time for SOC to the patient.")
+            call screen narration(" You feel that you learnt something new about resolving conflict with patients. It seems that you will have to do a better job at using the six tools to analyse the patient and the nature of the conflict.")
+            call screen narration("Refer to your guidebook next time to better deal with conflicts.")
+            jump final_scene1A
     return
 
 label final_scene1A:
