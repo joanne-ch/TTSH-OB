@@ -2,19 +2,17 @@
 errors listed below, and try again.
 
 
-<<<<<<< Updated upstream
-File "game/script.rpy", line 340: invalid syntax
-    try = True
-         ^
-    
+File "game/script.rpy", line 382: expected statement.
+    <<<<<<< Updated upstream
+                            ^
 
-Ren'Py Version: Ren'Py 8.0.3.22090809
-Fri Sep 30 01:16:41 2022
-=======
-File "game/script.rpy", line 164: is not terminated with a newline. (Check strings and parenthesis.)
-(Perhaps you left out a " at the end of the first line.)
-        voice "audio/scene_3/Alright, I hope that clarifies everything.mp3”
+File "game/script.rpy", line 384: expected statement.
+    =======
+          ^
+
+File "game/script.rpy", line 388: expected statement.
+    >>>>>>> Stashed changes
+                           ^
 
 Ren'Py Version: Ren'Py 7.5.3.22090809
-Fri Sep 30 04:59:52 2022
->>>>>>> Stashed changes
+Fri Sep 30 11:01:44 2022

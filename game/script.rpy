@@ -27,7 +27,7 @@ label start:
     #doctor A uses Heather
     voice "audio/scene_1/Good morning, so good to finally meet you in perso.mp3"
     d "Good morning, so good to finally meet you in person [persistent.user_name]. We are very excited to have you on board of TTSH. My name is Doctor A. "
-    voice "audio/scene_1/.I believe H R has briefed you that you'd be workinmp3"
+    voice "audio/scene_1/I believe H R has briefed you that you'd be workin.mp3"
     d "I believe HR has briefed you that you’d be working with me for the first few months of your appointment."
     voice "audio/scene_1/Today, I will just be showing you around the hospi.mp3"
     d "Today, I will just be showing you around the hospital, our offices and do feel free to ask any questions."
@@ -62,7 +62,8 @@ label scene_1_1_1: #scene 1, branch 1
     with dissolve 
     voice "audio/scene_1/The pleasure is all mine!.mp3"
     d "The pleasure is all mine!"
-    voice "audio/scene_1/I’ve heard great things about you, but just a head.mp3"
+
+    voice "audio/scene_1/ve heard.mp3"
     d "I’ve heard great things about you, but just a heads-up, this job can be quite demanding, I hope you’ll keep up your spirit! Now then, do you want to start the tour? "
 
     menu:
@@ -89,9 +90,9 @@ label scene_1_1_3:
     show doctor_icon at right
     with dissolve
 
-    voice "audio/scene_1/You’re an eager one, aren’t you!.mp3"
+    voice "audio/scene_1/an eager one.mp3"
     d "You’re an eager one, aren’t you!"
-    voice "audio/scene_1/There’s no rush, we have plenty of time for Q&A as.mp3"
+    voice "audio/scene_1/no rush, we have plenty of time for Q&A as.mp3"
     d " There’s no rush, we have plenty of time for Q&A as we tour, but I don’t mind giving any clarifications now."
 
     menu:
@@ -104,6 +105,7 @@ label scene_1_1_3:
         "Which area will I be working at the most?":
             return
         "I think I have no further questions":
+            voice "audio/scene_1/Great, as I was saying, today.mp3"
             d"Great, as I was saying, today we’re just here to see around the office space and the hospital ground, no 	need to rush yourself to anything yet. "
             jump end_ofscene1
     
@@ -119,15 +121,15 @@ label end_ofscene2:
     return
 
 label scene_1_2: #chapter1_scene2
-    voice "audio/scene_2/On the first floor, we have….mp3"
+    voice "audio/scene_2/On the first floor.mp3"
     d"On the first floor, we have…"
-    voice "audio/scene_2/On the second floor, we have….mp3"
+    voice "audio/scene_2/On the second floor.mp3"
     d "On the second floor, we have…"
-    voice "audio/scene_2/On the third  floor, we have….mp3"
+    voice "audio/scene_2/On the third  floor.mp3"
     d "On the third  floor, we have…"
     voice "audio/scene_2/This is our main office and where you can work & r.mp3"
     d "This is our main office and where you can work & rest during off-hour"
-    voice "audio/scene_2/Here is the nurse ward….mp3"
+    voice "audio/scene_2/Here is the nurse war.mp3"
     d "Here is the nurse ward…"
     voice "audio/scene_2/This is where you will be working most of the day,.mp3"
     d "This is where you will be working most of the day, tending to patients assigned to you. Do you have any questions so far? "
@@ -176,8 +178,8 @@ label scene_1_3:
     voice "audio/scene_3/She seems quite upset and is clearly waiting for s.mp3"
     call screen narration("She seems quite upset and is clearly waiting for some sort of appointment.")
     $ renpy.movie_cutscene ("video/angry grandma.webm")
-    call screen narration("While you have been hired as a nurse, it is not your first official day of work, do you want to approach this upset patient?")
     voice "audio/scene_3/While you have been hired as a nurse, it is not yo.mp3"
+    call screen narration("While you have been hired as a nurse, it is not your first official day of work, do you want to approach this upset patient?")
 
     call screen tutorial 
 
@@ -186,7 +188,7 @@ label scene_1_3:
             jump scene_1_3_1
 
         "I should focus on the tour, besides, I am sure it is nothing urgent.":
-            jump scene_1_3_2
+            jump scene_1_3_1_2
     return
 
 default look = False
@@ -343,7 +345,7 @@ label scene_1_3_1_4:
 
     return 
 
-default tried = False
+default try = False
 
 label scene_1_3_1_5:
     voice "audio/scene_3/You contemplate what is the best course of action.mp3"
@@ -352,40 +354,27 @@ label scene_1_3_1_5:
     menu:
         "You decide to further reassure Mdm Ho that the long wait time is normal and there’s really nothing you can do for now.":
             if (trust_level >= 1):
-                call screen conflict_win
-                jump final_scene1A
+                call screen conflict_success
             else:
-                if tried:
-                    jump final_scene1A
+                if try:
+                    return
+                    #call screen conflict_fail
                 else:
-                    call screen conflict_failure
                     jump scene_1_3_1_5
-
+            jump final_scene1A
         
         "You decide to talk to the nurse at the reception and inquire about the long wait time":
-            call screen narration("It seems that there were really no errors in the number calling, it was simply yet another busy day at TTSH. You return with this information to the patient.")
-            call screen conflict_win
-            call screen narration("She begrudgingly accepts this fact")
-            if (trust_level >= 1):
-                p"Thank you for at least trying to reach out"
-                call screen narration(" You feel somewhat reassured by this gesture")
-            jump final_scene1A
+            return
 
         "You decide to ask the help from another nurse to take over and assist the situation. You observe how the nurse resolves the conflict.":
-            call screen narration("You observed how the nurse calmly and patiently explained the congested waiting time for SOC to the patient.")
-            call screen narration(" You feel that you learnt something new about resolving conflict with patients. It seems that you will have to do a better job at using the six tools to analyse the patient and the nature of the conflict.")
-            call screen narration("Refer to your guidebook next time to better deal with conflicts.")
-            jump final_scene1A
+            return
+
     return
 
 label final_scene1A:
-<<<<<<< Updated upstream
-    call screen narration("It seems that the situation has been resolved, regardless of the outcome, you return to the spot where you were meeting for Doctor A, Doctor A soon returns and reconvenes with the player")
-=======
 
     call screen narration("You observed how the nurse calmly and patiently explained the congested waiting time for SOC to the patient. You feel that you learnt something new about resolving conflict with patients.")
     call screen narration("It seems that you will have to do a better job at using the six tools to analyse the patient and the nature of the conflict. Refer to your guidebook next time to better deal with conflicts.")
->>>>>>> Stashed changes
 
-    return
+    call screen narration("")
 
