@@ -2,17 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 382: expected statement.
-    <<<<<<< Updated upstream
-                            ^
+File "game/additional_script_screen/trust_level.rpy", line 5: 'xpos' is not a keyword argument or valid child for the screen statement.
+    xpos 100
+        ^
 
-File "game/script.rpy", line 384: expected statement.
-    =======
-          ^
-
-File "game/script.rpy", line 388: expected statement.
-    >>>>>>> Stashed changes
-                           ^
-
-Ren'Py Version: Ren'Py 7.5.3.22090809
-Fri Sep 30 11:01:44 2022
+Ren'Py Version: Ren'Py 8.0.3.22090809
+Tue Oct  4 18:27:33 2022

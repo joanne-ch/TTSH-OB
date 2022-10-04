@@ -6,7 +6,7 @@ screen show_npc_status():
         xalign 0.5
         xmaximum 1000
         ymaximum 300
-        xpos 1710 ypos 30
+        xpos 1650 ypos 30
         xpadding 30
         ypadding 30
         vbox:

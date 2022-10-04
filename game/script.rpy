@@ -279,7 +279,8 @@ label scene_1_3_1_2:
     call screen narration("The patient continues to rant as if you are not there. What should you do in this situation?")
     
     call screen tutorial_2
-    
+    show screen show_npc_status
+    show screen guidebook_icon
     centered ""
     
     jump scene_1_3_1_3
@@ -289,8 +290,6 @@ label scene_1_3_1_2:
 label scene_1_3_1_3:
     voice "audio/scene_3/You decide to try to calm her down first.mp3"
     call screen narration("You decide to try to calm her down first")
-    show screen show_npc_status
-    show screen guidebook_icon
 
     menu:
         "I’m so sorry for your situation mam, it is a busy day for the hospital so I hope you may understand.":
@@ -345,7 +344,7 @@ label scene_1_3_1_4:
 
     return 
 
-default try = False
+default tried = False
 
 label scene_1_3_1_5:
     call screen narration("You contemplate what is the best course of action next, hopefully this can resolve the situation")
@@ -373,7 +372,7 @@ label scene_1_3_1_5:
             jump final_scene1A
 
         "You decide to ask the help from another nurse to take over and assist the situation. You observe how the nurse resolves the conflict.":
-            call conflict_win
+            call screen conflict_win
             call screen narration("You observed how the nurse calmly and patiently explained the congested waiting time for SOC to the patient.")
             call screen narration(" You feel that you learnt something new about resolving conflict with patients. It seems that you will have to do a better job at using the six tools to analyse the patient and the nature of the conflict.")
             call screen narration("Refer to your guidebook next time to better deal with conflicts.")

@@ -1,22 +1,26 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 191, in script
-    jump scene_1_3_2
-ScriptError: could not find label 'scene_1_3_2'.
+  File "game/script.rpy", line 375, in script call
+    call conflict_win
+  File "game/script.rpy", line 375, in script call
+    call conflict_win
+ScriptError: could not find label 'conflict_win'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 191, in script
-    jump scene_1_3_2
-  File "/Volumes/renpy-7.5.3-sdk/renpy-7.5.3-sdk/renpy/ast.py", line 1974, in execute
-    rv = renpy.game.script.lookup(target)
-  File "/Volumes/renpy-7.5.3-sdk/renpy-7.5.3-sdk/renpy/script.py", line 927, in lookup
+  File "game/script.rpy", line 375, in script call
+    call conflict_win
+  File "C:\Users\joann\Downloads\renpy-8.0.3-sdk\renpy\ast.py", line 1705, in execute
+    rv = renpy.game.context().call(label, return_site=self.next.name)
+  File "game/script.rpy", line 375, in script call
+    call conflict_win
+  File "C:\Users\joann\Downloads\renpy-8.0.3-sdk\renpy\script.py", line 927, in lookup
     raise ScriptError("could not find label '%s'." % str(original))
-ScriptError: could not find label 'scene_1_3_2'.
+ScriptError: could not find label 'conflict_win'.
 
-Darwin-21.6.0-x86_64-i386-64bit x86_64
-Ren'Py 7.5.3.22090809
+Windows-10-10.0.22000 AMD64
+Ren'Py 8.0.3.22090809
 BetaGame 1.0
-Fri Sep 30 12:12:13 2022
+Tue Oct  4 18:31:13 2022

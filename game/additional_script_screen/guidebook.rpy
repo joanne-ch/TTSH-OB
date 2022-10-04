@@ -6,7 +6,7 @@ screen guidebook_sample():
 
         imagebutton:
             idle "images/notebook/cross icon.png" xpos 1550 ypos 110
-            action [Hide("guidebook_sample"), Hide("tutorial_guidebook_2"), Return(True)]
+            action [Hide("guidebook_sample"), Hide("tutorial_guidebook_2"), Show("tutorial_trustpoint")]
 
 screen guidebook():
     use overlay
