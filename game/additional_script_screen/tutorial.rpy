@@ -91,17 +91,16 @@ transform redbutton:
     easein 0.3 xpos 0
     repeat
 
-    
+default tutorial = True
 screen tutorial_guidebook_1:
     modal True
-    
     use overlay
     
     hbox:
         imagebutton:
             idle "images/notebook/guidebook icon.png" xpos 50 ypos 50
             hover "images/notebook/guidebook icon hover.png"
-            action [Hide("tutorial_guidebook_1"), Show("tutorial_guidebook_2")]
+            action [Hide("tutorial_guidebook_1"), Show("tutorial_guidebook_2"), SetVariable("tutorial", True)]
 
         imagebutton at redbutton:
             idle "images/dialogue/arrow red.png" xpos 40 ypos 60
@@ -159,13 +158,13 @@ screen tutorial_guidebook_2_text:
 
 screen tutorial_guidebook_2:
     modal True
-    on "show" action Show("guidebook_sample")
+    on "show" action Show("guidebook")
     on "show" action Show("tutorial_guidebook_2_text")
     
        
 screen tutorial_trustpoint:
     use overlay
-
+    $Tutorial = False
     frame:
         background Null()
         xmaximum 600

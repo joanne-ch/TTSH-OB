@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/additional_script_screen/trust_level.rpy", line 5: 'xpos' is not a keyword argument or valid child for the screen statement.
-    xpos 100
-        ^
+File "game/additional_script_screen/guidebook.rpy", line 129: 'add' is not a keyword argument or valid child for the imagebutton statement.
+    add "images/notebook/shape title.png" xpos 280 ypos 150
+       ^
 
 Ren'Py Version: Ren'Py 8.0.3.22090809
-Tue Oct  4 18:27:33 2022
+Tue Oct  4 23:28:08 2022
