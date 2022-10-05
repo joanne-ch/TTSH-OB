@@ -121,18 +121,21 @@ label end_ofscene2:
     return
 
 label scene_1_2: #chapter1_scene2
-    voice "audio/scene_2/On the first floor.mp3"
-    d"On the first floor, we have…"
-    voice "audio/scene_2/On the second floor.mp3"
-    d "On the second floor, we have…"
-    voice "audio/scene_2/On the third  floor.mp3"
-    d "On the third  floor, we have…"
-    voice "audio/scene_2/This is our main office and where you can work & r.mp3"
-    d "This is our main office and where you can work & rest during off-hour"
-    voice "audio/scene_2/Here is the nurse war.mp3"
-    d "Here is the nurse ward…"
-    voice "audio/scene_2/This is where you will be working most of the day,.mp3"
-    d "This is where you will be working most of the day, tending to patients assigned to you. Do you have any questions so far? "
+    scene bg nursing hallway
+    call screen map
+
+    #voice "audio/scene_2/On the first floor.mp3"
+    #d"On the first floor, we have…"
+    #voice "audio/scene_2/On the second floor.mp3"
+    #d "On the second floor, we have…"
+    #voice "audio/scene_2/On the third  floor.mp3"
+    #d "On the third  floor, we have…"
+    #voice "audio/scene_2/This is our main office and where you can work & r.mp3"
+    #d "This is our main office and where you can work & rest during off-hour"
+    #voice "audio/scene_2/Here is the nurse war.mp3"
+    #d "Here is the nurse ward…"
+    #voice "audio/scene_2/This is where you will be working most of the day,.mp3"
+    #d "This is where you will be working most of the day, tending to patients assigned to you. Do you have any questions so far? "
 
     menu:
         "No, I have no question at the moment.":
