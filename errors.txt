@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/additional_script_screen/guidebook.rpy", line 129: 'add' is not a keyword argument or valid child for the imagebutton statement.
-    add "images/notebook/shape title.png" xpos 280 ypos 150
-       ^
+File "game/map.rpy", line 9: keyword argument u'xpos' appears more than once in a imagebutton statement.
+    hover "images/map/singapore_hover.png" xpos 0 ypos 0
+                                               ^
 
-Ren'Py Version: Ren'Py 8.0.3.22090809
-Tue Oct  4 23:28:08 2022
+Ren'Py Version: Ren'Py 7.5.3.22090809
+Fri Oct  7 15:10:56 2022

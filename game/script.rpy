@@ -10,11 +10,12 @@ label start:
     scene black
     with Pause(1)
     voice "audio/scene_1/scene1_1.ogg"
-    centered "You have just become a new-hire of TTSH, it is your first day at the hospital as an official worker (Nurse)."
+    centered "You are a new-hire at TTSH, this is your first day of work as a nurse." #changed
     
     voice "audio/scene_1/scene1_2.ogg"
-    centered "You were informed that you will be given a tour today around the hospital and possibly get to know some of your colleagues."
-    
+    #centered "You were informed that you will be given a tour today around the hospital and possibly get to know some of your colleagues."
+    centered "welcome! you will be brought on a tour and meet some of your new collegues" #changed
+
     voice "audio/scene_1/scene1_3.ogg"
     centered "Excited and a bit nervous, you enter the main lobby of Tan Tock Seng Hospital."
     $ renpy.movie_cutscene ("video/Opening.webm")
@@ -121,8 +122,10 @@ label end_ofscene2:
     return
 
 label scene_1_2: #chapter1_scene2
+    d "let me intro to you where yo are at." # to be chaged: 
+
     scene bg nursing hallway
-    call screen map
+    call screen map #second page delete
 
     #voice "audio/scene_2/On the first floor.mp3"
     #d"On the first floor, we have…"
