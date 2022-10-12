@@ -381,6 +381,37 @@ style navigation_button_text:
 ## https://www.renpy.org/doc/html/screen_special.html#main-menu
 default onClick = False
 
+transform main_button_ani:
+        "images/main_menu/orange_box.png" 
+        ypos 440 
+        xpos 100
+        pause 0.2
+        "images/main_menu/orange_box_hover.png" 
+        ypos 440 
+        xpos 100
+        pause 0.5
+        repeat
+
+transform codex_ani:
+        "images/main_menu/pink banner.png"
+        xpos 1000
+        pause 0.2
+        "images/main_menu/pink banner hover.png"
+        xpos 1000
+        pause 0.5
+        "images/main_menu/pink banner.png"
+        xpos 1000
+        pause 0.2
+        "images/main_menu/pink banner hover.png"
+        xpos 1000
+        pause 0.5
+        "images/main_menu/pink banner.png"
+        xpos 1000
+        pause 0.2
+        "images/main_menu/pink banner hover.png"
+        xpos 1000
+        pause 0.5
+
 screen main_menu():
     tag menu
 
@@ -406,13 +437,18 @@ screen main_menu():
         action Show("ProfilePage")
 
     #Main Chapter Button
+    
+
+    add "images/main_menu/orange_box.png" at main_button_ani
+
     imagebutton:
         ypos 440
         xpos 100
         idle "images/main_menu/orange_box.png" 
         hover "images/main_menu/orange_box_hover.png"
-        action Show("characterSelect")
         #action Start()
+        #action Show("opening_screen",text = "Prologue")
+
         
     text "Main Chapter" style "mainText" ypos 510 xpos 200
     #Progress Check - Need to sync, with profile
@@ -424,7 +460,6 @@ screen main_menu():
         xpos 260
         idle "images/main_menu/orange_box.png" 
         hover "images/main_menu/orange_box_hover.png"
-        #action Show("chooseCharacters") 
 
     text "Side Chapter" style "mainText" ypos 800 xpos 365
     text "(Play with your friends)" style "subMain" ypos 885 xpos 365 size 60
@@ -466,7 +501,7 @@ screen main_menu():
         idle "images/main_menu/pink banner.png" xpos 1400
         hover "images/main_menu/pink banner hovered.png" 
         
-
+    add "images/main_menu/pink banner.png" at codex_ani
     imagebutton: 
         idle "images/main_menu/pink banner.png" xpos 1000
         hover "images/main_menu/pink banner hovered.png" 
@@ -474,6 +509,54 @@ screen main_menu():
 
     add "images/main_menu/Saves.png" xpos 1130 ypos 140
     add "images/main_menu/Codex.png" xpos 1520 ypos 140
+#the end of screen main_menu
+
+#################################character select page####################################################################
+init python:
+    def placeholderFunc():
+        pass
+
+default btn_selected = False
+screen characterSelect():
+    tag menu
+    
+    use game_menu1(_("ProfilePage"), scroll="viewport"):
+        style_prefix "about"
+
+    use overlay
+
+    add gui.main_menu_background
+    #add "main_menu/profile_background.png" xpos 130
+    #text "{u}Codex{u}" style "mainText" xpos 270 ypos 200 size 100
+
+    imagebutton:
+        idle "images/Selection Page (Confirmation)/Nurse.png" xpos 200 ypos 130
+        hover "images/Selection Page (Confirmation)/Nurse hover.png" 
+        selected_idle "images/Selection Page (Confirmation)/Nurse hover selected.png"
+        selected_hover "images/Selection Page (Confirmation)/Nurse hover selected.png" 
+        selected (btn_selected)
+        action ToggleVariable("btn_selected", True, False)
+
+    imagebutton:
+        idle "images/Selection Page (Confirmation)/Patient.png" xpos 850 ypos 130
+
+    imagebutton:
+        idle "images/Selection Page (Confirmation)/Doctor.png" xpos 1400 ypos 130
+
+
+    imagebutton:
+        xpos 1400
+        ypos 900
+        idle "images/main_menu/hide_button.png"
+        hover "images/main_menu/hide_button_hover.png" 
+        action Show("main_menu")
+
+    text "Continue" size 76 xpos 1480 ypos 943
+    
+screen overlay():
+    add "images/main_menu/overlay.png" zoom 2
+######################################################################################################
+
 
 screen input(prompt):
     style_prefix "input"
@@ -496,6 +579,15 @@ screen give_input(prompt):
     add "images/input name/input box.png" xpos 560 ypos 450
     input id "input" xpos 640 ypos 605 style "input_prompt" size 50
 
+    #jump to character selection screen
+    imagebutton:
+        xpos 1400
+        ypos 900
+        idle "images/main_menu/hide_button.png"
+        hover "images/main_menu/hide_button_hover.png" 
+        action [Show("characterSelect"),Hide("give_input")]
+    text "Continue" size 76 xpos 1480 ypos 943
+
 image splash = "images/doctor_icon.png"
 default persistent.user_name = ""
 label splashscreen:
@@ -512,7 +604,6 @@ label splashscreen:
             persistent.user_name = "Kamala Harris"
 
     with Pause(1)
-    
 
 
 style main_menu_frame is empty
