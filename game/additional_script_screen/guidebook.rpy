@@ -164,10 +164,151 @@ screen guidebook():
             add "images/notebook/inquire text1.png" xpos 295 ypos 180
             add "images/notebook/inquire text2.png" xpos 1150  ypos 300
 
-        
-        
+default show1 = True
+screen guidebook_tutorial():
+    modal True
+    use overlay
 
+    frame:
+        background Null()
+        add "images/notebook/new notebook.png" xalign 0.5 yalign 0.5
+        if (show1 == False):
+            imagebutton:
+                idle "images/notebook/cross icon.png" xpos 1650 ypos 130
+                action [Hide("guidebook_tutorial"), Return(True)]
+
+            frame:
+                background Null()
+                xpos 830
+                ypos 680
+                imagebutton at redbutton:
+                    idle "images/dialogue/arrow red.png"
+
+        vbox:
+            xanchor -90
+            yanchor -150
+            frame:
+                background Null()
+                ymaximum 120
+                xmaximum 200
+                imagebutton:
+                    idle "images/notebook/click bg.png"
+                    action [SetVariable("label_trust", True), Function(exclusive_check, 0)]
+
+            frame:
+                background Null()
+                ypos 15
+                ymaximum 120
+                xmaximum 200
+                imagebutton:
+                    idle "images/notebook/click bg.png"
+                    action [SetVariable("label_mental", True), Function(exclusive_check, 1), SetVariable("show1", False)]
+            frame:
+                background Null()
+                ypos 30
+                ymaximum 100
+                xmaximum 200
+                imagebutton:
+                    ypos 5
+                    idle "images/notebook/click bg.png"
+                    action [SetVariable("label_shape", True), Function(exclusive_check, 2)]
+            frame:
+                background Null()
+                ypos 45
+                ymaximum 100
+                xmaximum 200
+                imagebutton:
+                    ypos 15
+                    idle "images/notebook/click bg.png"
+                    action [SetVariable("label_ladder", True), Function(exclusive_check, 3)]
+                    
+            frame:
+                background Null()
+                ypos 85
+                ymaximum 100
+                xmaximum 
+                imagebutton:
+                    ypos 15
+                    idle "images/notebook/click bg.png"
+                    action [SetVariable("label_left", True), Function(exclusive_check, 4)]
+            frame:
+                background Null()
+                ypos 105
+                ymaximum 100
+                xmaximum 200
+                imagebutton:
+                    ypos 15
+                    idle "images/notebook/click bg.png"
+                    action [SetVariable("label_inquiry", True), Function(exclusive_check, 5)]
+    
+        if (label_trust):
+            imagebutton:
+                xpos 60
+                ypos 120
+                idle  "images/notebook/yellow label.png"
+            add "images/notebook/trust text.png"xpos 300 ypos 290
+            add "images/notebook/trust image.png" xpos 1200 ypos 220
+        elif (label_mental):
+            imagebutton:
+                xpos 60
+                ypos 250
+                idle "images/notebook/orange label.png"
+            add "images/notebook/shape title.png" xpos 280 ypos 150
+            add "images/notebook/shape text1.png" xpos 300  ypos 250
+            add "images/notebook/shape text2.png" xpos 1100 ypos 180
+        elif (label_shape):
+            imagebutton:
+                xpos 60
+                ypos 380
+                idle "images/notebook/red label.png"
+            add "images/notebook/mental text1.png" xpos 290 ypos 180
+            add "images/notebook/mental text2.png" xpos 300  ypos 530
+            add "images/notebook/mental text3.png" xpos 1130 ypos 260
         
+        elif (label_ladder):
+            imagebutton:
+                xpos 60
+                ypos 505
+                idle "images/notebook/purple label.png"
+            add "images/notebook/ladder image.png" xpos 185 ypos 60
+            add "images/notebook/ladder text.png" xpos 1120  ypos 280
+        elif (label_left):
+            imagebutton:
+                xpos 60
+                ypos 635
+                idle "images/notebook/blue label.png"
+            add "images/notebook/left text1.png" xpos 295 ypos 180
+            add "images/notebook/left text2.png" xpos 1150  ypos 200
+        elif (label_inquiry):
+            imagebutton:
+                xpos 60
+                ypos 765
+                idle "images/notebook/teal label.png"
+            add "images/notebook/inquire text1.png" xpos 295 ypos 180
+            add "images/notebook/inquire text2.png" xpos 1150  ypos 300        
+
+    if show1:
+        frame:
+            xpos 500
+            ypos 500
+            xminimum 700
+            yminimum 300
+            xmaximum 700
+            ymaximum 300
+            frame:
+                background Null()
+                xalign 0.5 
+                yalign 0.5
+                xminimum 600
+                yminimum 150
+                text "To find out what SQUARE Personality Shape is, click on the Personality Shape Button"        
+
+        frame:
+            background Null()
+            xpos 280
+            ypos 280
+            imagebutton at redbutton:
+                idle "images/dialogue/arrow red.png"
 
 
 screen guidebook_icon():

@@ -381,37 +381,6 @@ style navigation_button_text:
 ## https://www.renpy.org/doc/html/screen_special.html#main-menu
 default onClick = False
 
-transform main_button_ani:
-        "images/main_menu/orange_box.png" 
-        ypos 440 
-        xpos 100
-        pause 0.2
-        "images/main_menu/orange_box_hover.png" 
-        ypos 440 
-        xpos 100
-        pause 0.5
-        repeat
-
-transform codex_ani:
-        "images/main_menu/pink banner.png"
-        xpos 1000
-        pause 0.2
-        "images/main_menu/pink banner hover.png"
-        xpos 1000
-        pause 0.5
-        "images/main_menu/pink banner.png"
-        xpos 1000
-        pause 0.2
-        "images/main_menu/pink banner hover.png"
-        xpos 1000
-        pause 0.5
-        "images/main_menu/pink banner.png"
-        xpos 1000
-        pause 0.2
-        "images/main_menu/pink banner hover.png"
-        xpos 1000
-        pause 0.5
-
 screen main_menu():
     tag menu
 
@@ -437,18 +406,13 @@ screen main_menu():
         action Show("ProfilePage")
 
     #Main Chapter Button
-    
-
-    add "images/main_menu/orange_box.png" at main_button_ani
-
     imagebutton:
         ypos 440
         xpos 100
         idle "images/main_menu/orange_box.png" 
         hover "images/main_menu/orange_box_hover.png"
-        action Start()
-        #action Show("characterSelect")
-        #action Show("open_scene")
+        action Show("characterSelect")
+        #action Start()
         
     text "Main Chapter" style "mainText" ypos 510 xpos 200
     #Progress Check - Need to sync, with profile
@@ -502,7 +466,7 @@ screen main_menu():
         idle "images/main_menu/pink banner.png" xpos 1400
         hover "images/main_menu/pink banner hovered.png" 
         
-    add "images/main_menu/pink banner.png" at codex_ani
+
     imagebutton: 
         idle "images/main_menu/pink banner.png" xpos 1000
         hover "images/main_menu/pink banner hovered.png" 
@@ -510,7 +474,6 @@ screen main_menu():
 
     add "images/main_menu/Saves.png" xpos 1130 ypos 140
     add "images/main_menu/Codex.png" xpos 1520 ypos 140
-#the end of screen main_menu
 
 screen input(prompt):
     style_prefix "input"
@@ -532,15 +495,6 @@ screen give_input(prompt):
 
     add "images/input name/input box.png" xpos 560 ypos 450
     input id "input" xpos 640 ypos 605 style "input_prompt" size 50
-
-    #jump to character selection screen
-    imagebutton:
-        xpos 1400
-        ypos 900
-        idle "images/main_menu/hide_button.png"
-        hover "images/main_menu/hide_button_hover.png" 
-        action [Show("characterSelect"),Hide("give_input")]
-    text "Continue" size 76 xpos 1480 ypos 943
 
 image splash = "images/doctor_icon.png"
 default persistent.user_name = ""
