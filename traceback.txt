@@ -1,26 +1,70 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-While parsing /Users/fanyupei/Downloads/y2s1/ntu EDge/github/TTSH-OB/game/chapter_1_script/scene_2.rpy.
-Exception: Line with id start_7914e3bd appeared twice, at game/chapter_1_script/scene_2.rpy:12 and game/script.rpy:12.
+While running game code:
+  File "game/scenes_script/scene_1.rpy", line 136, in script
+    call screen tutorial_trustpoint
+  File "renpy/common/000statements.rpy", line 609, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+  File "game/additional_script_screen/guidebook.rpy", line 167, in execute
+    screen guidebook_tutorial():
+  File "game/additional_script_screen/guidebook.rpy", line 167, in execute
+    screen guidebook_tutorial():
+  File "game/additional_script_screen/guidebook.rpy", line 302, in execute
+    frame:
+  File "game/additional_script_screen/guidebook.rpy", line 302, in keywords
+    frame:
+  File "game/additional_script_screen/guidebook.rpy", line 303, in <module>
+    background NUll()
+NameError: name 'NUll' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "/Volumes/renpy-7.5.3-sdk/renpy-7.5.3-sdk/renpy/bootstrap.py", line 277, in bootstrap
-    renpy.main.main()
-  File "/Volumes/renpy-7.5.3-sdk/renpy-7.5.3-sdk/renpy/main.py", line 490, in main
-    renpy.game.script.load_script() # sets renpy.game.script.
-  File "/Volumes/renpy-7.5.3-sdk/renpy-7.5.3-sdk/renpy/script.py", line 297, in load_script
-    self.load_appropriate_file(".rpyc", ".rpy", dir, fn, initcode)
-  File "/Volumes/renpy-7.5.3-sdk/renpy-7.5.3-sdk/renpy/script.py", line 809, in load_appropriate_file
-    self.finish_load(stmts, initcode, filename=lastfn) # type: ignore
-  File "/Volumes/renpy-7.5.3-sdk/renpy-7.5.3-sdk/renpy/script.py", line 427, in finish_load
-    self.translator.take_translates(all_stmts)
-  File "/Volumes/renpy-7.5.3-sdk/renpy-7.5.3-sdk/renpy/translation/__init__.py", line 169, in take_translates
-    n.filename, n.linenumber))
-Exception: Line with id start_7914e3bd appeared twice, at game/chapter_1_script/scene_2.rpy:12 and game/script.rpy:12.
+  File "game/scenes_script/scene_1.rpy", line 136, in script
+    call screen tutorial_trustpoint
+  File "C:\Users\joann\Downloads\renpy-8.0.3-sdk\renpy\ast.py", line 2232, in execute
+    self.call("execute")
+  File "C:\Users\joann\Downloads\renpy-8.0.3-sdk\renpy\ast.py", line 2220, in call
+    return renpy.statements.call(method, parsed, *args, **kwargs)
+  File "C:\Users\joann\Downloads\renpy-8.0.3-sdk\renpy\statements.py", line 281, in call
+    return method(parsed, *args, **kwargs)
+  File "renpy/common/000statements.rpy", line 609, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+  File "C:\Users\joann\Downloads\renpy-8.0.3-sdk\renpy\exports.py", line 3181, in call_screen
+    rv = renpy.ui.interact(mouse="screen", type="screen", roll_forward=roll_forward)
+  File "C:\Users\joann\Downloads\renpy-8.0.3-sdk\renpy\ui.py", line 299, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "C:\Users\joann\Downloads\renpy-8.0.3-sdk\renpy\display\core.py", line 3377, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "C:\Users\joann\Downloads\renpy-8.0.3-sdk\renpy\display\core.py", line 3810, in interact_core
+    root_widget.visit_all(lambda i : i.per_interact())
+  File "C:\Users\joann\Downloads\renpy-8.0.3-sdk\renpy\display\core.py", line 582, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\joann\Downloads\renpy-8.0.3-sdk\renpy\display\core.py", line 582, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\joann\Downloads\renpy-8.0.3-sdk\renpy\display\core.py", line 582, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\joann\Downloads\renpy-8.0.3-sdk\renpy\display\screen.py", line 451, in visit_all
+    callback(self)
+  File "C:\Users\joann\Downloads\renpy-8.0.3-sdk\renpy\display\core.py", line 3810, in <lambda>
+    root_widget.visit_all(lambda i : i.per_interact())
+  File "C:\Users\joann\Downloads\renpy-8.0.3-sdk\renpy\display\screen.py", line 462, in per_interact
+    self.update()
+  File "C:\Users\joann\Downloads\renpy-8.0.3-sdk\renpy\display\screen.py", line 653, in update
+    self.screen.function(**self.scope)
+  File "game/additional_script_screen/guidebook.rpy", line 167, in execute
+    screen guidebook_tutorial():
+  File "game/additional_script_screen/guidebook.rpy", line 167, in execute
+    screen guidebook_tutorial():
+  File "game/additional_script_screen/guidebook.rpy", line 302, in execute
+    frame:
+  File "game/additional_script_screen/guidebook.rpy", line 302, in keywords
+    frame:
+  File "game/additional_script_screen/guidebook.rpy", line 303, in <module>
+    background NUll()
+NameError: name 'NUll' is not defined
 
-Darwin-21.6.0-x86_64-i386-64bit x86_64
-Ren'Py 7.5.3.22090809
+Windows-10-10.0.22000 AMD64
+Ren'Py 8.0.3.22090809
 BetaGame 1.0
-Mon Oct 10 11:26:24 2022
+Wed Oct 12 01:33:21 2022

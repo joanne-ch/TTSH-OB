@@ -30,6 +30,20 @@ init python:
             page_number = 1
         else:
             page_number -= 1
+    
+    def increase_page_trust():
+        global page_tutorial
+        if (page_tutorial>=3):
+            page_tutorial = 3
+        else:
+            page_tutorial+=1
+    
+    def decrease_page_trust():
+        global page_tutorial
+        if (page_tutorial == 1):
+            page_tutorial = 1
+        else: 
+            page_tutorial-=1
 
 default page_number = 1
 screen tutorial_2():
@@ -83,7 +97,7 @@ screen tutorial_2():
         if (page_number == 3):
             textbutton "Continue":
                 ypos 450 xpos 1150
-                action [Hide("tutorial_2"), Show("tutorial_guidebook_1")]
+                action [Hide("tutorial_2"), Return(True)]
 
 transform redbutton:
     xpos 0
@@ -161,25 +175,17 @@ screen tutorial_guidebook_2:
     on "show" action Show("guidebook")
     on "show" action Show("tutorial_guidebook_2_text")
     
-       
+default page_tutorial = 1
 screen tutorial_trustpoint:
     use overlay
     $Tutorial = False
-    frame:
-        background Null()
-        xmaximum 600
-        ymaximum 200
-        xpos 50
-        ypos 20
-        use show_npc_status
-    
-    frame:
-        background Null()
-        xpos 1150 ypos 10
-        imagebutton at redbutton:
-            idle "images/dialogue/arrow red reverse.png" xpos 2540 ypos 40
+    use overlay
+    use show_npc_status
+    modal True
+
 
     frame:
+        text "{u}{b}TRUST POINT{b}{u}" ypos 30 xpos 30
         xalign 0.5
         yalign 0.5
         yminimum 600
@@ -188,22 +194,64 @@ screen tutorial_trustpoint:
         ymaximum 600
         xpadding 30
         ypadding 30
-        text "{u}{b}Trust Point Tutorial{b}{u}" ypos 30 xpos 30
-    
+
+
         frame:
             background Null()
             xalign 0.5
             yalign 0.5
             xmaximum 1500
-            ymaximum 300
+            ymaximum 600
             xpadding 30
             ypadding 30
             vbox:
                 text ""
-                text "Trust point will determine the level of bond and affection you have with certain characters. {color=#f4b157}Accumulating enough trust point may help you achieve alternative approaches to conflict resolution{/color}, it may even get you some sweet reward down the line"
+                if (page_tutorial == 1):
+                    text "Trust point will determine the level of bond and affection you have with certain characters. Accumulating enough trust point may help you achieve alternative approaches to conflict resolution, it may even get you some sweet reward down the line."
+                elif (page_tutorial == 2):
+                    text "To gain trust point, you need to do actions that best fits the character's state of mind or personality. "
+                else:
+                    text "For instance, the personality shape of our patient is currently SQUARE. What is a SQUARE Personality Shape? Let us refer to the guidebook."
                 text ""
-                textbutton "Close":
-                    action [Hide("tutorial_trustpoint"), Return(True)] ypos 20
+
+        hbox:
+            xalign 0.5
+            yalign 0.95
+            imagebutton:
+                xpadding 100
+                idle "images/dialogue/arrow left.png"
+                hover "images/dialogue/arrow left hover.png"
+                action Function(decrease_page_trust)
+            
+            text "[page_tutorial]" ypos 20 
+            imagebutton:
+                xpadding 100
+                idle "images/dialogue/arrow right.png"
+                hover "images/dialogue/arrow right hover.png"
+                action Function(increase_page_trust)
+ 
+    frame:
+        background Null()
+        xpos 970 ypos 30
+        if (page_tutorial == 3):
+            imagebutton at redbutton:
+                idle "images/dialogue/arrow red reverse.png"
+    
+    frame:
+        background Null()
+        ypos 30 xpos 30
+        if (page_tutorial == 3):
+            imagebutton:
+                idle "images/notebook/guidebook icon.png" 
+                hover "images/notebook/guidebook icon hover.png"
+                action [Show("guidebook_tutorial"), Hide("tutorial_trustpoint")]
+    
+    frame:
+        xpos 250 ypos 30
+        background Null()
+        if (page_tutorial == 3):
+            imagebutton at redbutton:
+                idle "images/dialogue/arrow red.png"
 
     
                 
