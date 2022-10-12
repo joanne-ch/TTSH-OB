@@ -7,7 +7,7 @@
         imagebutton:
             idle "images/map/singapore.png" xalign 0.5 yalign 0.5
             hover "images/map/singapore_hover.png"
-            action [Hide("map"),Show("map_1")]
+            action [Hide("map"),Show("map_2")]
         imagebutton:
             idle "images/map/cross.png" xpos 1650 ypos 90
             hover "images/map/cross_hover.png"

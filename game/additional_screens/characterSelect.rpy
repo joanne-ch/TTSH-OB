@@ -11,25 +11,23 @@ screen characterSelect():
 
     use overlay
 
+    add gui.main_menu_background
     #add "main_menu/profile_background.png" xpos 130
     #text "{u}Codex{u}" style "mainText" xpos 270 ypos 200 size 100
 
     imagebutton:
-        idle "images/Selection Page (Confirmation)/Nurse.png" xpos 200 ypos 100
+        idle "images/Selection Page (Confirmation)/Nurse.png" xpos 200 ypos 130
         hover "images/Selection Page (Confirmation)/Nurse hover.png" 
-        selected_idle "images/Selection Page (Confirmation)/Nurse hover.png"
-        selected_hover "images/Selection Page (Confirmation)/Nurse hover.png" 
+        selected_idle "images/Selection Page (Confirmation)/Nurse hover selected.png"
+        selected_hover "images/Selection Page (Confirmation)/Nurse hover selected.png" 
         selected (btn_selected)
         action ToggleVariable("btn_selected", True, False)
 
     imagebutton:
-        idle "images/Selection Page (Confirmation)/Patient.png" xpos 850 ypos 100
+        idle "images/Selection Page (Confirmation)/Patient.png" xpos 850 ypos 130
 
     imagebutton:
-        idle "images/Selection Page (Confirmation)/Doctor.png" xpos 1400 ypos 100
-
-
-
+        idle "images/Selection Page (Confirmation)/Doctor.png" xpos 1400 ypos 130
 
 
     imagebutton:
@@ -37,7 +35,7 @@ screen characterSelect():
         ypos 900
         idle "images/main_menu/hide_button.png"
         hover "images/main_menu/hide_button_hover.png" 
-        action Start()
+        action Show("main_menu")
 
     text "Continue" size 76 xpos 1480 ypos 943
     
