@@ -65,4 +65,4 @@ JumpOutException: start
 Darwin-21.6.0-x86_64-i386-64bit x86_64
 Ren'Py 7.5.3.22090809
 BetaGame 1.0
-Wed Oct 12 20:47:20 2022
+Fri Oct 14 14:30:48 2022
