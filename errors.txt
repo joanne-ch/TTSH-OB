@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/additional_script_screen/guidebook.rpy", line 173: 'yminimum300' is not a keyword argument or valid child for the frame statement.
-    yminimum300
-               ^
+File "game/additional_script_screen/opening_screen.rpy", line 3: u'scene' is not a keyword argument or valid child for the screen statement.
+    scene black
+         ^
 
-Ren'Py Version: Ren'Py 8.0.3.22090809
-Wed Oct 12 01:27:45 2022
+Ren'Py Version: Ren'Py 7.5.3.22090809
+Wed Oct 12 20:31:51 2022

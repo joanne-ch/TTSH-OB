@@ -8,7 +8,7 @@ define p = Character('Patient', color="#c8c8ff", what_outlines=[(5, "#000000", 0
 
 label start: 
 
-    call screen opening_screen("Prologue")
+    #call screen opening_screen("Prologue")
 
     scene black
     with Pause(1)
