@@ -3,9 +3,9 @@
 While running game code:
   File "renpy/common/00start.rpy", line 240, in script call
     call _splashscreen from _call_splashscreen_1
-  File "game/screens.rpy", line 600, in script
+  File "game/screens.rpy", line 616, in script
     python:
-  File "game/screens.rpy", line 601, in <module>
+  File "game/screens.rpy", line 617, in <module>
     persistent.user_name = renpy.input("Please input your name \n (Max 15 characters):", length=15, screen = u'give_input')
   File "renpy/common/00action_menu.rpy", line 148, in __call__
     renpy.jump_out_of_context(self.label)
@@ -24,13 +24,13 @@ Full traceback:
     context.run()
   File "renpy/common/00start.rpy", line 240, in script call
     call _splashscreen from _call_splashscreen_1
-  File "game/screens.rpy", line 600, in script
+  File "game/screens.rpy", line 616, in script
     python:
   File "/Volumes/renpy-7.5.3-sdk/renpy-7.5.3-sdk/renpy/ast.py", line 1131, in execute
     renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
   File "/Volumes/renpy-7.5.3-sdk/renpy-7.5.3-sdk/renpy/python.py", line 1061, in py_exec_bytecode
     exec(bytecode, globals, locals)
-  File "game/screens.rpy", line 601, in <module>
+  File "game/screens.rpy", line 617, in <module>
     persistent.user_name = renpy.input("Please input your name \n (Max 15 characters):", length=15, screen = u'give_input')
   File "/Volumes/renpy-7.5.3-sdk/renpy-7.5.3-sdk/renpy/exports.py", line 885, in input
     rv = renpy.ui.interact(mouse='prompt', type="input", roll_forward=roll_forward)
@@ -65,4 +65,4 @@ JumpOutException: start
 Darwin-21.6.0-x86_64-i386-64bit x86_64
 Ren'Py 7.5.3.22090809
 BetaGame 1.0
-Fri Oct 14 14:30:48 2022
+Mon Oct 17 13:58:11 2022

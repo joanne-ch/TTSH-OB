@@ -40,6 +40,7 @@ label start:
     #make choice 
 
     #TUTORIALL(FOR CHOICE PICKING) 
+    call screen direction_1
 
     menu:
         "Good to meet you too, A, looking forward to working with you!":
@@ -62,6 +63,8 @@ label end_ofscene1:
     return
 
 label scene_1_1_1: #scene 1, branch 1
+    #tutorial
+    call screen direction_function
 
     show doctor_icon at right #import character doctor A
     with dissolve 
@@ -80,6 +83,8 @@ label scene_1_1_1: #scene 1, branch 1
     return 
 
 label scene_1_1_2:
+    #tutorial
+    call screen direction_function
 
     show doctor_icon at right
     with dissolve
@@ -91,7 +96,9 @@ label scene_1_1_2:
     return 
 
 label scene_1_1_3:
-
+    #tutorial
+    call screen direction_function
+    
     show doctor_icon at right
     with dissolve
 
