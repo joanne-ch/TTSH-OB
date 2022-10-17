@@ -446,7 +446,7 @@ screen main_menu():
         xpos 100
         idle "images/main_menu/orange_box.png" 
         hover "images/main_menu/orange_box_hover.png"
-        #action Start()
+        action Start()
         #action Show("opening_screen",text = "Prologue")
 
         

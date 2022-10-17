@@ -105,7 +105,7 @@ transform redbutton:
     easein 0.3 xpos 0
     repeat
 
-default tutorial = True
+default tutorial = False
 screen tutorial_guidebook_1:
     modal True
     use overlay
@@ -254,8 +254,24 @@ screen tutorial_trustpoint:
                 idle "images/dialogue/arrow red.png"
 
     
-                
-                
+screen tutorial(text):
+    use overlay
+    modal True
+
+    frame:
+        xalign 0.5
+        yalign 0.5
+        xmaximum 1500
+        ymaximum 600
+        xpadding 30
+        ypadding 30
+        vbox:
+            text "{u}{b}TUTORIAL{b}{u}"
+            text ""
+            text "[text]"
+            text ""
+            textbutton "Ok":
+                action Return(True)                
 
 
 
