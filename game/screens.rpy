@@ -607,21 +607,20 @@ screen give_input(prompt):
 
 image splash = "images/doctor_icon.png"
 default persistent.user_name = ""
+label splashscreen:
+    scene black
+    with Pause(1)
 
-#label splashscreen:
- #   scene black
-  #  with Pause(1)
-#
- #   $ renpy.movie_cutscene ("video/FINAL NTU EDGE Game Intro.webm")
-#
- #   python:
-  #      persistent.user_name = renpy.input("Please input your name \n (Max 15 characters):", length=15, screen = u'give_input')
-   #     persistent.user_name = persistent.user_name.strip()
-#
- #       if not persistent.user_name:
-  #          persistent.user_name = "Kamala Harris"
-#
- #   with Pause(1)
+    $ renpy.movie_cutscene ("video/FINAL NTU EDGE Game Intro.webm")
+
+    python:
+        persistent.user_name = renpy.input("Please input your name \n (Max 15 characters):", length=15, screen = u'give_input')
+        persistent.user_name = persistent.user_name.strip()
+
+        if not persistent.user_name:
+            persistent.user_name = "Kamala Harris"
+
+    with Pause(1)
 
 
 style main_menu_frame is empty
