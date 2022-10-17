@@ -434,7 +434,8 @@ screen main_menu():
         xpos 865
         idle "images/main_menu/profile_icon.png"
         hover "images/main_menu/profile_icon_hover.png" 
-        action Show("ProfilePage")
+        #action Show("ProfilePage")
+        action Show("under_construction")
 
     #Main Chapter Button
     
@@ -448,6 +449,7 @@ screen main_menu():
         hover "images/main_menu/orange_box_hover.png"
         action Start()
         #action Show("opening_screen",text = "Prologue")
+        action Show("opening_screen_0")
 
         
     text "Main Chapter" style "mainText" ypos 510 xpos 200
@@ -499,13 +501,15 @@ screen main_menu():
     
     imagebutton:
         idle "images/main_menu/pink banner.png" xpos 1400
-        hover "images/main_menu/pink banner hovered.png" 
+        hover "images/main_menu/pink banner codex.png" 
+        action Show ("under_construction")
         
-    add "images/main_menu/pink banner.png" at codex_ani
+    add "images/main_menu/pink banner" at codex_ani
     imagebutton: 
         idle "images/main_menu/pink banner.png" xpos 1000
         hover "images/main_menu/pink banner hovered.png" 
         action Show("savePage")
+
 
     add "images/main_menu/Saves.png" xpos 1130 ypos 140
     add "images/main_menu/Codex.png" xpos 1520 ypos 140
@@ -528,9 +532,10 @@ screen characterSelect():
     add gui.main_menu_background
     #add "main_menu/profile_background.png" xpos 130
     #text "{u}Codex{u}" style "mainText" xpos 270 ypos 200 size 100
+    add"images/choosingPage/title.png" xalign 0.5 ypos 40
 
     imagebutton:
-        idle "images/Selection Page (Confirmation)/Nurse.png" xpos 200 ypos 130
+        idle "images/Selection Page (Confirmation)/Nurse.png" xpos 200 ypos 200
         hover "images/Selection Page (Confirmation)/Nurse hover.png" 
         selected_idle "images/Selection Page (Confirmation)/Nurse hover selected.png"
         selected_hover "images/Selection Page (Confirmation)/Nurse hover selected.png" 
@@ -538,11 +543,12 @@ screen characterSelect():
         action ToggleVariable("btn_selected", True, False)
 
     imagebutton:
-        idle "images/Selection Page (Confirmation)/Patient.png" xpos 850 ypos 130
+        idle "images/Selection Page (Confirmation)/Patient.png" xpos 850 ypos 200
+        action Show("under_construction_character")
 
     imagebutton:
-        idle "images/Selection Page (Confirmation)/Doctor.png" xpos 1400 ypos 130
-
+        idle "images/Selection Page (Confirmation)/Doctor.png" xpos 1400 ypos 200
+        action Show("under_construction_character")
 
     imagebutton:
         xpos 1400
@@ -553,6 +559,16 @@ screen characterSelect():
 
     text "Continue" size 76 xpos 1480 ypos 943
     
+
+screen under_construction_character:
+    add "images/under_construction.png" xalign 0.5 yalign 0.5
+    imagebutton:
+            idle "images/map/cross.png" xpos 1650 ypos 90
+            hover "images/map/cross_hover.png"
+            action [Hide("under_construction_character"),Show("characterSelect")]
+
+
+
 screen overlay():
     add "images/main_menu/overlay.png" zoom 2
 ######################################################################################################
@@ -572,6 +588,7 @@ screen input(prompt):
             text prompt style "input_prompt"
             input id "input"
 
+#####opening_screen##########################
 screen give_input(prompt):
     add "images/input name/Confirmation Box.png" xpos 300 ypos 150 
     text prompt style "input_prompt" xpos 590 ypos 390 color "#000000" outlines [(5, "#ffffff", 0, 0)] size 70
