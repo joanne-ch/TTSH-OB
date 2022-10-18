@@ -66,11 +66,11 @@ label end_ofscene1:
 label scene_1_1_1: #scene 1, branch 1
     show doctor_icon at right #import character doctor A
     with dissolve 
-    voice "audio/scene_1/The pleasure is all mine!.mp3"
-    d "The pleasure is all mine!"
 
     #tutorial
     call screen direction_function
+    voice "audio/scene_1/The pleasure is all mine!.mp3"
+    d "The pleasure is all mine!"
 
     voice "audio/scene_1/ve heard.mp3"
     d "I’ve heard great things about you, but just a heads-up, this job can be quite demanding, I hope you’ll keep up your spirit! Now then, do you want to start the tour? "
@@ -86,12 +86,10 @@ label scene_1_1_1: #scene 1, branch 1
 label scene_1_1_2:
     show doctor_icon at right
     with dissolve
-
-    voice "audio/scene_1/I like your spirit, getting right to the point! Th.mp3"
-    d " I like your spirit, getting right to the point! Then let’s get started."
-
     #tutorial
     call screen direction_function
+    voice "audio/scene_1/I like your spirit, getting right to the point! Th.mp3"
+    d " I like your spirit, getting right to the point! Then let’s get started."
 
     jump end_ofscene1 # go to scene2
     
@@ -100,24 +98,28 @@ label scene_1_1_2:
 label scene_1_1_3:
     show doctor_icon at right
     with dissolve
-
-    voice "audio/scene_1/an eager one.mp3"
-    d "You’re an eager one, aren’t you!"
     #tutorial
     call screen direction_function
+    voice "audio/scene_1/an eager one.mp3"
+    d "You’re an eager one, aren’t you!"
     
     voice "audio/scene_1/no rush, we have plenty of time for Q&A as.mp3"
     d " There’s no rush, we have plenty of time for Q&A as we tour, but I don’t mind giving any clarifications now."
 
     menu:
         "What will be my duty as a (Job role: Nurse)?":
-            return
+            call screen under_constructionDialog
+            jump end_ofscene1
         "Can you tell me more about TTSH?":
-            return
+            d "let me intro to you where you are at."
+            call screen map
+            jump end_ofscene1
         "Who else will I be working with?":
-            return
+            call screen under_constructionDialog
+            jump end_ofscene1
         "Which area will I be working at the most?":
-            return
+            call screen under_constructionDialog
+            jump end_ofscene1
         "I think I have no further questions":
             voice "audio/scene_1/Great, as I was saying, today.mp3"
             d"Great, as I was saying, today we’re just here to see around the office space and the hospital ground, no 	need to rush yourself to anything yet. "
@@ -135,10 +137,8 @@ label end_ofscene2:
     return
 
 label scene_1_2: #chapter1_scene2
-    d "let me intro to you where yo are at." # to be chaged: 
-
     scene bg nursing hallway
-    call screen map #second page delete
+    #call screen map #second page delete
 
     #voice "audio/scene_2/On the first floor.mp3"
     #d"On the first floor, we have…"
@@ -168,6 +168,23 @@ label scene_1_2_1:
     return
 
 label scene_1_2_2:
+    menu:
+        "What will be my duty as a (Job role: Nurse)?":
+            call screen under_constructionDialog
+            jump scene_1_2_2
+        "Can you tell me more about TTSH?":
+            d "let me intro to you where you are at."
+            call screen map
+            jump end_ofscene2
+        "Who else will I be working with?":
+            call screen under_constructionDialog
+            jump scene_1_2_2
+        "Which area will I be working at the most?":
+            call screen under_constructionDialog
+            jump scene_1_2_2
+        "I think I have no further questions":
+            jump end_ofscene2
+
     menu:
         "Can you run me through the first floor again…":
             jump scene_1_2_2

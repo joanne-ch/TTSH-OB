@@ -449,7 +449,7 @@ screen main_menu():
         hover "images/main_menu/orange_box_hover.png"
         action Start()
         #action Show("opening_screen",text = "Prologue")
-        action Show("opening_screen_0")
+        #action Show("opening_screen_0")
 
         
     text "Main Chapter" style "mainText" ypos 510 xpos 200

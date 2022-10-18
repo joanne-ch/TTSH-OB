@@ -13,6 +13,7 @@
             
 
 label scene_1_4_3:
+    $tutorial = False
     d "Ah, that is Madam Merry Ho. She has been visiting quite frequently lately due to her recent knee replacement surgery."
     d "I hope she hasn’t given you too much trouble, she is a bit hard of hearing and could come off quite loud and rude sometimes."
     d "Speaking of which, here’s a pop quiz for you, did you manage to parse what her shape is?"
@@ -21,21 +22,26 @@ label scene_1_4_3:
             d "Oh, I’m guessing the six tools are still a bit of a foreign concept to you."
             d "Well, just a heads start, but these are the tools we use to engage with problems in our line of work. Maybe I’ll run you through about shape just briefly today."
             d "But don’t worry, you'll get plenty of opportunities to practise these concepts as you start working."
+            $ label_shape = True
+            call screen tutorial_shapeReview(0)
         "B. A triangle?":
             d "Close, but not quite. Madam Ho would most likely fall under the square category."
-            label_shape = True
-            call screen guidebook
+            call screen tutorial_shapeReview(1)
+            #call screen guidebook
         "C. A square! I’m sure of it!":
             d "Right on the money! I’d say she’s a square too."
-            call screen guidebook
+            #call screen guidebook
+            call screen tutorial_shapeReview(2)
         "D. Circle, maybe?":
             d "A little off. Madam Ho would most likely fall under the square category."
-            call screen guidebook
+            call screen tutorial_shapeReview(3)
+            #call screen guidebook
             d "But good try nonetheless."
         "E. She definitely gave off squiggle vibes.":
             d "A bit of a stretch. Madam Ho would most likely fall under the square category. "
-            call screen guidebook
-            label_shape = False
+            #call screen guidebook
+            call screen tutorial_shapeReview(4)
+            $ label_shape = False
             d "But good try nonetheless."
                 ###########scene to be improved##############
     d "Now then, let’s pick up where we stopped with the tour."
@@ -76,26 +82,16 @@ label scene_1_4_2: #progress scene
     if (trust_level >= 1):
         call screen conflict_win
         m " Insightful! I’ve taken note on how to reach compromises if future conflicts occur."
-        jump to final_scene1B
+        jump final_scene1B
     else:
         call screen conflict_win
         d " We need to ensure balance between personal and professional needs, do reconsider your course of action in the future for maximum benefit."
-        jump to final_scene1B
+        jump final_scene1B
 
-label scene final_scene1B:
+label final_scene1B:
 
-    call screen narration("")
+    scene black
+    with Pause(1)
 
-    #jump scene_1_5
-
-
-
-
-
-
-
-
-
-
-
+    jump scene_1_5
 

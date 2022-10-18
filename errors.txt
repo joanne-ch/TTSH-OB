@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/scenes_script/chapter_2.rpy", line 375: Menu does not contain any choices.
-    menu:
+File "game/scenes_script/scene_3.rpy", line 10: expected 'label_name_declare' not found.
+    label scene final_scene1C:
          ^
 
-Ren'Py Version: Ren'Py 8.0.3.22090809
-Mon Oct 17 22:31:14 2022
+Ren'Py Version: Ren'Py 7.5.3.22090809
+Tue Oct 18 16:19:33 2022

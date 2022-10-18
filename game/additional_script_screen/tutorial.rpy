@@ -105,7 +105,7 @@ transform redbutton:
     easein 0.3 xpos 0
     repeat
 
-default tutorial = False
+default tutorial = True
 screen tutorial_guidebook_1:
     modal True
     use overlay
@@ -253,8 +253,62 @@ screen tutorial_trustpoint:
             imagebutton at redbutton:
                 idle "images/dialogue/arrow red.png"
 
-    
-screen tutorial(text):
+
+screen tutorial_shapeReview(x):
+    use overlay
+    modal False
+    $Tutorial = False
+
+    frame:
+        text "{u}{b}PERSONALITY REVIEW{b}{u}" ypos 30 xpos 30
+        xalign 0.5
+        yalign 0.5
+        yminimum 600
+        xminimum 1500
+        xmaximum 1500
+        ymaximum 600
+        xpadding 30
+        ypadding 30
+
+
+        frame:
+            background Null()
+            xalign 0.5
+            yalign 0.5
+            xmaximum 1500
+            ymaximum 600
+            xpadding 30
+            ypadding 30
+            vbox:
+                text ""
+                if (x == 1):
+                    text "What is the personality of triangle?"
+                if (x == 0):
+                    text "What is a shape?"
+                elif (x == 2):
+                    text "What is the personality of square?"
+                elif (x == 3):
+                    text "What is the personality of a circle?"
+                elif (x == 4):
+                    text "What is the personality of a squiggle?"
+                text ""
+                textbutton "I have reviewed. Close":
+                    action [Hide("tutorial_shapeReview", x), Return(True)] ypos 30
+
+    frame:
+        xpos 250 ypos 30
+        background Null()
+        imagebutton at redbutton:
+            idle "images/dialogue/arrow red.png"        
+    frame:
+        background Null()
+        ypos 30 xpos 30
+        imagebutton:
+            idle "images/notebook/guidebook icon.png" 
+            hover "images/notebook/guidebook icon hover.png"
+            #action [Show("guidebook"), Function( renpy.hide_screen, "tutorial_shapeReview", x )]
+            
+screen tutorial_text(text):
     use overlay
     modal True
 
@@ -271,7 +325,6 @@ screen tutorial(text):
             text "[text]"
             text ""
             textbutton "Ok":
-                action Return(True)                
-
+                action Return(True)   
 
 

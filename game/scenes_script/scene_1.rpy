@@ -234,3 +234,5 @@ label final_scene1A:
 
     call screen narration("")
 
+    jump scene_1_4
+
