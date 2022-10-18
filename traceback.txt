@@ -3,9 +3,9 @@
 While running game code:
   File "renpy/common/00start.rpy", line 240, in script call
     call _splashscreen from _call_splashscreen_1
-  File "game/screens.rpy", line 616, in script
+  File "game/screens.rpy", line 599, in script
     python:
-  File "game/screens.rpy", line 617, in <module>
+  File "game/screens.rpy", line 600, in <module>
     persistent.user_name = renpy.input("Please input your name \n (Max 15 characters):", length=15, screen = u'give_input')
   File "renpy/common/00action_menu.rpy", line 148, in __call__
     renpy.jump_out_of_context(self.label)
@@ -14,55 +14,55 @@ JumpOutException: start
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "/Volumes/renpy-7.5.3-sdk/renpy-7.5.3-sdk/renpy/bootstrap.py", line 277, in bootstrap
+  File "C:\Users\joann\Downloads\renpy-8.0.3-sdk\renpy\bootstrap.py", line 277, in bootstrap
     renpy.main.main()
-  File "/Volumes/renpy-7.5.3-sdk/renpy-7.5.3-sdk/renpy/main.py", line 660, in main
+  File "C:\Users\joann\Downloads\renpy-8.0.3-sdk\renpy\main.py", line 660, in main
     run(restart)
-  File "/Volumes/renpy-7.5.3-sdk/renpy-7.5.3-sdk/renpy/main.py", line 146, in run
+  File "C:\Users\joann\Downloads\renpy-8.0.3-sdk\renpy\main.py", line 146, in run
     renpy.execution.run_context(True)
-  File "/Volumes/renpy-7.5.3-sdk/renpy-7.5.3-sdk/renpy/execution.py", line 938, in run_context
+  File "C:\Users\joann\Downloads\renpy-8.0.3-sdk\renpy\execution.py", line 938, in run_context
     context.run()
   File "renpy/common/00start.rpy", line 240, in script call
     call _splashscreen from _call_splashscreen_1
-  File "game/screens.rpy", line 616, in script
+  File "game/screens.rpy", line 599, in script
     python:
-  File "/Volumes/renpy-7.5.3-sdk/renpy-7.5.3-sdk/renpy/ast.py", line 1131, in execute
+  File "C:\Users\joann\Downloads\renpy-8.0.3-sdk\renpy\ast.py", line 1131, in execute
     renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
-  File "/Volumes/renpy-7.5.3-sdk/renpy-7.5.3-sdk/renpy/python.py", line 1061, in py_exec_bytecode
+  File "C:\Users\joann\Downloads\renpy-8.0.3-sdk\renpy\python.py", line 1061, in py_exec_bytecode
     exec(bytecode, globals, locals)
-  File "game/screens.rpy", line 617, in <module>
+  File "game/screens.rpy", line 600, in <module>
     persistent.user_name = renpy.input("Please input your name \n (Max 15 characters):", length=15, screen = u'give_input')
-  File "/Volumes/renpy-7.5.3-sdk/renpy-7.5.3-sdk/renpy/exports.py", line 885, in input
+  File "C:\Users\joann\Downloads\renpy-8.0.3-sdk\renpy\exports.py", line 885, in input
     rv = renpy.ui.interact(mouse='prompt', type="input", roll_forward=roll_forward)
-  File "/Volumes/renpy-7.5.3-sdk/renpy-7.5.3-sdk/renpy/ui.py", line 299, in interact
+  File "C:\Users\joann\Downloads\renpy-8.0.3-sdk\renpy\ui.py", line 299, in interact
     rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
-  File "/Volumes/renpy-7.5.3-sdk/renpy-7.5.3-sdk/renpy/display/core.py", line 3377, in interact
+  File "C:\Users\joann\Downloads\renpy-8.0.3-sdk\renpy\display\core.py", line 3377, in interact
     repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
-  File "/Volumes/renpy-7.5.3-sdk/renpy-7.5.3-sdk/renpy/display/core.py", line 4258, in interact_core
+  File "C:\Users\joann\Downloads\renpy-8.0.3-sdk\renpy\display\core.py", line 4258, in interact_core
     rv = root_widget.event(ev, x, y, 0)
-  File "/Volumes/renpy-7.5.3-sdk/renpy-7.5.3-sdk/renpy/display/layout.py", line 1175, in event
+  File "C:\Users\joann\Downloads\renpy-8.0.3-sdk\renpy\display\layout.py", line 1175, in event
     rv = i.event(ev, x - xo, y - yo, cst)
-  File "/Volumes/renpy-7.5.3-sdk/renpy-7.5.3-sdk/renpy/display/layout.py", line 1175, in event
+  File "C:\Users\joann\Downloads\renpy-8.0.3-sdk\renpy\display\layout.py", line 1175, in event
     rv = i.event(ev, x - xo, y - yo, cst)
-  File "/Volumes/renpy-7.5.3-sdk/renpy-7.5.3-sdk/renpy/display/layout.py", line 1175, in event
+  File "C:\Users\joann\Downloads\renpy-8.0.3-sdk\renpy\display\layout.py", line 1175, in event
     rv = i.event(ev, x - xo, y - yo, cst)
-  File "/Volumes/renpy-7.5.3-sdk/renpy-7.5.3-sdk/renpy/display/screen.py", line 743, in event
+  File "C:\Users\joann\Downloads\renpy-8.0.3-sdk\renpy\display\screen.py", line 743, in event
     rv = self.child.event(ev, x, y, st)
-  File "/Volumes/renpy-7.5.3-sdk/renpy-7.5.3-sdk/renpy/display/layout.py", line 1175, in event
+  File "C:\Users\joann\Downloads\renpy-8.0.3-sdk\renpy\display\layout.py", line 1175, in event
     rv = i.event(ev, x - xo, y - yo, cst)
-  File "/Volumes/renpy-7.5.3-sdk/renpy-7.5.3-sdk/renpy/display/behavior.py", line 1073, in event
+  File "C:\Users\joann\Downloads\renpy-8.0.3-sdk\renpy\display\behavior.py", line 1073, in event
     return handle_click(self.clicked)
-  File "/Volumes/renpy-7.5.3-sdk/renpy-7.5.3-sdk/renpy/display/behavior.py", line 1008, in handle_click
+  File "C:\Users\joann\Downloads\renpy-8.0.3-sdk\renpy\display\behavior.py", line 1008, in handle_click
     rv = run(action)
-  File "/Volumes/renpy-7.5.3-sdk/renpy-7.5.3-sdk/renpy/display/behavior.py", line 329, in run
+  File "C:\Users\joann\Downloads\renpy-8.0.3-sdk\renpy\display\behavior.py", line 329, in run
     return action(*args, **kwargs)
   File "renpy/common/00action_menu.rpy", line 148, in __call__
     renpy.jump_out_of_context(self.label)
-  File "/Volumes/renpy-7.5.3-sdk/renpy-7.5.3-sdk/renpy/exports.py", line 1906, in jump_out_of_context
+  File "C:\Users\joann\Downloads\renpy-8.0.3-sdk\renpy\exports.py", line 1906, in jump_out_of_context
     raise renpy.game.JumpOutException(label)
 JumpOutException: start
 
-Darwin-21.6.0-x86_64-i386-64bit x86_64
-Ren'Py 7.5.3.22090809
+Windows-10-10.0.22000 AMD64
+Ren'Py 8.0.3.22090809
 BetaGame 1.0
-Mon Oct 17 13:58:11 2022
+Tue Oct 18 00:41:35 2022

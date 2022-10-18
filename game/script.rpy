@@ -1,13 +1,14 @@
 ﻿
 ######################import scene 1 character, "doctor A" and "me"
 define d = Character('Doctor A', color="#c8ffc8", what_outlines=[(5, "#000000", 0, 0)])
-define m = Character('me', color="#c8c8ff")
+define m = Character('[persistent.user_name]', color="#c8c8ff", what_outlines=[(5, "#000000", 0, 0)])
 define p = Character('Patient', color="#c8c8ff", what_outlines=[(5, "#000000", 0, 0)])
-
+define j = Character('Jia', color="#c8c8ff", what_outlines=[(5, "#000000", 0, 0)])
+define mo = Character('Mother', color="#c8c8ff", what_outlines=[(5, "#000000", 0, 0)])
+define dau = Character('Daughter', color="#c8c8ff", what_outlines=[(5, "#000000", 0, 0)])
 ##################start scene_1_1 (chapter1_scene1)
 
-label start: 
-
+label start:
     #call screen opening_screen("Prologue")
 
     scene black

@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/direction.rpy", line 11: ATL statement contains two expressions in a row; is one of them a misspelled property? If not, separate them with pass.
-    easeoutn 0.3 ypos 975
-                 ^
+File "game/scenes_script/chapter_2.rpy", line 375: Menu does not contain any choices.
+    menu:
+         ^
 
-Ren'Py Version: Ren'Py 7.5.3.22090809
-Mon Oct 17 10:48:54 2022
+Ren'Py Version: Ren'Py 8.0.3.22090809
+Mon Oct 17 22:31:14 2022
