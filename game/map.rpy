@@ -80,4 +80,3 @@ screen map_2():
             idle "images/map/material/annex_2.png" xpos 309 ypos 312
             hover "images/map/material/annex_2_hover.png"
             action [Hide("map_2"), Show("intro_building_anx_2")]
-

@@ -26,7 +26,7 @@ init python:
         global label_inquiry
 
         index = 0
-        labels = [label_trust, label_mental, label_shape, label_ladder, label_left, label_inquiry]
+        labels = [label_trust, label_mental,label_shape, label_ladder, label_left, label_inquiry]
 
         for i in labels:
             if ( index != clicked and labels[index] == True):
@@ -312,6 +312,7 @@ screen guidebook_tutorial():
 
 
 screen guidebook_icon():
+    #modal True
     frame:
         background Null()
         xminimum 500

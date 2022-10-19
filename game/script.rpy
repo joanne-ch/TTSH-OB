@@ -14,6 +14,10 @@ label start:
     scene black
     with Pause(1)
     voice "audio/scene_1/scene1_1.ogg"
+
+    ##########################################################
+    #jump scene_1_5
+#########################################################
     
     call screen narration("You are a new-hire at TTSH, this is your first day of work as a nurse.") #changed
     
@@ -106,6 +110,8 @@ label scene_1_1_3:
     voice "audio/scene_1/no rush, we have plenty of time for Q&A as.mp3"
     d " There’s no rush, we have plenty of time for Q&A as we tour, but I don’t mind giving any clarifications now."
 
+
+    jump scene_1_2
     menu:
         "What will be my duty as a (Job role: Nurse)?":
             call screen under_constructionDialog
@@ -196,4 +202,3 @@ label scene_1_2_2:
             jump end_ofscene2
 
     return
-

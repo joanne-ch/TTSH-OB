@@ -258,7 +258,9 @@ screen tutorial_shapeReview(x):
     use overlay
     modal False
     $Tutorial = False
-
+    
+    $ label_mental = False
+    $ label_shape = True
     frame:
         text "{u}{b}PERSONALITY REVIEW{b}{u}" ypos 30 xpos 30
         xalign 0.5
@@ -269,7 +271,6 @@ screen tutorial_shapeReview(x):
         ymaximum 600
         xpadding 30
         ypadding 30
-
 
         frame:
             background Null()
@@ -283,7 +284,7 @@ screen tutorial_shapeReview(x):
                 text ""
                 if (x == 1):
                     text "What is the personality of triangle?"
-                if (x == 0):
+                elif (x == 0):
                     text "What is a shape?"
                 elif (x == 2):
                     text "What is the personality of square?"
@@ -291,6 +292,8 @@ screen tutorial_shapeReview(x):
                     text "What is the personality of a circle?"
                 elif (x == 4):
                     text "What is the personality of a squiggle?"
+                elif (x == 5):
+                    text "What is the personality of a triagle and circle?"
                 text ""
                 textbutton "I have reviewed. Close":
                     action [Hide("tutorial_shapeReview", x), Return(True)] ypos 30
@@ -306,7 +309,7 @@ screen tutorial_shapeReview(x):
         imagebutton:
             idle "images/notebook/guidebook icon.png" 
             hover "images/notebook/guidebook icon hover.png"
-            #action [Show("guidebook"), Function( renpy.hide_screen, "tutorial_shapeReview", x )]
+            action Show("guidebook")
             
 screen tutorial_text(text):
     use overlay
