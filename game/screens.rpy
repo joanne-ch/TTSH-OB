@@ -463,7 +463,7 @@ screen main_menu():
         idle "images/main_menu/orange_box.png" 
         hover "images/main_menu/orange_box_hover.png"
 
-    text "Side Chapter" style "mainText" ypos 800 xpos 365
+    text "Quiz Zone" style "mainText" ypos 800 xpos 365
     text "(Play with your friends)" style "subMain" ypos 885 xpos 365 size 60
 
     #Big Nurse Icon

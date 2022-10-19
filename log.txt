@@ -1,17 +1,17 @@
-Wed Oct 19 10:52:19 2022
+Wed Oct 19 14:52:46 2022
 Darwin-21.6.0-x86_64-i386-64bit
 Ren'Py 7.5.3.22090809
  
 
-Bootstrap to the start of init.init took 0.10s
+Bootstrap to the start of init.init took 0.14s
 Early init took 0.00s
-Loader init took 0.02s
-Loading error handling took 0.06s
-Loading script took 0.49s
+Loader init took 0.04s
+Loading error handling took 0.09s
+Loading script took 0.57s
 Loading save slot metadata. took 0.02s
 Loading persistent took 0.00s
 Faled to initialize steam: OSError("dlopen(/Volumes/renpy-7.5.3-sdk/renpy-7.5.3-sdk/renpy.app/Contents/MacOS/libsteam_api.dylib, 0x0006): tried: '/Volumes/renpy-7.5.3-sdk/renpy-7.5.3-sdk/renpy.app/Contents/MacOS/libsteam_api.dylib' (no such file)",)
-Running init code took 0.10s
+Running init code took 0.13s
 Loading analysis data took 0.02s
 Analyze and compile ATL took 0.00s
 Index archives took 0.00s
@@ -29,11 +29,11 @@ Load screen analysis took 0.00s
 Analyze screens took 0.01s
 Save screen analysis took 0.04s
 Prepare screens took 0.06s
-Save pyanalysis. took 0.00s
+Save pyanalysis. took 0.04s
 Save bytecode. took 0.02s
 Running _start took 0.00s
 Performance test:
-Interface start took 0.21s
+Interface start took 1.27s
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1440, 900)

@@ -116,7 +116,7 @@ label scene_1_4_2: #progress scene
     jump final_scene1B
 
 label final_scene1B:
-
+    $ trust_level = 0
     scene black
     with Pause(1)
 
