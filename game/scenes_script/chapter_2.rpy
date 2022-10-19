@@ -263,6 +263,7 @@ screen ladder7(text):
                 idle "images/rectangle icon.png" ypos -905 xpos -150
 
 label start_chapter2_2:
+    $ label_mental = False
     show doctor_room_background:
         alpha 0.0 truecenter zoom 0.5
         linear 2.0 alpha 1.0 zoom 1.0
