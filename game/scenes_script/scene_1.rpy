@@ -146,21 +146,22 @@ label scene_1_3_1_3:
             hide grandma icon static
             show happy grandma
             p "I’m sure you’re sorry, but I have already waited for so long. But I guess you are right, there are a lot of people today for some reason. But your hospital really ought to improve your wait time."
-            jump scene_1_3_1_4
+            jump scene_1_3_1_5
         "I’m so sorry that you feel this way, but it is a busy day for the hospital so I hope you understand.":
             p "How I feel is irrelevant, the fact is that I have been waiting here for 2 hours and there has been no update. It doesn’t matter if there’s a lot of people, we all deserve better treatment and wait time!"
-            jump scene_1_3_1_4
+            jump scene_1_3_1_5
         "Mam. I need you to calm down, this isn’t going to help you get in any sooner. You are only making a scene.":
             $trust_level -= 1
             p "How dare you tell me what to do? I am making a scene? How about you go and ask why they are making us wait for so long?"
-            jump scene_1_3_1_4
+            jump scene_1_3_1_5
         "Mam, I will go talk to the doctor in charge right away, but I think you should also calm down first.":
             $trust_level = trust_level + 2
             hide angry icon
             hide grandma icon static
             show happy grandma          
             p "That’s what I like to hear, you better go check what’s going on with the clinic today."
-            jump scene_1_3_1_4
+            jump scene_1_3_1_5###########delete scene_1_3_1_4
+            #jump scene_1_3_1_4
     
     return
 
@@ -228,7 +229,7 @@ label scene_1_3_1_5:
     return
 
 label final_scene1A:
-
+    $ trust_level = 0
     call screen narration("You observed how the nurse calmly and patiently explained the congested waiting time for SOC to the patient. You feel that you learnt something new about resolving conflict with patients.")
     call screen narration("It seems that you will have to do a better job at using the six tools to analyse the patient and the nature of the conflict. Refer to your guidebook next time to better deal with conflicts.")
 
