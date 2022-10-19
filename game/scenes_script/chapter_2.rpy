@@ -12,7 +12,7 @@ label start_chapter2:
         linear 0.5 alpha 1.0 zoom 1.0
         repeat
         
-
+    hide screen show_npc_status
     call screen opening_screen("Chapter 2: Ladder of Inference")
     call screen narration("It’s been a week since your first introduction to Tan Tock Seng Hospital. You are still in the process of settling in but you feel very welcome by all your colleagues.")
     call screen narration("You were assigned to work closely with Doctor A, and another day at the hospital begins.")
