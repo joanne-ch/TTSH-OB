@@ -597,13 +597,16 @@ screen give_input(prompt):
     input id "input" xpos 640 ypos 605 style "input_prompt" size 50
 
     #jump to character selection screen
-    imagebutton:
-        xpos 1400
-        ypos 900
-        idle "images/main_menu/hide_button.png"
-        hover "images/main_menu/hide_button_hover.png" 
-        action [Show("characterSelect"),Hide("give_input")]
-    text "Continue" size 76 xpos 1480 ypos 943
+    #imagebutton:
+     #   xpos 1400
+      #  ypos 900
+       # idle "images/main_menu/hide_button.png"
+        #hover "images/main_menu/hide_button_hover.png" 
+
+        #############################################################
+        #action [Show("main_menu"),Hide("give_input")]
+        #action [Show("characterSelect"),Hide("give_input")]
+    #text "Continue" size 76 xpos 1480 ypos 943
 
 image splash = "images/doctor_icon.png"
 default persistent.user_name = ""
