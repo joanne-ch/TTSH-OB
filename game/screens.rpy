@@ -464,7 +464,7 @@ screen main_menu():
         hover "images/main_menu/orange_box_hover.png"
 
     text "Quiz Zone" style "mainText" ypos 800 xpos 365
-    text "(Play with your friends)" style "subMain" ypos 885 xpos 365 size 60
+    text "Review Your Learnings" style "subMain" ypos 885 xpos 365 size 60
 
     #Big Nurse Icon
     #image bigNurse = "images/main_menu/big_nurse_icon.png"
