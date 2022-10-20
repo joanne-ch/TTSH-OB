@@ -18,8 +18,8 @@ label scene_1_5:
     jump scene_1_5_2
 
 label scene_1_5_2: #progresses scene
-    show screen show_npc_status
-    $ npc_shape = "Squiggle"
+    #show screen show_npc_status
+    #$ npc_shape = "Squiggle"
     image sarah = "images/sarah.png"
     voice "audio/footstep.mp3"
     call screen narration("You and Doctor A go into an office. You see a woman dressed in a nurse outfit working in front of the desk. She seems quite enthusiastic despite the amount of work that had piled in front of her")
