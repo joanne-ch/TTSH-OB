@@ -1,11 +1,12 @@
 define sarah = Character('sarah', color="#c8c8ff", what_outlines=[(5, "#000000", 0, 0)])
 
 label scene_1_5:
+    
     show bg nursing hallway
     call screen narration("You reconvene with Doctor A after your talk with Jia and Cheng")
     #trust level integration TBD
-    show doctor_icon at right
-    d "I hope Jia and Cheng have been nice to you. They like giving challenges to new hires. Speaking of which, are you interested in learning about their shape too?"
+    show doctor_icon at  right
+    d "I hope Jia and Cheng have been nice to you. They like giving challenges to new hires. Speaking of which, are you interested in learning more about their shape too?"
   #  call screen guidebook_icon
     $tutorial = False
     menu:
@@ -17,6 +18,8 @@ label scene_1_5:
     jump scene_1_5_2
 
 label scene_1_5_2: #progresses scene
+    show screen show_npc_status
+    $ npc_shape = "Squiggle"
     image sarah = "images/sarah.png"
     voice "audio/footstep.mp3"
     call screen narration("You and Doctor A go into an office. You see a woman dressed in a nurse outfit working in front of the desk. She seems quite enthusiastic despite the amount of work that had piled in front of her")
@@ -55,6 +58,8 @@ label scene_1_5_4:
     hide sarah
     with fade
     show bg main_background
+    hide screen show_npc_status
+    #$ npc_shape = "Null"
     show doctor_icon at center
     d "I hope today’s tour has been insightful. By the way, wanna take a gander at Sarah’s shape?"
     menu:
@@ -70,6 +75,8 @@ label scene_1_5_4:
 
 label final_scene1C:
     #call screen narration("chapter 1 scene 3 not finished")
+    
+    
     scene black
     with Pause(1)
 

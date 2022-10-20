@@ -16,7 +16,7 @@ label start:
     voice "audio/scene_1/scene1_1.ogg"
 
     ##########################################################
-    #jump scene_1_5
+    jump scene_1_4
 #########################################################
     
     call screen narration("You are a new-hire at TTSH, this is your first day of work as a nurse.") #changed

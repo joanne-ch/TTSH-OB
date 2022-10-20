@@ -230,6 +230,7 @@ label scene_1_3_1_5:
 
 label final_scene1A:
     $ trust_level = 0
+    hide screen show_npc_status
     call screen narration("You observed how the nurse calmly and patiently explained the congested waiting time for SOC to the patient. You feel that you learnt something new about resolving conflict with patients.")
     call screen narration("It seems that you will have to do a better job at using the six tools to analyse the patient and the nature of the conflict. Refer to your guidebook next time to better deal with conflicts.")
 

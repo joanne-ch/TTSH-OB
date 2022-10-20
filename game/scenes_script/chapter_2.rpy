@@ -1,4 +1,6 @@
 label start_chapter2:
+    #show screen show_npc_status
+    #$ npc_shape = "Null"
     show screen guidebook_icon()
     image chapter2_bganimation:
         "chapter2_bg"
@@ -12,7 +14,7 @@ label start_chapter2:
         linear 0.5 alpha 1.0 zoom 1.0
         repeat
         
-    hide screen show_npc_status
+
     call screen opening_screen("Chapter 2: Ladder of Inference")
     call screen narration("It’s been a week since your first introduction to Tan Tock Seng Hospital. You are still in the process of settling in but you feel very welcome by all your colleagues.")
     call screen narration("You were assigned to work closely with Doctor A, and another day at the hospital begins.")
@@ -263,7 +265,6 @@ screen ladder7(text):
                 idle "images/rectangle icon.png" ypos -905 xpos -150
 
 label start_chapter2_2:
-    $ label_mental = False
     show doctor_room_background:
         alpha 0.0 truecenter zoom 0.5
         linear 2.0 alpha 1.0 zoom 1.0

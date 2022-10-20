@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/scenes_script/scene_3.rpy", line 23: end of line expected.
-    show doctor_icon at right yalign
-                              ^
+File "game/scenes_script/scene_2.rpy", line 125: expected statement.
+    Hide (screen = show_npc_status, transition=None, _layer=None)
+                                                                 ^
 
 Ren'Py Version: Ren'Py 7.5.3.22090809
-Wed Oct 19 10:34:52 2022
+Thu Oct 20 18:33:42 2022

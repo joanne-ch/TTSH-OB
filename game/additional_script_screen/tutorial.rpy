@@ -283,17 +283,17 @@ screen tutorial_shapeReview(x):
             vbox:
                 text ""
                 if (x == 1):
-                    text "What is the personality of triangle?"
+                    text "The personality of triangle?"
                 elif (x == 0):
                     text "What is a shape?"
                 elif (x == 2):
-                    text "What is the personality of square?"
+                    text "The personality of square?"
                 elif (x == 3):
-                    text "What is the personality of a circle?"
+                    text "The personality of a circle?"
                 elif (x == 4):
-                    text "What is the personality of a squiggle?"
+                    text "The personality of a squiggle?"
                 elif (x == 5):
-                    text "What is the personality of a triagle and circle?"
+                    text "Jia is circle, and Cheng is triangle."
                 text ""
                 textbutton "I have reviewed. Close":
                     action [Hide("tutorial_shapeReview", x), Return(True)] ypos 30
@@ -327,7 +327,7 @@ screen tutorial_text(text):
             text ""
             text "[text]"
             text ""
-            textbutton "Ok":
+            textbutton "Ok": ##############################can say "i have viewed. OK" (FROM SOMOEONE ELSE 'S COMMENT)
                 action Return(True)   
 
 
