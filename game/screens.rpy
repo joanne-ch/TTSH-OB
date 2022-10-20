@@ -427,7 +427,7 @@ screen main_menu():
     #text "placeholder" style "user_name" xpos 420 ypos 200
 
     #Progress Check - Need to sync, with below Main Chapter
-    text "Progress: Chapter 1 - 1" style "progress_check" ypos 320
+    text "Progress: Chapter 1 / 6" style "progress_check" ypos 320
 
     imagebutton:
         ypos 225
