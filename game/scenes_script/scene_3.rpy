@@ -64,9 +64,9 @@ label scene_1_5_4:
     d "I hope today’s tour has been insightful. By the way, wanna take a gander at Sarah’s shape?"
     menu:
         "A. Process of elimination, I’d say Squiggle!":
-            ""
+            d "right!"
         "B. C’mon doc, this should be educational! Give me the answer already!":
-            ""
+            d "okay!"
     call screen tutorial_shapeReview(4)
     call screen narration("You feel that you are more in tune with TTSH culture and lifestyle after the tour. You depart from the hospital and look forward to the next day, when your official work will begin.")
 
