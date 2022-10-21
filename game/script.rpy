@@ -64,7 +64,7 @@ label end_ofscene1:
     scene black
     with Pause(1)
 
-    jump scene_1_2 
+    jump scene_1_2
     return
 
 label scene_1_1_1: #scene 1, branch 1
@@ -112,6 +112,7 @@ label scene_1_1_3:
 
 
     jump scene_1_2
+    #################################
     menu:
         "What will be my duty as a (Job role: Nurse)?":
             call screen under_constructionDialog
@@ -138,8 +139,23 @@ label scene_1_1_3:
 label end_ofscene2:
     scene black
     with Pause(1)
+    #return
+    #choose chapter
+    call screen chapter_selection
+    if(chap_num == 1):
+        jump scene_1_3
+    elif (chap_num == 2):
+        jump start_chapter2
+    elif(chap_num == 3):
+        call screen under_constructionDialog
+        jump end_ofscene2
+    elif(chap_num == 0):
+        jump end
+        
 
-    jump scene_1_3
+label end:
+    scene black
+    with Pause(1)
     return
 
 label scene_1_2: #chapter1_scene2
@@ -181,7 +197,7 @@ label scene_1_2_2:
         "Can you tell me more about TTSH?":
             d "let me intro to you where you are at."
             call screen map
-            jump end_ofscene2
+            jump scene_1_2_2
         "Who else will I be working with?":
             call screen under_constructionDialog
             jump scene_1_2_2
@@ -189,16 +205,6 @@ label scene_1_2_2:
             call screen under_constructionDialog
             jump scene_1_2_2
         "I think I have no further questions":
-            jump end_ofscene2
-
-    menu:
-        "Can you run me through the first floor again…":
-            jump scene_1_2_2
-        "Can you run me through the main office area again…":
-            jump scene_1_2_2
-        "Can you run me through the nursing ward again…":
-            jump scene_1_2_2
-        "I think I have no further questions":
-            jump end_ofscene2
+            jump scene_1_2_1
 
     return

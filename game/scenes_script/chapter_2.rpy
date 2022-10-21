@@ -451,4 +451,23 @@ label chapter2_222221:
     p "Thanks Doc, I now understand the importance of using the ladder of inference which allows me to comprehend the whole situation before making decisions to prevent misunderstandings."
     p "I will definitely use this tool to prevent conflicts in the future!"
 
+    jump final_chap2
+    return
+
+label final_chap2:
+    scene black
+    with Pause(1)
+
+    #choose chapter
+    call screen chapter_selection
+    if(chap_num == 1):
+        jump scene_1_3
+    elif (chap_num == 2):
+        jump start_chapter2
+    elif(chap_num == 3):
+        call screen under_constructionDialog
+        jump final_chap2
+    elif(chap_num == 0):
+        jump end
+    
     return

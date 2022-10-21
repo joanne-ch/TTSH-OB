@@ -75,9 +75,18 @@ label scene_1_5_4:
 
 label final_scene1C:
     #call screen narration("chapter 1 scene 3 not finished")
-    
-    
     scene black
     with Pause(1)
+    #choose chapter
+    call screen chapter_selection
+    if(chap_num == 1):
+        jump scene_1_3
+    elif (chap_num == 2):
+        jump start_chapter2
+    elif(chap_num == 3):
+        call screen under_constructionDialog
+        jump final_scene1C
+    elif(chap_num == 0):
+        jump end
 
-    jump start_chapter2
+    #jump start_chapter2

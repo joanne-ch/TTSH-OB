@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/scenes_script/scene_2.rpy", line 125: expected statement.
-    Hide (screen = show_npc_status, transition=None, _layer=None)
-                                                                 ^
+File "game/function_screen/chapter_selection.rpy", line 3: u'chap_num' is not a keyword argument or valid child for the screen statement.
+    chap_num = 1
+            ^
 
 Ren'Py Version: Ren'Py 7.5.3.22090809
-Thu Oct 20 18:33:42 2022
+Fri Oct 21 18:41:47 2022
