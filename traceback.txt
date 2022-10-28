@@ -1,66 +1,22 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 145, in script
-    call screen chapter_selection
-  File "renpy/common/000statements.rpy", line 609, in execute_call_screen
-    store._return = renpy.call_screen(name, *args, **kwargs)
-  File "renpy/common/00action_menu.rpy", line 148, in __call__
-    renpy.jump_out_of_context(self.label)
-JumpOutException: start
+  File "game/additional_script_screen/quiz.rpy", line 63, in script
+    jump _shape
+ScriptError: could not find label '_shape'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "/Volumes/renpy-7.5.3-sdk/renpy-7.5.3-sdk/renpy/bootstrap.py", line 277, in bootstrap
-    renpy.main.main()
-  File "/Volumes/renpy-7.5.3-sdk/renpy-7.5.3-sdk/renpy/main.py", line 660, in main
-    run(restart)
-  File "/Volumes/renpy-7.5.3-sdk/renpy-7.5.3-sdk/renpy/main.py", line 146, in run
-    renpy.execution.run_context(True)
-  File "/Volumes/renpy-7.5.3-sdk/renpy-7.5.3-sdk/renpy/execution.py", line 938, in run_context
-    context.run()
-  File "game/script.rpy", line 145, in script
-    call screen chapter_selection
-  File "/Volumes/renpy-7.5.3-sdk/renpy-7.5.3-sdk/renpy/ast.py", line 2232, in execute
-    self.call("execute")
-  File "/Volumes/renpy-7.5.3-sdk/renpy-7.5.3-sdk/renpy/ast.py", line 2220, in call
-    return renpy.statements.call(method, parsed, *args, **kwargs)
-  File "/Volumes/renpy-7.5.3-sdk/renpy-7.5.3-sdk/renpy/statements.py", line 281, in call
-    return method(parsed, *args, **kwargs)
-  File "renpy/common/000statements.rpy", line 609, in execute_call_screen
-    store._return = renpy.call_screen(name, *args, **kwargs)
-  File "/Volumes/renpy-7.5.3-sdk/renpy-7.5.3-sdk/renpy/exports.py", line 3181, in call_screen
-    rv = renpy.ui.interact(mouse="screen", type="screen", roll_forward=roll_forward)
-  File "/Volumes/renpy-7.5.3-sdk/renpy-7.5.3-sdk/renpy/ui.py", line 299, in interact
-    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
-  File "/Volumes/renpy-7.5.3-sdk/renpy-7.5.3-sdk/renpy/display/core.py", line 3377, in interact
-    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
-  File "/Volumes/renpy-7.5.3-sdk/renpy-7.5.3-sdk/renpy/display/core.py", line 4258, in interact_core
-    rv = root_widget.event(ev, x, y, 0)
-  File "/Volumes/renpy-7.5.3-sdk/renpy-7.5.3-sdk/renpy/display/layout.py", line 1175, in event
-    rv = i.event(ev, x - xo, y - yo, cst)
-  File "/Volumes/renpy-7.5.3-sdk/renpy-7.5.3-sdk/renpy/display/layout.py", line 1175, in event
-    rv = i.event(ev, x - xo, y - yo, cst)
-  File "/Volumes/renpy-7.5.3-sdk/renpy-7.5.3-sdk/renpy/display/layout.py", line 1175, in event
-    rv = i.event(ev, x - xo, y - yo, cst)
-  File "/Volumes/renpy-7.5.3-sdk/renpy-7.5.3-sdk/renpy/display/screen.py", line 743, in event
-    rv = self.child.event(ev, x, y, st)
-  File "/Volumes/renpy-7.5.3-sdk/renpy-7.5.3-sdk/renpy/display/layout.py", line 1175, in event
-    rv = i.event(ev, x - xo, y - yo, cst)
-  File "/Volumes/renpy-7.5.3-sdk/renpy-7.5.3-sdk/renpy/display/behavior.py", line 1073, in event
-    return handle_click(self.clicked)
-  File "/Volumes/renpy-7.5.3-sdk/renpy-7.5.3-sdk/renpy/display/behavior.py", line 1008, in handle_click
-    rv = run(action)
-  File "/Volumes/renpy-7.5.3-sdk/renpy-7.5.3-sdk/renpy/display/behavior.py", line 329, in run
-    return action(*args, **kwargs)
-  File "renpy/common/00action_menu.rpy", line 148, in __call__
-    renpy.jump_out_of_context(self.label)
-  File "/Volumes/renpy-7.5.3-sdk/renpy-7.5.3-sdk/renpy/exports.py", line 1906, in jump_out_of_context
-    raise renpy.game.JumpOutException(label)
-JumpOutException: start
+  File "game/additional_script_screen/quiz.rpy", line 63, in script
+    jump _shape
+  File "C:\Users\joann\Downloads\renpy-8.0.3-sdk\renpy\ast.py", line 1974, in execute
+    rv = renpy.game.script.lookup(target)
+  File "C:\Users\joann\Downloads\renpy-8.0.3-sdk\renpy\script.py", line 927, in lookup
+    raise ScriptError("could not find label '%s'." % str(original))
+ScriptError: could not find label '_shape'.
 
-Darwin-21.6.0-x86_64-i386-64bit x86_64
-Ren'Py 7.5.3.22090809
+Windows-10-10.0.22000 AMD64
+Ren'Py 8.0.3.22090809
 BetaGame 1.0
-Fri Oct 21 18:40:25 2022
+Fri Oct 28 14:25:18 2022

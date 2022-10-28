@@ -462,6 +462,7 @@ screen main_menu():
         xpos 260
         idle "images/main_menu/orange_box.png" 
         hover "images/main_menu/orange_box_hover.png"
+        action Start("quiz_shape")
 
     text "Quiz Zone" style "mainText" ypos 800 xpos 365
     text "Review Your Learnings" style "subMain" ypos 885 xpos 365 size 60

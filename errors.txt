@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/function_screen/chapter_selection.rpy", line 3: u'chap_num' is not a keyword argument or valid child for the screen statement.
-    chap_num = 1
-            ^
+File "game/additional_script_screen/quiz.rpy", line 105: Line is followed by a block, despite not being a menu choice. Did you forget a colon at the end of the line?
+    "a)	a)	Actions – Analysis – Criticism – Recommendations"
+                                                            ^
 
-Ren'Py Version: Ren'Py 7.5.3.22090809
-Fri Oct 21 18:41:47 2022
+Ren'Py Version: Ren'Py 8.0.3.22090809
+Fri Oct 28 14:24:19 2022
