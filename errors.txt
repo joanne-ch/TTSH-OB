@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/additional_script_screen/quiz.rpy", line 105: Line is followed by a block, despite not being a menu choice. Did you forget a colon at the end of the line?
-    "a)	a)	Actions – Analysis – Criticism – Recommendations"
-                                                            ^
+File "game/additional_script_screen/quiz_screen.rpy", line 45: 'left_margin' is not a keyword argument or valid child for the vbox statement.
+    left_margin 20
+               ^
 
 Ren'Py Version: Ren'Py 8.0.3.22090809
-Fri Oct 28 14:24:19 2022
+Wed Nov  2 04:18:40 2022

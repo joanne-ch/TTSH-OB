@@ -1,22 +1,22 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/additional_script_screen/quiz.rpy", line 63, in script
-    jump _shape
-ScriptError: could not find label '_shape'.
+  File "game/additional_script_screen/quiz.rpy", line 10, in script
+    jump question2_shape
+ScriptError: could not find label 'question2_shape'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/additional_script_screen/quiz.rpy", line 63, in script
-    jump _shape
+  File "game/additional_script_screen/quiz.rpy", line 10, in script
+    jump question2_shape
   File "C:\Users\joann\Downloads\renpy-8.0.3-sdk\renpy\ast.py", line 1974, in execute
     rv = renpy.game.script.lookup(target)
   File "C:\Users\joann\Downloads\renpy-8.0.3-sdk\renpy\script.py", line 927, in lookup
     raise ScriptError("could not find label '%s'." % str(original))
-ScriptError: could not find label '_shape'.
+ScriptError: could not find label 'question2_shape'.
 
 Windows-10-10.0.22000 AMD64
 Ren'Py 8.0.3.22090809
 BetaGame 1.0
-Fri Oct 28 14:25:18 2022
+Wed Nov  2 04:17:41 2022

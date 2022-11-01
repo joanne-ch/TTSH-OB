@@ -2,6 +2,7 @@ default quiz_score = 0
 
 label quiz_shape:
     #Choose which Chapter Quiz
+
     call screen quiz_selection
     if(quiz_num == 1):
         jump question1_shape
@@ -11,82 +12,54 @@ label quiz_shape:
         call screen under_constructionDialog
         jump quiz_shape
 
-    jump quiz_shape
+    return
 
 label question1_shape:
     centered "{u}Personality Shapes{u}"
-    call screen quiz_screen("1. Some characteristics of a Square-personality type individual:")
-    menu:
-        "a)	Works best in teams, empathetic & compassionate, can’t say no":
-            jump question2_shape
-        "b)	Detail-oriented, Analytical & hesitant to change":
-            $quiz_score += 1
-            jump question2_shape
-        "c)	Like to be in-charge, rarely apologize & extremely confident":
-            jump question2_shape
-        "d)	Love to try new things, idea generators and not as organized as they should be":
-            jump question2_shape
+    $quiz_score = 0
+    call screen quiz_screen_question(True, "Some characteristics of a Square-personality type individual:", "1", 2
+    , "a)	Works best in teams, empathetic & compassionate, can’t say no"
+    , "b)	Detail-oriented, Analytical & hesitant to change"
+    , "c)	Like to be in-charge, rarely apologize & extremely confident"
+    , "d)	Love to try new things, idea generators and not as organized as they should be")
 
-label question2_shape:
-    call screen quiz_screen("2.	Pick the one characteristic unlike of a Circle-personality type individual:")
-    menu:
-        "a)	Welcomes peer motivation to succeed":
-            jump question3_shape
-        "b)	Loves working  with data, policies and procedures over people":
-            $quiz_score += 1
-            jump question3_shape
-        "c)	Get along well with squiggles best:":
-            jump question3_shape
-        "d)	Dislikes conflicts and confrontation, better at mediating ":
-            jump question3_shape
 
-label question3_shape:
-    call screen quiz_screen("3.	Some characteristics of a Triangle-personality type individual:")
-    menu:
-        "a)	Prioritizes bottom line and accomplishing set goals":
-            $quiz_score += 1
-            jump question4_shape
-        "b)	Don’t like to be told what to do":
-            jump question4_shape
-        "c)	Believes in working hard than working smart":
-            jump question4_shape
-        "d)	Loves to have fun and laugh":
-            jump question4_shape
+    call screen quiz_screen_question(True, "Pick the one characteristic unlike of a Circle-personality type individual:","2", 2
+    , "a)	Welcomes peer motivation to succeed"
+    , "b)	Loves working with data, policies and procedures over people"
+    , "c)	Get along well with squiggles best"
+    , "d)	Dislikes conflicts and confrontation, better at mediating ")
 
-label question4_shape:
-    call screen quiz_screen("4.	Pick the {u}one{u} characteristic unlike of a Squiggle-personality type individual:")
-    menu:
-        "a)	Shoot from the hip – don’t always do deep research first":
-            jump question5_shape
-        "b)	Visionary; but others may not get what they are saying/seeing":
-            jump question5_shape
-        "c)	More logical than creative":
-            $quiz_score += 1
-            jump question5_shape
-        "d)	Speak before they think; Able to shift from topic to topic easily ":
-            jump question5_shape
+    
+    call screen quiz_screen_question(True, "Some characteristics of a Triangle-personality type individual:","3", 1
+    , "a)	Prioritizes bottom line and accomplishing set goals"
+    , "b)	Don’t like to be told what to do"
+    , "c)	Believes in working hard than working smart"
+    , "d)	Loves to have fun and laugh")
 
-label question5_shape:
-    call screen quiz_screen("5.	We typically have a dominant personality and may have a secondary personality at work. It may be influenced by our role functions. Understanding ourselves is the first step to working well with others.")
-    menu:
-        "True":
-            $quiz_score += 1
-            jump question6_shape
-        "False":
-            jump question6_shape
-        
-label question6_shape:
-    call screen quiz_screen("6.	The awareness of your own personality and working tendencies, as well as those of others you work with, is to:")
-    menu:
-        "a)	Insist that your personality is better than others":
-            jump end_quiz
-        "b)	Be more efficient and effective on your own":
-            jump end_quiz
-        "c)	Flex your personality range to work better with others and serve our patients well":
-            $quiz_score += 1
-            jump end_quiz
-        "d)	Forecast what actions other may take because personality typing guarantees stereotypes all the time":
-            jump end_quiz
+    call screen quiz_screen_question(True, "Pick the one characteristic unlike of a Squiggle-personality type individual:","4", 3
+    , "a)	Shoot from the hip – don’t always do deep research first"
+    , "b)	Visionary; but others may not get what they are saying/seeing"
+    , "c)	More logical than creative"
+    , "d)	Speak before they think; Able to shift from topic to topic easily ")
+
+
+    call screen quiz_screen_question(False, "We typically have a dominant personality and may have a secondary personality at work. It may be influenced by our role functions. Understanding ourselves is the first step to working well with others.","5", 1
+    , "a)	True"
+    , "b)	False"
+    , Null
+    , Null)
+
+    call screen quiz_screen_question(True, "6.	The awareness of your own personality and working tendencies, as well as those of others you work with, is to:","6" , 3
+    , "a)	Insist that your personality is better than others"
+    , "b)	Be more efficient and effective on your own"
+    , "c)	Flex your personality range to work better with others and serve our patients well"
+    , "d)   Forecast other's action because personality typing guarantees stereotypes")
+
+    jump end_quiz
+    
+
+
 
 label question1_ladder:
     centered "{u}Ladder of Inference{u}"
@@ -124,3 +97,4 @@ label question3_ladder:
 label end_quiz:
     centered "Your score is [quiz_score]"
     $quiz_score = 0
+    jump quiz_shape
