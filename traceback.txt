@@ -1,22 +1,34 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/additional_script_screen/quiz.rpy", line 10, in script
-    jump question2_shape
-ScriptError: could not find label 'question2_shape'.
+  File "game/scenes_script/chapter_3.rpy", line 156, in script
+    menu:
+  File "renpy/common/000statements.rpy", line 609, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+Exception: Screen tutorial_inquiryReview is not known.
+
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/additional_script_screen/quiz.rpy", line 10, in script
-    jump question2_shape
-  File "C:\Users\joann\Downloads\renpy-8.0.3-sdk\renpy\ast.py", line 1974, in execute
-    rv = renpy.game.script.lookup(target)
-  File "C:\Users\joann\Downloads\renpy-8.0.3-sdk\renpy\script.py", line 927, in lookup
-    raise ScriptError("could not find label '%s'." % str(original))
-ScriptError: could not find label 'question2_shape'.
+  File "game/scenes_script/chapter_3.rpy", line 156, in script
+    menu:
+  File "/Volumes/renpy-7.5.3-sdk/renpy-7.5.3-sdk/renpy/ast.py", line 2232, in execute
+    self.call("execute")
+  File "/Volumes/renpy-7.5.3-sdk/renpy-7.5.3-sdk/renpy/ast.py", line 2220, in call
+    return renpy.statements.call(method, parsed, *args, **kwargs)
+  File "/Volumes/renpy-7.5.3-sdk/renpy-7.5.3-sdk/renpy/statements.py", line 281, in call
+    return method(parsed, *args, **kwargs)
+  File "renpy/common/000statements.rpy", line 609, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+  File "/Volumes/renpy-7.5.3-sdk/renpy-7.5.3-sdk/renpy/exports.py", line 3167, in call_screen
+    show_screen(_screen_name, _transient=True, *args, **kwargs)
+  File "/Volumes/renpy-7.5.3-sdk/renpy-7.5.3-sdk/renpy/display/screen.py", line 1185, in show_screen
+    raise Exception("Screen %s is not known.\n" % (name[0],))
+Exception: Screen tutorial_inquiryReview is not known.
 
-Windows-10-10.0.22000 AMD64
-Ren'Py 8.0.3.22090809
+
+Darwin-21.6.0-x86_64-i386-64bit x86_64
+Ren'Py 7.5.3.22090809
 BetaGame 1.0
-Wed Nov  2 04:17:41 2022
+Wed Nov  2 15:33:47 2022

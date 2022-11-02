@@ -2,9 +2,13 @@
 errors listed below, and try again.
 
 
-File "game/additional_script_screen/quiz_screen.rpy", line 45: 'left_margin' is not a keyword argument or valid child for the vbox statement.
-    left_margin 20
-               ^
+File "game/function_screen/inquiry_advocacy.rpy", line 8: expected a keyword argument, colon, or end of line.
+    add "chap3/inquiry.png" at  xalign 0.5 yalign 0.5
+                                       ^
 
-Ren'Py Version: Ren'Py 8.0.3.22090809
-Wed Nov  2 04:18:40 2022
+File "game/scenes_script/chapter_3.rpy", line 81: expected 'image_name_component' not found.
+    show
+        ^
+
+Ren'Py Version: Ren'Py 7.5.3.22090809
+Wed Nov  2 15:23:56 2022

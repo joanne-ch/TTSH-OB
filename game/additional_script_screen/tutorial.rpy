@@ -310,6 +310,52 @@ screen tutorial_shapeReview(x):
             idle "images/notebook/guidebook icon.png" 
             hover "images/notebook/guidebook icon hover.png"
             action Show("guidebook")
+
+screen tutorial_inquiryReview:
+    use overlay
+    modal False
+    $Tutorial = False
+
+    $ label_mental = False
+    $ label_shape = False
+    $ label_inquiry = True
+    frame:
+        text "{u}{b}INQUIRY & ADVOCACY REVIEW{b}{u}" ypos 30 xpos 30
+        xalign 0.5
+        yalign 0.5
+        yminimum 600
+        xminimum 1500
+        xmaximum 1500
+        ymaximum 600
+        xpadding 30
+        ypadding 30
+        frame:
+            background Null()
+            xalign 0.5
+            yalign 0.5
+            xmaximum 1500
+            ymaximum 600
+            xpadding 30
+            ypadding 30
+            vbox:
+                text ""
+                text "Review INQUIRY & ADVOCACY page in guidebook"
+                text ""
+                textbutton "I have reviewed. Close":
+                    action [Hide("tutorial_shapeReview"), Return(True)] ypos 30
+
+    frame:
+        xpos 250 ypos 30
+        background Null()
+        imagebutton at redbutton:
+            idle "images/dialogue/arrow red.png"        
+    frame:
+        background Null()
+        ypos 30 xpos 30
+        imagebutton:
+            idle "images/notebook/guidebook icon.png" 
+            hover "images/notebook/guidebook icon hover.png"
+            action Show("guidebook")
             
 screen tutorial_text(text):
     use overlay
@@ -322,12 +368,20 @@ screen tutorial_text(text):
         ymaximum 600
         xpadding 30
         ypadding 30
-        vbox:
-            text "{u}{b}TUTORIAL{b}{u}"
-            text ""
-            text "[text]"
-            text ""
-            textbutton "Ok": ##############################can say "i have viewed. OK" (FROM SOMOEONE ELSE 'S COMMENT)
-                action Return(True)   
+        frame:
+            background Null()
+            xalign 0.5
+            yalign 0.5
+            xmaximum 1500
+            ymaximum 600
+            xpadding 30
+            ypadding 30
+            vbox:
+                text "{u}{b}TUTORIAL{b}{u}"
+                text ""
+                text "[text]"
+                text ""
+                textbutton "Ok": ##############################can say "i have viewed. OK" (FROM SOMOEONE ELSE 'S COMMENT)
+                    action Return(True)   
 
 
