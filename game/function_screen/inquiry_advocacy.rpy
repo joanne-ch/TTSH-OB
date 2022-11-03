@@ -5,11 +5,11 @@ screen inquiry_advocacy(num):
     add "shadow page.png" xalign 0.5 yalign 0.5
     add "chap3/image.png"  xalign 0.5 yalign 0.5
     if(num == 1):
-        add "chap3/inquiry.png" xalign 0.5 yalign 0.5
+        add "chap3/inquiry.png" at fade_in xalign 0.5 yalign 0.5
     elif(num == 2):
         add "chap3/advocacy.png" at fade_in xalign 0.5 yalign 0.5
     elif(num == 3):
-        add "chap3/balance.png" xalign 0.5 yalign 0.5
+        add "chap3/balance.png" at fadein xalign 0.5 yalign 0.5
 
     imagebutton:
         idle "images/dialogue/transparent.png"
@@ -24,7 +24,7 @@ transform fade_in:
     parallel:
         block:
             alpha 0.0
-            linear 1.0 alpha 1.0
+            linear 1.5 alpha 1.0
 
 screen inquiry(text):
     use overlay
