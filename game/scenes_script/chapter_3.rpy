@@ -270,7 +270,6 @@ label final_chap3:
     elif (chap_num == 2):
         jump start_chapter2
     elif(chap_num == 3):
-        #call screen under_constructionDialog
         jump start_chapter3
     elif(chap_num == 0):
         jump end

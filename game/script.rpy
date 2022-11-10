@@ -147,7 +147,7 @@ label end_ofscene2:
     elif (chap_num == 2):
         jump start_chapter2
     elif(chap_num == 3):
-        call screen under_constructionDialog
+        call screen start_chapter3
         jump end_ofscene2
     elif(chap_num == 0):
         jump end
