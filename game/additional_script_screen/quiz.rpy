@@ -7,10 +7,9 @@ label quiz_shape:
     if(quiz_num == 1):
         jump question1_shape
     elif (quiz_num == 2):
-        jump question2_shape
+        jump question2_ladder
     elif(quiz_num == 3):
-        call screen under_constructionDialog
-        jump quiz_shape
+        jump quiz3_inquiry
 
     return
 
@@ -58,40 +57,55 @@ label question1_shape:
 
     jump end_quiz
     
-
-
-
-label question1_ladder:
-    centered "{u}Ladder of Inference{u}"
-    call screen quiz_screen("1.	People often draw meaning and inferences from what others say and do, based on their past experience which could lead to misunderstandings and conflicts. Time permitting, we should reflect instead of taking the reflex responses.")
-    menu:
-        "True":
-            $quiz_score += 1
-            jump question2_ladder
-        "False":
-            jump question2_ladder
-
 label question2_ladder:
-    call screen quiz_screen("2.	What are the thinking steps of the Ladder of Inference?")
-    menu:
-        "a)	Actions – Analysis – Criticism – Recommendations":
-            jump question3_ladder
-        "b)	Observations – Selected Data – Meanings – Assumptions – Beliefs – Actions - Conclusions":
-            jump question3_ladder
-        "c)	Select Data – Observation – Assumptions – Meanings – Actions - Conclusions":
-            jump question3_ladder
-        "c)	Select Data – Observation – Assumptions – Meanings – Actions - Conclusions":
-            $quiz_score += 1
-            jump question3_ladder
+    centered "{u}Ladder of Inference{u}"
+    $quiz_score = 0
 
-label question3_ladder:
-    call screen quiz_screen("3.	To avoid jumping to conclusions, we should access how we think and break down the assumptions, meaning, selected data and observations we made. ")
-    menu:
-        "True":
-            $quiz_score += 1
-            jump end_quiz
-        "False":
-            jump end_quiz
+    call screen quiz_screen_question(False, "People often draw meaning and inferences from what others say and do, based on their past experience which could lead to misunderstandings and conflicts. Time permitting, we should reflect instead of taking the reflex responses.","1", 1
+    , "a)	True"
+    , "b)	False"
+    , Null
+    , Null)
+
+    call screen quiz_screen_question(True, "What are the thinking steps of the Ladder of Inference?", "2", 4
+    , "a)	Actions – Analysis – Criticism – Recommendations"
+    , "b)	Observations – Selected Data – Meanings – Assumptions – Beliefs – Actions - Conclusions"
+    , "c)	Select Data – Observation – Assumptions – Meanings – Actions - Conclusions"
+    , "d)	Observations – Selected Data – Meanings – Assumptions – Conclusions – Beliefs – Actions")
+
+    call screen quiz_screen_question(False, "To avoid jumping to conclusions, we should access how we think and break down the assumptions, meaning, selected data and observations we made. ","3", 1
+    , "a)	True"
+    , "b)	False"
+    , Null
+    , Null)
+
+    jump end_quiz
+
+label quiz3_inquiry:
+    centered "{u}Inquiry and Advocacy{u}"
+    $quiz_score = 0
+
+    call screen quiz_screen_question(True, "What makes quality interactions? ", "1", 3
+    , "a)	Just focus on listening and keep quiet"
+    , "b)	Share everything you think in your left-hand column to show that you trust the other person"
+    , "c)	Exercise a good balance of inquiry (ask) and advocacy (tell)"
+    , "d)	Criticize when mistakes are made so that they learn ")
+
+    call screen quiz_screen_question(True, "What makes quality interactions? ", "2", 4
+    , "a)	To gain insights"
+    , "b)	By asking from a position of curiosity and not criticism"
+    , "c)	To not misinterpret matters according to our own mental models"
+    , "d)	To gain brownie points from our bosses by being seen as enthusiastic")
+
+    call screen quiz_screen_question(False, "12.	To understand either position in a conversation, all parties involved will need to exercise deep listening.","3", 1
+    , "a)	True"
+    , "b)	False"
+    , Null
+    , Null)
+
+    jump end_quiz
+
+
 
 
 label end_quiz:
