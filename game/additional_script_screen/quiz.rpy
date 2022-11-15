@@ -1,4 +1,5 @@
 default quiz_score = 0
+#default quiz_chapter = 0
 
 label quiz_shape:
     #Choose which Chapter Quiz
@@ -107,8 +108,19 @@ label quiz3_inquiry:
 
 
 
-
 label end_quiz:
     centered "Your score is [quiz_score]"
-    $quiz_score = 0
-    jump quiz_shape
+    if(quiz_chapter == 0):
+        jump quiz_shape
+    elif(quiz_chapter == 1):
+        call screen quiz_chapter_selection
+        if(chap_num == 1):
+            jump scene_1_3
+        elif (chap_num == 2):
+            jump start_chapter2
+        elif(chap_num == 3):
+            jump start_chapter3
+        elif(chap_num == 0):
+            jump quiz_shape
+        elif(chap_num == -1):
+            jump quiz_shape

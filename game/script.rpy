@@ -141,16 +141,19 @@ label end_ofscene2:
     with Pause(1)
     #return
     #choose chapter
-    call screen chapter_selection
+    #call screen chapter_selection
+    call screen quiz_chapter_selection
     if(chap_num == 1):
         jump scene_1_3
     elif (chap_num == 2):
         jump start_chapter2
     elif(chap_num == 3):
-        call screen start_chapter3
-        jump end_ofscene2
+        jump start_chapter3
     elif(chap_num == 0):
         jump end
+    elif(chap_num == -1):
+        #$quiz_chapter == 1
+        jump quiz_shape
         
 
 label end:
