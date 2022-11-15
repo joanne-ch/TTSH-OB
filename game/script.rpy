@@ -141,8 +141,8 @@ label end_ofscene2:
     with Pause(1)
     #return
     #choose chapter
-    #call screen chapter_selection
-    call screen quiz_chapter_selection
+    call screen chapter_selection
+    
     if(chap_num == 1):
         jump scene_1_3
     elif (chap_num == 2):

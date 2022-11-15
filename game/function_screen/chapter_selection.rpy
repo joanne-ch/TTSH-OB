@@ -24,12 +24,12 @@ screen chapter_selection:
 default quiz_chapter = 0
 screen quiz_chapter_selection:
     imagebutton:
-        idle "images/quiz_selection/select chapters.png" xalign 0.5 ypos 280
+        idle "images/quiz_selection/select chapters.png" xalign 0.5 ypos 320
         hover "images/quiz_selection/select chapter hover.png"
         action [Hide("quiz_chapter_selection"),Show("chapter_selection")]
     
     imagebutton:
-        idle "images/quiz_selection/go to quiz.png" xalign 0.5 ypos 632
+        idle "images/quiz_selection/go to quiz.png" xalign 0.5 ypos 550
         hover "images/quiz_selection/go to quiz hover.png"
         action [Hide("quiz_chapter_selection"),SetVariable("chap_num", -1),SetVariable("quiz_chapter", 1),Return(True)]
 

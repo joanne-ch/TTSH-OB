@@ -265,6 +265,7 @@ label final_chap3:
 
     #choose chapter
     call screen chapter_selection
+    
     if(chap_num == 1):
         jump scene_1_3
     elif (chap_num == 2):
@@ -273,5 +274,8 @@ label final_chap3:
         jump start_chapter3
     elif(chap_num == 0):
         jump end
-    
+    elif(chap_num == -1):
+        #$quiz_chapter == 1
+        jump quiz_shape
+        
     return
