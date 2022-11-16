@@ -144,7 +144,7 @@ screen intro_building_CHI:
         vbox:
             text "{u}{b}CHI{b}{u}" slow_cps True  style "narration"
             text ""
-            text "While playing this game, you will often be {color=#f4b157}making choices {/color}that may {color=#f4b157}change the trajectory of your story {/color}and the challenges you will have to overcome.Don’t worry about missing out, after finishing each chapter, you will be able to {color=#f4b157}replay and choose the different choices {/color} .With that said, we encourage you to fully experience the game at least once before replaying any sequence" slow_cps True  style "narration"
+            text "The CHI Co-Learning Network aims to deepen co-learning and create opportunities for collaboration between our partners. With the support of CHI’s Co-Learning Management Committee and Faculty, we seek to spread the culture of innovation and translate innovations into actual practice." slow_cps True  style "narration"
             text ""
 
     add "images/map/CHI_hover.png" xpos 60 ypos 500
